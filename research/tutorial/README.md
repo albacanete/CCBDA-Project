@@ -2,9 +2,10 @@
 
 The aim of this research project is to learn how **AWS CloudFormation** works and create a hands-on tutorial that puts
 in practice the theory learned. [AWS CloudFormation](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/aws-cloudformation.html)
-is an Infrastructure as a Code service that lets you automate the creation and deployment of AWS resources.
+is an Infrastructure as a Code service that lets you automate the creation and deployment of AWS resources. 
+To create the templates we can use either JSON or YAML. In this research project we will create the template using the YAML definition.
 
-In this tutorial we will create a YAML file that 
+In the YAML file we will specify:
 - An **EC2 instance** with a *private key*, a *public IP address* and *security group* attached to it. The instance will 
 also start with Apache already installed.  
 - An **Elastic Load Balancer** that will be used to access the port 80 (through a *security group*) of the EC2 instance.
@@ -60,11 +61,14 @@ necessary to create the stack.
 
 ### Parameters
 In this section of the YAML file we are going to specify the parameters that the user can choose when using the template 
-to create a stack using the interface. There are four 
-1. EC2 Instance type.
-2. Name of the private key that will be used Seto access the EC2 (it has to be created already).
-3. IP from which we will be able to access the EC2 via SSH.
-4. Name of the security group that will be created and attached to the EC2 instance. 
+to create a stack using the interface. For this example we are going to use four different ones:
+1. EC2 Instance type (*String*).
+2. Name of the private key, it has to be created already, that will be used to access the EC2 (*AWS::EC2::KeyPair::KeyNam*e).
+3. IP from which we will be able to access the EC2 via SSH (*String*).
+4. Name of the security group that will be created and attached to the EC2 instance (*String*). 
+
+Is important to remark that all the parameters have different filters (`allowed patterns` or `allowed values`) to verify that the field introduced will not give an error in the deployment of the infrastructure.
+In more complex scenarios, this could be a handy tool in order to avoid further impossible or hard problems to solve. 
 
 For example, the following code will allow the user to choose the type of EC2 Instance that will we deployed. The interface will show
 a dropdown list with all the `AllowdValues`.  
@@ -91,15 +95,17 @@ InstanceType:
 ```
 
 ### Resources
-This section specifies all the AWS resources that will be created in the stack. In our case these are
+This section specifies all the AWS resources that are going to be created in the stack. In our case these are:
 1. EC2 Instance.
 2. Security group attached to the EC2.
-3. Elastic Load Balancer. 
+3. Elastic Load Balancer, listening to port 80.
 4. Security group attached to the ELB. 
 5. Public IP address that will let us connect to the EC2. 
 
-The following code is the specification of the EC2 instance, its Security Group and the public IP address. The link 
-between resources is made with the `!Ref` tag. 
+The following code is the specification of the EC2 instance, its Security Group, public IP address, Availability Zone and Image ID (ubuntu-18). The code will also install the python package in the EC2 instance by the linux commands. 
+This is possible by specifying the linux commands to execute in the `UserData` parameter, is necessary to put also the following parameters `Fn::Base64: !Sub |` before the commands. Is important to highlight that th
+
+Finally, the link between resources is made with the `!Ref` tag or `Ref: reference`.
 
 ```yaml
 Resources:
@@ -117,8 +123,16 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           sudo apt -y update
-          sudo apt -y install apache2
-
+          sudo apt -y install python3      
+  ELBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ELB Security Group
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
   EC2SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -136,16 +150,35 @@ Resources:
         ToPort: 22
         CidrIp:
           Ref: SshIp
-
+  LoadBalancerforEC2:
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
+    Properties:
+      AvailabilityZones: [eu-west-1a]
+      Instances:
+      - !Ref EC2Instance2
+      Listeners:
+      - LoadBalancerPort: '80'
+        InstancePort: '80'
+        Protocol: HTTP
+      HealthCheck:
+        Target: HTTP:80/
+        HealthyThreshold: '3'
+        UnhealthyThreshold: '5'
+        Interval: '30'
+        Timeout: '5'
+      SecurityGroups:
+        - !GetAtt ELBSecurityGroup.GroupId
   IPAddress:
     Type: AWS::EC2::EIP
 ```
 
 ### Outputs
-This section specifies which will be the outputs of the Stack creation. In our case there are
+This section specifies which will be the outputs of the Stack creation in the tab *Outputs*. In our case there are:
 1. The ID of the EC2 instance. 
 2. The public IP associated to the Instance.
 3. The ELB URL. 
+
+The way to get some values like from the elements deployed, like the URL, Name, etc. is by using the `!GetAtt element.field` tag further information in [this link](https://docs.aws.amazon.com/es_es/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html).
 
 ```yaml
 Outputs:
@@ -162,5 +195,43 @@ Outputs:
     Value: !GetAtt LoadBalancerforEC2.DNSName
 ```
 
+To upload our YAML file we have to go to the CloudFormation service in AWS. Then we go to stack and, we create a new one uploading a template file.
+
+![img](img/cloudformation-creation.png)
+
+Once we upload our template we have to fill all the parameters specified in the YAML file. And we select *Next* till we create the stack.
+
+![img](img/stack-creation.png)
+
+While the stack is being created the AWS will provide logs for all the steps in order to detect possible failures. Everything should go *blue* or *green* to have a good deployment.
+
+![img](img/stack-log.png)
+
+If the creation of the stack it is successful we can check the output messages in the *Outputs* tab.
+
+![img](img/stack-output.png)
+
+As we can see in the following image the EC2Instance is running perfectly.
+
+![img](img/ec2instance-created.png)
+
+Now that the EC2Instance is running, we will check if we can connect to it through the IP specified in the `SshIp` parameter.
+
+![img](img/ssh-connection.png)
+
+We can check also that the python package has been installed successfully.
+
+![img](img/python-version.png)
+
+Finally, we will check if the Load Balancer is running with the parameters specified.
+
+![img](img/loadbalancer-created.png)
+
 You can find the complete YAML template file in [research.yaml](templates/research.yaml). Take a deep look at it and try 
 to understand how all the resources are created and linked among them. 
+
+#### Q1: Code a YAML file that creates an EC2Instance with Apache installed and test if it is working. Upload your README.md and your YAML code with the respective images.
+
+#### Q2: Code a YAML file that creates a Load Balancer that redirect the traffic from port 80 to the EC2Instance. The EC2Instance will only listen from port 80 and from the security group of the Load Balancer. Upload your README.md and your YAML code with the respective images.
+
+
