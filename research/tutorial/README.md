@@ -22,7 +22,7 @@ create a template that uses the *YAML* format.
 
 In the YAML file we will specify:
 - An **EC2 instance** with a *private key*, a *public IP address* and *security group* attached to it. The instance will 
-also start with `python` already installed.  
+also start with `apache` already installed.  
 - An **Elastic Load Balancer** that will be used to access the port 80 (through a *security group*) of the EC2 instance.
 
 
@@ -117,7 +117,7 @@ This section specifies all the AWS resources that are going to be created in the
 4. Security group attached to the ELB. 
 5. Public IP address that will let us connect to the EC2. 
 
-The following code is the specification of the EC2 instance, its Security Group, public IP address, Availability Zone and Image ID (ubuntu-18). The code will also install the python package in the EC2 instance by the linux commands. 
+The following code is the specification of the EC2 instance, its Security Group, public IP address, Availability Zone and Image ID (ubuntu-18). The code will also install the apache web server in the EC2 instance by the linux commands. 
 This is possible by specifying the linux commands to execute in the `UserData` parameter, is necessary to put also the following parameters `Fn::Base64: !Sub |` before the commands. Is important to highlight that th
 
 Finally, the link between resources is made with the `!Ref` tag or `Ref: reference`.
@@ -138,7 +138,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           sudo apt -y update
-          sudo apt -y install python3      
+          sudo apt -y install apache2     
   ELBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -255,9 +255,9 @@ parameter using the private key.
 
 ![img](img/ssh-connection.png)
 
-You can check also that the `python` package has been installed successfully.
+We can check also that the apache web server is running perfectly and, it is accessible through the Load Balancer DNS name.
 
-![img](img/python-version.png)
+![img](img/web-page.png)
 
 <!--
 # Questions
