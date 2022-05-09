@@ -147,5 +147,20 @@ This section specifies which will be the outputs of the Stack creation. In our c
 2. The public IP associated to the Instance.
 3. The ELB URL. 
 
+```yaml
+Outputs:
+  InstanceId:
+    Description: InstanceId of the newly created EC2 instance
+    Value:
+      Ref: EC2Instance2
+  InstanceIPAddress:
+    Description: IP address of the newly created EC2 instance
+    Value:
+      Ref: IPAddress
+  LoadBalancerURL:
+    Description: Load Balancer's URL
+    Value: !GetAtt LoadBalancerforEC2.DNSName
+```
+
 You can find the complete YAML template file in [research.yaml](templates/research.yaml). Take a deep look at it and try 
 to understand how all the resources are created and linked among them. 
