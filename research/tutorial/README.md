@@ -3,65 +3,80 @@
 The aim of this research project is to learn how **AWS CloudFormation** works and create a hands-on tutorial that puts
 in practice the theory learned. [AWS CloudFormation](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/aws-cloudformation.html)
 is an Infrastructure as a Code service that lets you automate the creation and deployment of AWS resources. 
-To create the templates we can use either JSON or YAML. In this research project we will create the template using the YAML definition.
+
+In AWS CloudFormation, a **Stack** is a collection of different AWS resources that can be managed as a single unit. 
+Then all the resources are grouped and if we change this single unit (creating, updating or deleting), we can see all 
+the respective changes in the other resources.
+The idea is to deploy and to undeploy in an easy way different applications in AWS, i.e. one click to create all the 
+resources and one click to delete all the resource of our application. All the resources in a Stack are defined by the 
+Stack's AWS CloudFormation template. Because AWS CloudFormation treats the stack resources as a single unit, 
+they must all be created or deleted successfully for the stack to be created or deleted.
+
+To create the template, we can use three ways
+1. Use the *AWS CloudFormation Designer*. 
+2. Upload a template in *JSON* format. 
+3. Upload a template in *YAML* format. 
+
+In this research project/tutorial we will first use the *Designer* to get familiar with CloudFormation and then we will 
+create a template that uses the *YAML* format.
 
 In the YAML file we will specify:
 - An **EC2 instance** with a *private key*, a *public IP address* and *security group* attached to it. The instance will 
-also start with Apache already installed.  
+also start with `python` already installed.  
 - An **Elastic Load Balancer** that will be used to access the port 80 (through a *security group*) of the EC2 instance.
 
-<!-- Explicar que es una stack a cloudformation -->
 
 ## Getting familiar with AWS CloudFormation 
 In order to get familiar with CloudFormation, first we are going to create a basic stack that deploys an EC2 instance 
 with a security group. We can create it accessing [this link](https://eu-west-1.console.aws.amazon.com/cloudformation/designer/home?region=eu-west-1&templateURL=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fcloudformation-templates-us-west-2%2FEC2InstanceWithSecurityGroupSample.template).
 
-The link opens the AWS CloudFormation Designer in Ireland. We can see in the left panel named *Resource types* that there
-are all the existing AWS resources listed, you can make a test and drag one into the right panel. On the right panel 
-there is already a **EC2 -> Instance** and a **EC2 -> Security group** that are linked between them. If we move the mouse above the purple and pink circles that are 
-around the resources, we can see that they are used to connect the resources between them. 
+The link opens the AWS CloudFormation Designer in Ireland. The left panel, named *Resource types*, lists all the existing 
+AWS resources (you can make a test and drag one into the right panel). On the right panel, there is already a 
+**EC2 -> Instance** and a **EC2 -> Security group** that are linked between them. If you move the mouse above the purple 
+and pink circles that are around the resources, you will be able to see that they are used to connect the resources 
+between them. 
 
-In the bottom panel we can see that the Designer is translating the resource allocation that we are creating into JSON 
-and YAML. We can also add or modify resources by writing in that panel. 
+In the bottom panel, you can see that the Designer is translating the resource allocation that we are creating into JSON 
+and YAML. You can also add or modify resources by writing directly in that panel. 
 
 ![img](img/designer.png)
 
 The button next to *Close* in the top-left toolbar is the *Validate template* button. As its name says, it can be used 
-to validate the template before creating the Stack. In this case, we are using a template that we know that works, 
-but it can be useful when we are adding resources or creating the infrastructure from scratch. If you dragged a resource
-earlier to play with the Designer, remove it before validating, or you will get an error. The one next to it in the 
-left, with the Cloud symbol is the *Create stack* button. We click it to move on with the tutorial.
+to validate the template before creating the Stack. In this case, you are using a template that we know that works, 
+but it can be useful when you are adding resources or creating the infrastructure from scratch. If you dragged a resource
+earlier to play with the Designer, remove it before validating, or you will get an error. The button next to the validation
+one, in the left, with the Cloud symbol, is the *Create stack* button. You may click it to move on with the tutorial.
 
 ![img](img/designer-toolbar.png)
 
-The Create Stack button moves us back to the *Create Stack* page, but this time the *Template is ready* option will be 
+The Create Stack button moves us back to the *Create Stack* page, but this time the *Template is ready* option is 
 selected, and CloudFormation also lets us know that our template will be stored in S3. We click next and select 
 `research-review` as name for the Stack.
 
-The *Parameters* section lets us select which are the specific values of the resources of this Stack. Choose
+The *Parameters* section lets you select which are the specific values of the resources of this Stack. Choose
 1. IntanceType: `t2.micro`.
 2. KeyName: choose one you have already created for other lab sessions.
 3. SSHLocation: It is the IP address range that can be used to SSH to the EC2 instances. It can be your home or the UPC.
 
-Create the Stack and wait for the resources to be allocated. When the creation is complete, we can access the *Resources*
+Create the Stack and wait for the resources to be allocated. When the creation is complete, you can access the *Resources*
 tab and check the allocations. The *Template* tab shows the JSON code for the template. 
 
 ![img](img/research-review-stack.png)
 
-We can also check in the EC2 console that the Instance and the Security Group have been correctly created. 
+You can also check in the EC2 console that the Instance and the Security Group have been correctly created. 
 
 ![img](img/ec2-created.png)
 
-We can now go back to the CloudFormation console and **Delete** the Stack.
+You can now go back to the CloudFormation console and **Delete** the Stack.
 
 
 # Creating our own template 
-Another way to create the resources we need is to specify them in a YAML file. There are three main concepts that are 
-necessary to create the stack.
+Another way to create the resources that will form your infrastructure is to specify them in a YAML file. There are 
+three main sections that are necessary to create the Stack.
 
 ### Parameters
-In this section of the YAML file we are going to specify the parameters that the user can choose when using the template 
-to create a stack using the interface. For this example we are going to use four different ones:
+In this section of the YAML file, you are going to specify the parameters that the user can choose when using the template 
+to create a Stack using the console, as you did in the previous section. For this example we are going to use four different ones:
 1. EC2 Instance type (*String*).
 2. Name of the private key, it has to be created already, that will be used to access the EC2 (*AWS::EC2::KeyPair::KeyNam*e).
 3. IP from which we will be able to access the EC2 via SSH (*String*).
@@ -195,43 +210,59 @@ Outputs:
     Value: !GetAtt LoadBalancerforEC2.DNSName
 ```
 
-To upload our YAML file we have to go to the CloudFormation service in AWS. Then we go to stack and, we create a new one uploading a template file.
+You can find the complete YAML template file in [research.yaml](templates/research.yaml). Take a deep look at it and try 
+to understand how all the resources are created and linked among them.
+
+# Deployment of the template
+In this section you are going to deploy the infrastructure specified in the `research.yaml` YAML file using the 
+CloudFormation console in AWS. 
+
+### Stack creation 
+Log in to the AWS CloudFormation console and click on *Create Stack*. Select *Template is ready* and *Upload a template file*.
 
 ![img](img/cloudformation-creation.png)
 
-Once we upload our template we have to fill all the parameters specified in the YAML file. And we select *Next* till we create the stack.
+Once the template is uploaded, CloudFormation will ask for the parameters specified in the YAML file, which where 
+discussed earlier. Remember to select an IP range that will let you connect to SSH later. 
 
 ![img](img/stack-creation.png)
 
-While the stack is being created the AWS will provide logs for all the steps in order to detect possible failures. Everything should go *blue* or *green* to have a good deployment.
+Leave the *Configure stack options* as it is, and create the new Stack. 
+
+### Check that all resources are correctly provisioned
+While the stack is being created, AWS provides logs for all the steps in order to detect possible failures. Everything 
+should be *blue* or *green* to have a good deployment.
 
 ![img](img/stack-log.png)
 
-If the creation of the stack it is successful we can check the output messages in the *Outputs* tab.
+If the creation of the stack it is successful you can check the output messages in the *Outputs* tab, where you will find
+the ID of the Instance, the public IP assigned to it and the URL of the ELB. 
 
 ![img](img/stack-output.png)
 
-As we can see in the following image the EC2Instance is running perfectly.
+You can also check that the EC2 Instance is running correctly in the AWS EC2 console.
 
 ![img](img/ec2instance-created.png)
 
-Now that the EC2Instance is running, we will check if we can connect to it through the IP specified in the `SshIp` parameter.
 
-![img](img/ssh-connection.png)
-
-We can check also that the python package has been installed successfully.
-
-![img](img/python-version.png)
-
-Finally, we will check if the Load Balancer is running with the parameters specified.
+Last, you can also check if the Load Balancer is running with the parameters specified.
 
 ![img](img/loadbalancer-created.png)
 
-You can find the complete YAML template file in [research.yaml](templates/research.yaml). Take a deep look at it and try 
-to understand how all the resources are created and linked among them. 
+### EC2 SSH connection 
+Now that the EC2 Instance is running, you have to check that you can connect to it through the IP specified in the `SshIp` 
+parameter using the private key.
 
+![img](img/ssh-connection.png)
+
+You can check also that the `python` package has been installed successfully.
+
+![img](img/python-version.png)
+
+<!--
+# Questions
 #### Q1: Code a YAML file that creates an EC2Instance with Apache installed and test if it is working. Upload your README.md and your YAML code with the respective images.
 
 #### Q2: Code a YAML file that creates a Load Balancer that redirect the traffic from port 80 to the EC2Instance. The EC2Instance will only listen from port 80 and from the security group of the Load Balancer. Upload your README.md and your YAML code with the respective images.
-
+-->
 
