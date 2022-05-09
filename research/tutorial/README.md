@@ -255,6 +255,8 @@ parameter using the private key.
 
 ![img](img/ssh-connection.png)
 
+### Load Balancer test
+
 We can check also that the apache web server is running perfectly and, it is accessible through the Load Balancer DNS name.
 
 ![img](img/web-page.png)
