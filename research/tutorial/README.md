@@ -21,8 +21,8 @@ In this research project/tutorial we will first use the *Designer* to get famili
 create a template that uses the *YAML* format.
 
 In the YAML file we will specify:
-- An **EC2 instance** with a *private key*, a *public IP address* and *security group* attached to it. The instance will 
-also start with `apache` already installed.  
+- An **EC2 instance** with a *private key* and *security group* attached to it. The instance will also start with 
+the `apache2` package already installed.  
 - An **Elastic Load Balancer** that will be used to access the port 80 (through a *security group*) of the EC2 instance.
 
 
@@ -56,7 +56,8 @@ selected, and CloudFormation also lets us know that our template will be stored 
 The *Parameters* section lets you select which are the specific values of the resources of this Stack. Choose
 1. IntanceType: `t2.micro`.
 2. KeyName: choose one you have already created for other lab sessions.
-3. SSHLocation: It is the IP address range that can be used to SSH to the EC2 instances. It can be your home or the UPC.
+3. SSHLocation: It is the IP address range that can be used to SSH to the EC2 instances. It can be your home or the UPC 
+subnet.
 
 Create the Stack and wait for the resources to be allocated. When the creation is complete, you can access the *Resources*
 tab and check the allocations. The *Template* tab shows the JSON code for the template. 
@@ -115,10 +116,11 @@ This section specifies all the AWS resources that are going to be created in the
 2. Security group attached to the EC2.
 3. Elastic Load Balancer, listening to port 80.
 4. Security group attached to the ELB. 
-5. Public IP address that will let us connect to the EC2. 
 
-The following code is the specification of the EC2 instance, its Security Group, public IP address, Availability Zone and Image ID (ubuntu-18). The code will also install the apache web server in the EC2 instance by the linux commands. 
-This is possible by specifying the linux commands to execute in the `UserData` parameter, is necessary to put also the following parameters `Fn::Base64: !Sub |` before the commands. Is important to highlight that th
+The following code is the specification of the EC2 instance, its Security Group, Availability Zone and Image ID (ubuntu-18). 
+The code will also install the apache web server in the EC2 instance by the linux commands. This is possible by specifying 
+the linux commands to execute in the `UserData` parameter, is necessary to put also the following parameters `Fn::Base64: !Sub |` 
+before the commands. 
 
 Finally, the link between resources is made with the `!Ref` tag or `Ref: reference`.
 
@@ -183,17 +185,15 @@ Resources:
         Timeout: '5'
       SecurityGroups:
         - !GetAtt ELBSecurityGroup.GroupId
-  IPAddress:
-    Type: AWS::EC2::EIP
 ```
 
 ### Outputs
 This section specifies which will be the outputs of the Stack creation in the tab *Outputs*. In our case there are:
-1. The ID of the EC2 instance. 
-2. The public IP associated to the Instance.
-3. The ELB URL. 
+1. The ID of the EC2 instance.
+2. The ELB URL. 
 
-The way to get some values like from the elements deployed, like the URL, Name, etc. is by using the `!GetAtt element.field` tag further information in [this link](https://docs.aws.amazon.com/es_es/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html).
+The way to get some values like from the elements deployed, like the URL, Name, etc. is by using the `!GetAtt element.field` 
+tag. Further information in [this link](https://docs.aws.amazon.com/es_es/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html).
 
 ```yaml
 Outputs:
@@ -201,10 +201,6 @@ Outputs:
     Description: InstanceId of the newly created EC2 instance
     Value:
       Ref: EC2Instance2
-  InstanceIPAddress:
-    Description: IP address of the newly created EC2 instance
-    Value:
-      Ref: IPAddress
   LoadBalancerURL:
     Description: Load Balancer's URL
     Value: !GetAtt LoadBalancerforEC2.DNSName
@@ -214,7 +210,7 @@ You can find the complete YAML template file in [research.yaml](templates/resear
 to understand how all the resources are created and linked among them.
 
 # Deployment of the template
-In this section you are going to deploy the infrastructure specified in the `research.yaml` YAML file using the 
+In this section you are going to deploy the infrastructure specified in the `research.yaml` file using the 
 CloudFormation console in AWS. 
 
 ### Stack creation 
@@ -250,8 +246,7 @@ Last, you can also check if the Load Balancer is running with the parameters spe
 ![img](img/loadbalancer-created.png)
 
 ### EC2 SSH connection 
-Now that the EC2 Instance is running, you have to check that you can connect to it through the IP specified in the `SshIp` 
-parameter using the private key.
+Now that the EC2 Instance is running, you have to check that you can connect to it using the private key.
 
 ![img](img/ssh-connection.png)
 
@@ -267,4 +262,18 @@ We can check also that the apache web server is running perfectly and, it is acc
 
 #### Q2: Code a YAML file that creates a Load Balancer that redirect the traffic from port 80 to the EC2Instance. The EC2Instance will only listen from port 80 and from the security group of the Load Balancer. Upload your README.md and your YAML code with the respective images.
 -->
-
+# Future work
+This tutorial focuses on the infrastructure deployment and automation, but there are many paths that those that found it
+interesting can follow. We propose one
+1. You can search for a *Github* repository of a basic web application and, first, clone it in the running EC2 instance 
+connecting through SSH. Then, change the necessary Apache configuration so that when accessing the Load Balancer URL it 
+now serves the application. 
+2. Once the new application is running correctly, automate its deployment by adding the correct commands to the YAML file.
+Remember that we have already automated the installation of Apache. 
+```yaml
+UserData: 
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo apt -y update
+          sudo apt -y install apache2
+```
