@@ -1,5 +1,4 @@
 import scrapy
-import scrapy
 import unidecode
 import re
 
