@@ -58,6 +58,13 @@
         + (builtins.readFile ./scrapy/requirements.txt);
     };
 
+    django-env = mach.mkPython {
+      python = "python38";
+      requirements = ''
+        tzdata
+      '' + (builtins.readFile ./backend/requirements.txt);
+    };
+
   in
   {
     devShells.default = with pkgs; mkShellNoCC {
@@ -89,8 +96,8 @@
     packages.default = self.packages.${system}.backend;
     packages.backend = let backend = ./backend; in pkgs.writeShellScriptBin "manage"
     ''
-      export PYTHONPATH=${python-env}/bin;
-      export PATH=${python-env}/bin:$PATH;
+      export PYTHONPATH=${django-env}/bin;
+      export PATH=${django-env}/bin:$PATH;
 
       python ${backend}/manage.py "$@"
     '';

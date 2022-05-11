@@ -1,0 +1,51 @@
+name: Build layered docker image with nix
+on: workflow_dispatch
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: CCBDA-project/django
+
+jobs:
+  build_document:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v15
+      with:
+        extra_nix_config: |
+          access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+    - uses: cachix/cachix-action@v10
+      with:
+        name: leixb
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        extraPullNames: nix-community
+    - name: Build image
+      run: nix build -L .#dockerImage
+
+    - name: Load image
+      run: docker load <result
+
+    - name: Log in to registry
+      # This is where you will update the PAT to GITHUB_TOKEN
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+
+    - name: Push image
+      run: |
+        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+
+        # Change all uppercase to lowercase
+        IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+        # Strip git ref prefix from version
+        VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+        # Strip "v" prefix from tag name
+        [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+        # Use Docker `latest` tag convention
+        [ "$VERSION" == "master" ] && VERSION=latest
+        echo IMAGE_ID=$IMAGE_ID
+        echo VERSION=$VERSION
+        docker tag backend $IMAGE_ID:$VERSION
+        docker push $IMAGE_ID:$VERSION
