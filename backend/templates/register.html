@@ -1,0 +1,33 @@
+{% extends "layouts/header.html" %}
+{% block contents %}
+    <!-- partial:index.partial.html -->
+        <div class="screen">
+            <div class="screen__content">
+                <form class="register" action="/register" method="POST">
+                    <div class="register__field">
+                        <i class="register__icon fas fa-user"></i>
+                        <input type="text" id="username-email" name="username-email" class="register__input" placeholder="User name / Email">
+                    </div>
+                    <div class="register__field">
+                        <i class="register__icon fas fa-lock"></i>
+                        <input type="password" name="password" id="password" class="register__input" placeholder="Password">
+                    </div>
+                    <div class="register__field">
+                        <i class="register__icon fas fa-lock"></i>
+                        <input type="password" name="repeat-password" id="repeat-password" class="register__input" placeholder="Repeat password">
+                    </div>
+                    <button class="button register__submit" type="submit">
+                        <span class="button__text">Sign Up</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    <!-- partial -->
+{% endblock %}
