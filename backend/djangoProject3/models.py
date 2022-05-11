@@ -2,8 +2,6 @@ from django.db import models
 import boto3
 import os
 import logging
-from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password, check_password
 import bcrypt
 
 from boto3.dynamodb.conditions import Key
@@ -71,31 +69,16 @@ def login_model(email, password):
         return 403
 
     try:
-        password_hashed = password.encode('utf-8')
-        # Generate salt
-        mySalt = bcrypt.gensalt()
-
-        # Hash password
+        # Get user
         response = table.get_item(
             Key={
                 'email': email
             }
         )
+
+        password_hashed = password.encode('utf-8')
         return bcrypt.checkpw(password_hashed, response['Item']['password'].encode('utf-8'))
 
-
     except Exception as e:
-        logger.error(
-            'Error adding item to database: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
-        return 403
+        print(e)
 
-    status = response['ResponseMetadata']['HTTPStatusCode']
-    if status == 200:
-        if 'Attributes' in response:
-            logger.error('Existing item updated to database.')
-            return 409
-        logger.error('New item added to database.')
-    else:
-        logger.error('Unknown error inserting item to database.')
-
-    return status

@@ -5,17 +5,26 @@
             <div class="screen__content">
                 <form class="register" action="/register" method="POST">
                     {% csrf_token %}
+                    {% if errors %}
+                        {% for error in errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if success %}
+                        {{ success }}
+                    {% endif %}
+
                     <div class="register__field">
                         <i class="register__icon fas fa-user"></i>
-                        <input type="text" id="email" name="email" class="register__input" placeholder="Email">
+                        <input type="text" id="email" name="email" class="register__input" required placeholder="Email">
                     </div>
                     <div class="register__field">
                         <i class="register__icon fas fa-lock"></i>
-                        <input type="password" name="password" id="password" class="register__input" placeholder="Password">
+                        <input type="password" name="password" id="password" class="register__input" required placeholder="Password">
                     </div>
                     <div class="register__field">
                         <i class="register__icon fas fa-lock"></i>
-                        <input type="password" name="repeat_password" id="repeat_password" class="register__input" placeholder="Repeat password">
+                        <input type="password" name="repeat_password" id="repeat_password" class="register__input" required placeholder="Repeat password">
                     </div>
                     <button class="button register__submit" type="submit">
                         <span class="button__text">Register</span>
