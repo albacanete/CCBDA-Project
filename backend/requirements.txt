@@ -1,0 +1,4 @@
+django
+validate_email
+bcrypt
+boto3
