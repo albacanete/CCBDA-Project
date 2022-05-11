@@ -51,8 +51,13 @@ def register(request):
             errors.append("The password repeated is not the same as the original one")
 
         if not errors:
-            register_model(email, password)
-            return render(request, 'register.html', {'success': "User registered!"})
+            status = register_model(email, password)
+            if not status:
+                return render(request, 'register.html', {'success': "User registered!"})
+            else:
+                for error in status:
+                    errors.append(error)
+                return render(request, 'register.html', {'errors': errors})
         else:
             return render(request, 'register.html', {'errors': errors})
 

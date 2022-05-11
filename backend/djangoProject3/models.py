@@ -15,6 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 def register_model(email, password):
+    errors = []
     try:
         dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID,
                                   aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
@@ -27,7 +28,6 @@ def register_model(email, password):
     try:
 
         password_hashed = password.encode('utf-8')
-        print(password_hashed)
         # Generate salt
         mySalt = bcrypt.gensalt()
 
@@ -48,13 +48,13 @@ def register_model(email, password):
     status = response['ResponseMetadata']['HTTPStatusCode']
     if status == 200:
         if 'Attributes' in response:
-            logger.error('Existing item updated to database.')
-            return 409
+            errors.append('User already registered!')
+
         logger.error('New item added to database.')
     else:
         logger.error('Unknown error inserting item to database.')
 
-    return status
+    return errors
 
 
 # Create your models here.
