@@ -98,18 +98,12 @@ Resources:
         Timeout: '5'
       SecurityGroups:
         - !GetAtt ELBSecurityGroup.GroupId
-  IPAddress:
-    Type: AWS::EC2::EIP
         
 Outputs:
   InstanceId:
     Description: InstanceId of the newly created EC2 instance
     Value:
       Ref: EC2Instance2
-  InstanceIPAddress:
-    Description: IP address of the newly created EC2 instance
-    Value:
-      Ref: IPAddress
   LoadBalancerURL:
     Description: Load Balancer's URL
     Value: !GetAtt LoadBalancerforEC2.DNSName
