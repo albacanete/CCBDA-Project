@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-#from .models import Leads
+# from .models import Leads
 from collections import Counter
 from django.core.exceptions import ValidationError
 from validate_email import validate_email
 
 from .models import *
+
 
 def home(request):
     if "email" in request.session:
@@ -13,7 +14,9 @@ def home(request):
     else:
         return redirect('/login')
 
+
 def login(request):
+    user = User()
     errors = []
     if request.method == 'GET':
         if "email" in request.session:
@@ -27,14 +30,16 @@ def login(request):
         if not validate_email(email):
             errors.append("Bad email format")
 
-        if login_model(email, password):
+        if user.login(email, password):
             request.session["email"] = str(email)
             return redirect('/')
         else:
             errors.append("Email or Password wrong!")
             return render(request, 'login.html', {'errors': errors})
 
+
 def register(request):
+    user = User()
     errors = []
     if request.method == 'GET':
         return render(request, 'register.html')
@@ -51,7 +56,7 @@ def register(request):
             errors.append("The password repeated is not the same as the original one")
 
         if not errors:
-            status = register_model(email, password)
+            status = user.register(email, password)
             if not status:
                 return render(request, 'register.html', {'success': "User registered!"})
             else:
@@ -62,9 +67,7 @@ def register(request):
             return render(request, 'register.html', {'errors': errors})
 
 
-
 def logout(request):
     if "email" in request.session:
         del request.session["email"]
         return redirect('/login')
-

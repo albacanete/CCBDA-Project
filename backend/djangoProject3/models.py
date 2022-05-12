@@ -14,71 +14,73 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 logger = logging.getLogger(__name__)
 
 
-def register_model(email, password):
-    errors = []
-    try:
-        dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID,
-                                  aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-        table = dynamodb.Table(USER_TABLE)
-    except Exception as e:
-        logger.error(
-        'Error connecting to database table: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
-        return 403
+class User(models.Model):
+    email = models.CharField(max_length=30)
+    password = models.CharField(max_length=60)
 
-    try:
+    def register(self, email, password):
+        errors = []
+        try:
+            dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID,
+                                      aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+            table = dynamodb.Table(USER_TABLE)
+        except Exception as e:
+            logger.error(
+                'Error connecting to database table: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
+            return 403
 
-        password_hashed = password.encode('utf-8')
-        # Generate salt
-        mySalt = bcrypt.gensalt()
+        try:
 
-        # Hash password
-        hash = bcrypt.hashpw(password_hashed, mySalt)
-        response = table.put_item(
-            Item={
-                'email': email,
-                'password': hash.decode('utf-8'),
-            },
-            ReturnValues='ALL_OLD',
-        )
-    except Exception as e:
-        logger.error(
-            'Error adding item to database: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
-        return 403
+            password_hashed = password.encode('utf-8')
+            # Generate salt
+            mySalt = bcrypt.gensalt()
 
-    status = response['ResponseMetadata']['HTTPStatusCode']
-    if status == 200:
-        if 'Attributes' in response:
-            errors.append('User already registered!')
+            # Hash password
+            hash = bcrypt.hashpw(password_hashed, mySalt)
+            response = table.put_item(
+                Item={
+                    'email': email,
+                    'password': hash.decode('utf-8'),
+                },
+                ReturnValues='ALL_OLD',
+            )
+        except Exception as e:
+            logger.error(
+                'Error adding item to database: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
+            return 403
 
-        logger.error('New item added to database.')
-    else:
-        logger.error('Unknown error inserting item to database.')
+        status = response['ResponseMetadata']['HTTPStatusCode']
+        if status == 200:
+            if 'Attributes' in response:
+                errors.append('User already registered!')
 
-    return errors
+            logger.error('New item added to database.')
+        else:
+            logger.error('Unknown error inserting item to database.')
 
+        return errors
 
-# Create your models here.
-def login_model(email, password):
-    try:
-        dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID,
-                                  aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-        table = dynamodb.Table(USER_TABLE)
-    except Exception as e:
-        logger.error(
-        'Error connecting to database table: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
-        return 403
+    # Create your models here.
+    def login(self, email, password):
+        try:
+            dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY_ID,
+                                      aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+            table = dynamodb.Table(USER_TABLE)
+        except Exception as e:
+            logger.error(
+                'Error connecting to database table: ' + (e.fmt if hasattr(e, 'fmt') else '') + ','.join(e.args))
+            return 403
 
-    try:
-        # Get user
-        response = table.get_item(
-            Key={
-                'email': email
-            }
-        )
+        try:
+            # Get user
+            response = table.get_item(
+                Key={
+                    'email': email
+                }
+            )
 
-        password_hashed = password.encode('utf-8')
-        return bcrypt.checkpw(password_hashed, response['Item']['password'].encode('utf-8'))
+            password_hashed = password.encode('utf-8')
+            return bcrypt.checkpw(password_hashed, response['Item']['password'].encode('utf-8'))
 
-    except Exception as e:
-        print(e)
-
+        except Exception as e:
+            print(e)
