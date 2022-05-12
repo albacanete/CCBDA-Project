@@ -3,6 +3,7 @@ import boto3
 import os
 import logging
 import bcrypt
+import uuid
 
 from boto3.dynamodb.conditions import Key
 
@@ -13,10 +14,10 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
 logger = logging.getLogger(__name__)
 
-
 class User(models.Model):
-    email = models.CharField(max_length=30)
-    password = models.CharField(max_length=60)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    email = models.EmailField()
+    password = models.CharField(max_length=100)
 
     def register(self, email, password):
         errors = []
@@ -84,3 +85,42 @@ class User(models.Model):
 
         except Exception as e:
             print(e)
+
+class Parameters(models.Model):
+    #id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    pass
+
+class Request(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    datetime = models.DateTimeField()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    #parameter_id = models.ForeignKey()
+
+class League(models.Model):
+    name = models.CharField(max_length=30)
+    country = models.CharField(max_length=30)
+
+class Team(models.Model):
+    name = models.CharField(primary_key=True, max_length=30)
+    avg_age = models.PositiveIntegerField()
+    squad_value = models.PositiveBigIntegerField()
+    year = models.PositiveIntegerField()
+
+class Players(models.Model):
+    name = models.CharField(max_length=30)
+    age = models.IntegerField()
+    role = models.CharField(max_length=30)
+    value = models.PositiveBigIntegerField()
+    squad = models.CharField(max_length=30)
+    year = models.PositiveIntegerField()
+    games = models.PositiveIntegerField()
+    goals = models.PositiveIntegerField()
+    assists = models.PositiveIntegerField()
+    minutes = models.PositiveIntegerField()
+
+    # Make two unique fields in the table
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['name', 'squad'], name='players_constraint')
+        ]
+

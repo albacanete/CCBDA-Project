@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ccbda_project.apps.CcbdaProjectConfig',
-    'rest_framework',
+    #'rest_framework',
     'djangoProject3',
 ]
 
