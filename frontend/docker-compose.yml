@@ -1,0 +1,20 @@
+version: '1.0'
+
+networks:
+  frontend:
+    external: true
+
+services:
+  web:
+    image: ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}
+    hostname: web
+    volumes:
+      - ${SSL_KEY_LOCATION}:/etc/ssl/privkey.pem # [Docker-ref] Need to change it
+      - ${SSL_CERT_LOCATION}:/etc/ssl/fullchain.pem # [Docker-ref] Need to change it
+    networks:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - .envs/.web.env # [Docker-ref] Need to add .envs (Not sure)

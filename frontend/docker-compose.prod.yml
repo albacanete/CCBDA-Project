@@ -1,0 +1,8 @@
+version: '1.0'
+
+
+services:
+  web:
+    image: ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}
+    volumes:
+      - ./nginx-default.tmpl:/etc/nginx/conf.d/nginx-default.tmpl
