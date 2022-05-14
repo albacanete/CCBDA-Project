@@ -166,6 +166,10 @@ Resources:
         Properties:
             Priority: "1"
             ListenerArn: !Ref ALBListener
+            Conditions:
+                -   Field: "host-header"
+                    Values:
+                        - "test2.blog.com"
             Actions:
                 -   Type: "forward"
                     TargetGroupArn: !Ref EC2TargetGroup
