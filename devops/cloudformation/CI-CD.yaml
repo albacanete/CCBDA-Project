@@ -36,7 +36,7 @@ Parameters:
     EBSRootVolumeSize:
         Description: Which size are the EC2 instances root volumes?
         Type: Number
-        Default: 80
+        Default: 20
     VPC:
         Description: The vpc to launch the service
         Type: 'AWS::EC2::VPC::Id'
@@ -44,7 +44,10 @@ Parameters:
         Description: Subnet 1 of the ALB
         Type: 'AWS::EC2::Subnet::Id'
     Subnet2:
-        Description: Subnet 1 of the ALB
+        Description: Subnet 2 of the ALB
+        Type: 'AWS::EC2::Subnet::Id'
+    Subnet3:
+        Description: Subnet 3 of the ALB
         Type: 'AWS::EC2::Subnet::Id'
 Resources:
     EC2Instance2:
@@ -133,6 +136,7 @@ Resources:
             Subnets:
                 - !Ref Subnet1
                 - !Ref Subnet2
+                - !Ref Subnet3
     ALBListener:
         Type: "AWS::ElasticLoadBalancingV2::Listener"
         Properties:
@@ -155,6 +159,8 @@ Resources:
             HealthCheckTimeoutSeconds: 5
             UnhealthyThresholdCount: 2
             TargetType: "instance"
+            Targets:
+                - Id: !Ref EC2Instance2
             Matcher:
                 HttpCode: "200"
             HealthyThresholdCount: 5
@@ -169,7 +175,7 @@ Resources:
             Conditions:
                 -   Field: "host-header"
                     Values:
-                        - "test2.blog.com"
+                        - "teamcity-ccbda.com"
             Actions:
                 -   Type: "forward"
                     TargetGroupArn: !Ref EC2TargetGroup
