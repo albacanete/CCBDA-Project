@@ -44,4 +44,4 @@ So yes, we think that this research topic only goes a little further with AWS La
 
 ### Conclusions
 
-Making an evaluation on the three aspects, we come to the conclusion to grade this research topic with a **9**.
+Making an evaluation on the three aspects, we come to the conclusion to grade this research topic with a **9.25**.
