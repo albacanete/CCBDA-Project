@@ -1,0 +1,197 @@
+---
+Parameters:
+    InstanceType:
+        Description: WebServer EC2 instance type
+        Type: String
+        Default: t2.micro
+        AllowedValues:
+            - t3.nano
+            - t3.micro
+            - t3.small
+            - t3.medium
+            - t3.large
+            - t3.xlarge
+            - t3.2xlarge
+            - t1.micro
+            - t2.nano
+            - t2.micro
+            - t2.small
+            - t2.medium
+            - t2.large
+        ConstraintDescription: must be a valid EC2 instance type.
+    KeyName:
+        Description: Key Pair for EC2
+        Type: 'AWS::EC2::KeyPair::KeyName'
+    SshIp:
+        Description: IP which EC2 instance will allow the ssh connection
+        Type: String
+        MinLength: '9'
+        MaxLength: '18'
+        Default: 0.0.0.0/0
+        AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+        ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+    SecurityGroupDescription:
+        Description: Security Group Description
+        Type: String
+    EBSRootVolumeSize:
+        Description: Which size are the EC2 instances root volumes?
+        Type: Number
+        Default: 20
+    VPC:
+        Description: The vpc to launch the service
+        Type: 'AWS::EC2::VPC::Id'
+    Subnet1:
+        Description: Subnet 1 of the ALB
+        Type: 'AWS::EC2::Subnet::Id'
+    Subnet2:
+        Description: Subnet 2 of the ALB
+        Type: 'AWS::EC2::Subnet::Id'
+    Subnet3:
+        Description: Subnet 3 of the ALB
+        Type: 'AWS::EC2::Subnet::Id'
+Resources:
+    EC2Instance2:
+        Type: AWS::EC2::Instance
+        Properties:
+            AvailabilityZone: eu-west-1a
+            ImageId: ami-07d8796a2b0f8d29c
+            InstanceType:
+                Ref: InstanceType
+            SecurityGroups:
+                - !Ref EC2SecurityGroup
+            KeyName: !Ref KeyName
+            UserData:
+              !Base64 |
+                #!/bin/bash -xe
+                # Install docker
+                sudo apt-get -y update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release >> /var/log/user-data.log
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg >> /var/log/user-data.log
+                echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+                sudo apt-get -y update && sudo apt-get -y install docker-ce docker-ce-cli containerd.io  >> /var/log/user-data.log
+                sudo usermod -aG docker ubuntu >> /var/log/user-data.log
+
+                # Limit Docker logs
+                printf '{\n\t"log-driver": "json-file",\n\t"log-opts": {\n\t\t"max-size": "50m",\n\t\t"max-file": "2"\n\t}\n}' > /etc/docker/daemon.json
+                systemctl restart docker >> /var/log/user-data.log
+
+                # Create docker network
+                docker network create --gateway 172.32.0.1 --subnet 172.32.0.0/16 project >> /var/log/user-data.log
+
+                # Install docker-compose
+                sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose >> /var/log/user-data.log
+                sudo chmod +x /usr/local/bin/docker-compose >> /var/log/user-data.log
+
+                # Clone git repo
+                git clone https://github.com/albacg5/CCBDA-devops.git
+                mv /CCBDA-devops /home/ubuntu/CCBDA-devops
+                sudo chown -R ubuntu:ubuntu /home/ubuntu/CCBDA-devops
+                cd /home/ubuntu/CCBDA-devops/teamcity && docker-compose up -d
+
+            BlockDeviceMappings:
+                -   DeviceName: '/dev/sda1'
+                    Ebs:
+                        VolumeType: gp2
+                        DeleteOnTermination: "true"
+                        VolumeSize: !Ref EBSRootVolumeSize
+
+    # security group
+    ELBSecurityGroup:
+        Type: AWS::EC2::SecurityGroup
+        Properties:
+            GroupDescription: ELB Security Group
+            SecurityGroupIngress:
+                -   IpProtocol: tcp
+                    FromPort: 80
+                    ToPort: 80
+                    CidrIp: 0.0.0.0/0
+
+    EC2SecurityGroup:
+        Type: AWS::EC2::SecurityGroup
+        Properties:
+            GroupDescription: !Ref SecurityGroupDescription
+            SecurityGroupIngress:
+                -   IpProtocol: tcp
+                    FromPort: 8111
+                    ToPort: 8111
+                    SourceSecurityGroupId:
+                        Fn::GetAtt:
+                            - ELBSecurityGroup
+                            - GroupId
+                -   IpProtocol: tcp
+                    FromPort: 22
+                    ToPort: 22
+                    CidrIp:
+                        Ref: SshIp
+
+    # Load Balancer for EC2
+    LoadBalancerforEC2:
+        Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+        Properties:
+            Name: "teamcity"
+            Scheme: "internet-facing"
+            Type: "application"
+            SecurityGroups:
+                - !GetAtt ELBSecurityGroup.GroupId
+            IpAddressType: "ipv4"
+            Subnets:
+                - !Ref Subnet1
+                - !Ref Subnet2
+                - !Ref Subnet3
+    ALBListener:
+        Type: "AWS::ElasticLoadBalancingV2::Listener"
+        Properties:
+            LoadBalancerArn: !Ref LoadBalancerforEC2
+            Port: 80
+            Protocol: "HTTP"
+            DefaultActions:
+                -   Order: 1
+                    TargetGroupArn: !Ref EC2TargetGroup
+                    Type: "forward"
+    EC2TargetGroup:
+        Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+        Properties:
+            HealthCheckIntervalSeconds: 30
+            HealthCheckPath: "/"
+            Port: 8111
+            Protocol: "HTTP"
+            HealthCheckPort: "traffic-port"
+            HealthCheckProtocol: "HTTP"
+            HealthCheckTimeoutSeconds: 5
+            UnhealthyThresholdCount: 2
+            TargetType: "instance"
+            Targets:
+                - Id: !Ref EC2Instance2
+            Matcher:
+                HttpCode: "200"
+            HealthyThresholdCount: 5
+            Name: "ec2-8111"
+            HealthCheckEnabled: true
+            VpcId: !Ref VPC
+    ALBListenerRule:
+        Type: "AWS::ElasticLoadBalancingV2::ListenerRule"
+        Properties:
+            Priority: "1"
+            ListenerArn: !Ref ALBListener
+            Conditions:
+                -   Field: "host-header"
+                    Values:
+                        - "teamcity-ccbda.com"
+            Actions:
+                -   Type: "forward"
+                    TargetGroupArn: !Ref EC2TargetGroup
+                    Order: 1
+                    ForwardConfig:
+                        TargetGroups:
+                            -   TargetGroupArn: !Ref EC2TargetGroup
+                                Weight: 1
+                        TargetGroupStickinessConfig:
+                            Enabled: false
+
+Outputs:
+    InstanceId:
+        Description: InstanceId of the newly created EC2 instance
+        Value:
+            Ref: EC2Instance2
+    LoadBalancerURL:
+        Description: Load Balancer's URL
+        Value: !GetAtt LoadBalancerforEC2.DNSName
