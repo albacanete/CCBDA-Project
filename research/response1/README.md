@@ -22,15 +22,13 @@ Overall, the quality of the written part is very clear and has a good presentati
 
 The tasks are explained with a lot of detail, going step by step. That is really good if the tutorial is addressed to a nonspecialist audience, which is not the case. So we think some redundant steps could be skipped.
 
-While following the tutorial, we've faced many errors:
+We got an error when following the tutorial:
 
 - The first Lambda function didn't add the S3 bucket, returned an error, so we had to added manually.
-- Some commands not work on Windows, and the tutorial does not specify which O.S. is required.
-- Tutorial does not warn us to change the google_cloud_key in some copy/paste code step.
-- Some errors when adding a new role in the Lambda function creation, we couldn't create the function, so we had to research a bit. It seems there is a race between IAM creating the rol and Lambda using this same role on the Lambda function. The solution was to wait a few minutes.
-- Task 5 gave us an internal server error.
 
-Also, a minor issue is that we saw some wrong links, like the "sample@@@@@file" one.
+#### Presentation
+
+Moreover, another aspect that we evaluate inside the quality aspect is the presentation, that in their case it was really well presented. They have answered each question very clearly, and the slides followed a good structure.
 
 ### Complexity of the topic
 
@@ -46,4 +44,4 @@ So yes, we think that this research topic only goes a little further with AWS La
 
 ### Conclusions
 
-Making an evaluation on the three aspects, we come to the conclusion to grade this research topic with a **7**.
+Making an evaluation on the three aspects, we come to the conclusion to grade this research topic with a **9**.
