@@ -97,7 +97,7 @@ class Request(models.Model):
 """
 class Team_Status(models.Model):
     nameTeam = models.CharField(max_length=50)
-    #nameLeague = models.CharField(max_length=50)
+    nameLeague = models.CharField(max_length=50)
     year = models.PositiveIntegerField()
     avgAge= models.FloatField()
     valueTeam = models.BigIntegerField()
@@ -106,10 +106,10 @@ class Team_Status(models.Model):
 class Player_Status(models.Model):
     namePlayer = models.CharField(max_length=50)
     nameTeam = models.CharField(max_length=50)
+    nameLeague = models.CharField(max_length=50)
     age = models.IntegerField()
     year = models.PositiveIntegerField()
     valuePlayer = models.BigIntegerField()
-    #nameLeague = models.CharField(max_length=50)
     role = models.CharField(max_length=100)
     games = models.PositiveIntegerField()
     goals = models.PositiveIntegerField()

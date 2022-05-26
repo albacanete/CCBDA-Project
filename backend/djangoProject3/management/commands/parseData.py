@@ -21,7 +21,8 @@ class Command(BaseCommand):
                     print("avgAge")
                 valueTeam = i['squad_value']
                 numberPlayers = i['number_players']
-                Team_Status.objects.create(nameTeam = nameTeam, year = year,avgAge= avgAge,valueTeam = valueTeam, numberPlayers = numberPlayers)
+                championship=i['championship']
+                Team_Status.objects.create(nameTeam = nameTeam, nameLeague= championship, year = year,avgAge= avgAge,valueTeam = valueTeam, numberPlayers = numberPlayers)
             #Player
             elif (len(i) >9):
                 namePlayer=i['name_player']
@@ -32,6 +33,7 @@ class Command(BaseCommand):
                 nameTeam = i['squad_name']
                 games=i['games_played']
                 minutes = i['minute_played']
+                championship = i['championship']
                 if(i['role']=="Goalkeeper"):
                     cleanSheets=i['clean_sheets']
                     goalsConceded = i['goals_conceded']
@@ -41,9 +43,10 @@ class Command(BaseCommand):
                     cleanSheets = 0
                     goalsConceded = 0
                     goals =i['goals']
-                    assists = i['assits']
+                    assists = i['assists']
                 Player_Status.objects.create(namePlayer = namePlayer,
                                             nameTeam = nameTeam,
+                                            nameLeague= championship,
                                             age = age,
                                             year = year,
                                             valuePlayer = valuePlayer,

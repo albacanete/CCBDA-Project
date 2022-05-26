@@ -42,7 +42,7 @@ class TransfermarktSpider(scrapy.Spider):
                 elif championship == "bundesliga":
                     link = "https://www.transfermarkt.com/" + championship + "/startseite/wettbewerb/L1/saison_id/" + str(i)
                 if link != "":
-                    yield response.follow(link, callback=self.parse_squad_in_a_championship, dont_filter = True, meta={'year': i})
+                    yield response.follow(link, callback=self.parse_squad_in_a_championship, dont_filter = True, meta={'year': i, 'championship': championship})
                 pass
 
     def parse_squad_in_a_championship(self, response):
@@ -64,11 +64,12 @@ class TransfermarktSpider(scrapy.Spider):
                         'squad_value': money,
                         'year': response.meta['year'],
                         'number_players': int(number_players),
+                        'championship': response.meta['championship']
                     }
                     link = "https://www.transfermarkt.com" + link_squad
                     yield response.follow(link,
                                           callback=self.parse_player_in_a_team, dont_filter = True,
-                                          meta={'squad_name': name_squad, 'year': response.meta['year']})
+                                          meta={'squad_name': name_squad, 'year': response.meta['year'], 'championship': response.meta['championship']})
                 pass
 
     def parse_player_in_a_team(self, response):
@@ -96,7 +97,7 @@ class TransfermarktSpider(scrapy.Spider):
                                       callback=self.parse_bio_player, dont_filter = True,
                                       meta={'player_name': name_player, 'age': birthday, 'role': role,
                                             'value_player': money, 'squad_name': response.meta['squad_name'],
-                                            'year': response.meta['year']})
+                                            'year': response.meta['year'], 'championship': response.meta['championship']})
             pass
 
     def parse_bio_player(self, response):
@@ -152,6 +153,7 @@ class TransfermarktSpider(scrapy.Spider):
                     'goals_conceded': goals_conceded,
                     'clean_sheets': clean_sheets,
                     'minute_played': minute_played,
+                    'championship': response.meta['championship'],
                 }
             else:
                 yield {
@@ -165,5 +167,6 @@ class TransfermarktSpider(scrapy.Spider):
                     'goals': goals,
                     'assists': assists,
                     'minute_played': minute_played,
+                    'championship': response.meta['championship'],
                 }
             pass
