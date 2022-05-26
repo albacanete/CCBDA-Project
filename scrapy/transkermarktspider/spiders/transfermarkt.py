@@ -24,11 +24,10 @@ class TransfermarktSpider(scrapy.Spider):
     start_urls = ['https://www.transfermarkt.com/']
 
     def parse(self, response):
-        #championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]
-        championships = ["bundesliga"]
+        championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]
 
         for championship in championships:
-            for i in range(2010, 2013):
+            for i in range(2010, 2022):
                 link = ""
                 if championship == "serie-a":
                     link = "https://www.transfermarkt.com/" + championship + "/startseite/wettbewerb/IT1/saison_id/" + str(i)
@@ -119,8 +118,10 @@ class TransfermarktSpider(scrapy.Spider):
             stats = a_table.css("td[class='zentriert'] ::text").extract()
             minute_played_t = a_table.css("td[class='rechts'] ::text").extract()
 
-            if minute_played_t != '-' and minute_played_t:
+            try:
                 minute = int(re.sub("[^0-9]", "", minute_played_t[1]))
+            except:
+                minute=0
             games_played_t = 0
             goals_t = 0
             assists_t = 0
@@ -130,7 +131,7 @@ class TransfermarktSpider(scrapy.Spider):
                 games_played_t = int(stats[0])
             if response.meta['role'] != "Goalkeeper":
                 if stats[1] != '-' and stats[1] != '-/-/-':
-                    goals_conceded = int(stats[1])
+                    goals_t = int(stats[1])
                 if stats[2] != '-' and stats[2] != '-/-/-':
                     assists_t = int(stats[2])
             else:
@@ -142,7 +143,7 @@ class TransfermarktSpider(scrapy.Spider):
             if games_played_t > 0:
                 games_played = games_played + games_played_t
             if goals_t > 0:
-                goals = games_played + goals_t
+                goals = goals + goals_t
             if assists_t > 0:
                 assists = assists + assists_t
             if minute > 0:
