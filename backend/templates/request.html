@@ -40,12 +40,49 @@
 
                   <h5 class="card-title">Creation model <span>/Select all the options to create the model</span></h5>
                   <!-- BEGIN:Values to select -->
-                  <select class="form-select" aria-label="Default select example">
-                      <option selected="">Selection menu</option>
-                      <option value="1">Value of a player</option>
-                      <option value="2">Value of a squad</option>
-                      <option value="3">...</option>
-                    </select>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <select class="form-select" aria-label="Default select example" id="target_model_1" onchange="selectFunction(this)">
+                          <option selected="" value="-1">Select target for the model</option>
+                          <option value="player">Value of a player</option>
+                          <option value="squad">Value of a squad</option>
+                          <option value="last-target">...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                      <!-- championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]-->
+                      <select class="form-select" aria-label="Default select example" id="target_model_2" style="display:none;" onchange="selectFunction(this)">
+                          <option selected="" value="-1">Select championship</option>
+                          <option value="serie_a">Serie-a</option>
+                          <option value="premier_league">Premier-league</option>
+                          <option value="primera_division">Primera-division</option>
+                          <option value="ligue_1">Ligue-1</option>
+                          <option value="bundesliga">Bundesliga</option>
+                        </select>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <select class="form-select" aria-label="Default select example" id="target_model_3" style="display:none;" onchange="selectFunction(this)">
+                        <option selected="" value="-1">Select squad</option>
+                        <option value="milan">Milan</option>
+                        <option value="barca">Barça</option>
+                        <option value="last-squad">...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <select class="form-select" aria-label="Default select example" id="target_model_4" style="display:none;" onchange="selectFunction(this)">
+                        <option selected="" value="-1">Select player</option>
+                        <option value="lionel_messi">Lionel Messi</option>
+                        <option value="cristiano_ronaldo">Cristiano Ronaldo</option>
+                        <option value="last-player">...</option>
+                      </select>
+                    </div>
+                  </div>
+
+
                   <!-- END:Values to select -->
 
                   <!-- Line Chart -->
