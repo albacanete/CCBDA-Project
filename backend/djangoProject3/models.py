@@ -109,8 +109,8 @@ class Player(models.Model):
     name = models.CharField(max_length=50)
 
 class Team_Status(models.Model):
-    id_team = models.ForeignKey(Team, on_delete=models.CASCADE())
-    id_league = models.ForeignKey(League, on_delete=models.CASCADE())
+    id_team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    id_league = models.ForeignKey(League, on_delete=models.CASCADE)
     year = models.PositiveIntegerField()
     value_team = models.PositiveBigIntegerField()
     number_players = models.PositiveIntegerField()
@@ -125,8 +125,8 @@ class Team_Status(models.Model):
 
 class Player_Status(models.Model):
     id_stats_player = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    id_player = models.ForeignKey(Player, on_delete=models.CASCADE())
-    id_team = models.ForeignKey(Team, on_delete=models.CASCADE())
+    id_player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    id_team = models.ForeignKey(Team, on_delete=models.CASCADE)
     value_player = models.PositiveBigIntegerField()
     year = models.PositiveIntegerField()
     role = models.CharField(max_length=100)
@@ -140,7 +140,7 @@ class Player_Status(models.Model):
 
 
 class Stats_Player(models.Model):
-    id_stats_player= models.ForeignKey(Player_Status, on_delete=models.CASCADE())
+    id_stats_player= models.ForeignKey(Player_Status, on_delete=models.CASCADE)
     year = models.PositiveIntegerField()
     games = models.PositiveIntegerField()
     goals = models.PositiveIntegerField()
