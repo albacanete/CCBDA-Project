@@ -54,16 +54,19 @@ class TransfermarktSpider(scrapy.Spider):
         squads = a_table.css("tr[class='odd']") + a_table.css("tr[class='even']")
         for squad in squads:
             name_squad = cleanString(squad.css("td[class='hauptlink no-border-links'] a::text").extract_first())
-            avg_age = squad.css("td[class='zentriert'] ::text").extract_first()
+            avg_age_set = squad.css("td[class='zentriert'] ::text").extract()
+            number_players=avg_age_set[0]
+            avg_age=avg_age_set[1]
             squad_value = cleanString(squad.css("td[class='rechts'] a::text").extract_first())
             money=self.change_money(squad_value)
             link_squad = squad.css("td[class='hauptlink no-border-links'] a::attr(href)").extract_first()
             if(name_squad):
                 yield {
                     'squad_name': name_squad,
-                    'avg_age': avg_age,
+                    'avg_age': float(avg_age),
                     'squad_value': money,
                     'year': response.meta['year'],
+                    'number_players': int(number_players),
                 }
                 link="https://www.transfermarkt.com"+link_squad
                 request_player = response.follow(link,
@@ -108,20 +111,27 @@ class TransfermarktSpider(scrapy.Spider):
             minute=0
             stats=a_table.css("td[class='zentriert'] ::text").extract()
             minute_played_t = a_table.css("td[class='rechts'] ::text").extract()
-            if(response.meta['player_name']=="Rayan Souici"):
-                print("ciao")
+
             if(minute_played_t!='-' and minute_played_t):
                 minute = int(re.sub("[^0-9]", "", minute_played_t[1]))
             games_played_t = 0
             goals_t = 0
             assists_t = 0
+            goals_conceded=0
+            clean_sheets=0
             if (stats[0] != '-' and stats[0]!= '-/-/-'):
                 games_played_t=int(stats[0])
             if(response.meta['role'] !="Goalkeeper"):
                 if (stats[1]!= '-' and stats[1]!= '-/-/-' ):
-                    goals_t = int(stats[1])
+                    goals_conceded = int(stats)
                 if (stats[2] != '-' and stats[2]!= '-/-/-'):
                     assists_t = int(stats[2])
+            else:
+                if (stats[3] != '-' and stats[3] != '-/-/-'):
+                    goals_conceded = int(stats[3])
+                if (stats[4] != '-' and stats[4] != '-/-/-'):
+                    clean_sheets = int(stats[4])
+
 
             if(games_played_t>0):
                 games_played=games_played+games_played_t
@@ -131,18 +141,32 @@ class TransfermarktSpider(scrapy.Spider):
                 assists = assists + assists_t
             if (minute>0):
                 minute_played = minute_played + minute
-            yield {
-                'name_player': response.meta['player_name'],
-                'age': response.meta['age'],
-                'role' : response.meta['role'],
-                'value_player': response.meta['value_player'],
-                'squad_name': response.meta['squad_name'],
-                'year': response.meta['year'],
-                'games_played': games_played,
-                'goals': goals,
-                'assits': assists,
-                'minute_played': minute_played,
-            }
+            if (response.meta['role'] == "Goalkeeper"):
+                yield {
+                    'name_player': response.meta['player_name'],
+                    'age': response.meta['age'],
+                    'role' : response.meta['role'],
+                    'value_player': response.meta['value_player'],
+                    'squad_name': response.meta['squad_name'],
+                    'year': response.meta['year'],
+                    'games_played': games_played,
+                    'goals_conceded': goals_conceded,
+                    'clean_sheets': clean_sheets,
+                    'minute_played': minute_played,
+                }
+            else:
+                yield {
+                    'name_player': response.meta['player_name'],
+                    'age': response.meta['age'],
+                    'role': response.meta['role'],
+                    'value_player': response.meta['value_player'],
+                    'squad_name': response.meta['squad_name'],
+                    'year': response.meta['year'],
+                    'games_played': games_played,
+                    'goals': goals,
+                    'assits': assists,
+                    'minute_played': minute_played,
+                }
 
 
 
