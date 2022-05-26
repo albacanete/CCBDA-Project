@@ -14,8 +14,7 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 """
 logger = logging.getLogger(__name__)
 
-class User(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+"""class User(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=100)
 
@@ -91,64 +90,30 @@ class Parameters(models.Model):
     pass
 
 class Request(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     datetime = models.DateTimeField()
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     #parameter_id = models.ForeignKey()
 
-class League(models.Model):
-    id_league = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=50)
-
-class Team(models.Model):
-    id_team = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=50)
-
-class Player(models.Model):
-    id_player = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=50)
-
+"""
 class Team_Status(models.Model):
-    id_team = models.ForeignKey(Team, on_delete=models.CASCADE)
-    id_league = models.ForeignKey(League, on_delete=models.CASCADE)
+    nameTeam = models.CharField(max_length=50)
+    #nameLeague = models.CharField(max_length=50)
     year = models.PositiveIntegerField()
-    value_team = models.PositiveBigIntegerField()
-    number_players = models.PositiveIntegerField()
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['idTeam', 'year'], name='unique_idTeam_year_combination'
-            )
-        ]
-
+    avgAge= models.FloatField()
+    valueTeam = models.BigIntegerField()
+    numberPlayers = models.PositiveIntegerField()
 
 class Player_Status(models.Model):
-    id_stats_player = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    id_player = models.ForeignKey(Player, on_delete=models.CASCADE)
-    id_team = models.ForeignKey(Team, on_delete=models.CASCADE)
-    value_player = models.PositiveBigIntegerField()
+    namePlayer = models.CharField(max_length=50)
+    nameTeam = models.CharField(max_length=50)
+    age = models.IntegerField()
     year = models.PositiveIntegerField()
+    valuePlayer = models.BigIntegerField()
+    #nameLeague = models.CharField(max_length=50)
     role = models.CharField(max_length=100)
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['id_player', 'year', 'id_team'], name='unique_idPlayer_year_idTeam_combination'
-            )
-        ]
-
-
-class Stats_Player(models.Model):
-    id_stats_player= models.ForeignKey(Player_Status, on_delete=models.CASCADE)
-    year = models.PositiveIntegerField()
     games = models.PositiveIntegerField()
     goals = models.PositiveIntegerField()
     assists = models.PositiveIntegerField()
     minutes = models.PositiveIntegerField()
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['id_stats_player', 'year'], name='unique_idStatsPlayer_year_idTeam_combination'
-            )
-        ]
+    goalsConceded = models.PositiveIntegerField()
+    cleanSheets = models.PositiveIntegerField()

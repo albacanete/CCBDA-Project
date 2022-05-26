@@ -163,7 +163,7 @@ class TransfermarktSpider(scrapy.Spider):
                     'year': response.meta['year'],
                     'games_played': games_played,
                     'goals': goals,
-                    'assits': assists,
+                    'assists': assists,
                     'minute_played': minute_played,
                 }
             pass
