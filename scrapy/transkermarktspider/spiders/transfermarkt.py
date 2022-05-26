@@ -14,6 +14,9 @@ def change_money(money):
         elif money[-1] == ".":
             money = float(money.split("T")[0])
             money = int(money * 1000)
+        elif money[-1] == "n":
+            money = float(money.split("b")[0])
+            money = int(money * 1000000000)
         return money
     return 0
 
@@ -25,7 +28,6 @@ class TransfermarktSpider(scrapy.Spider):
 
     def parse(self, response):
         championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]
-
         for championship in championships:
             for i in range(2010, 2022):
                 link = ""
