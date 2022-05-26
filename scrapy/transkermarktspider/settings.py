@@ -15,11 +15,6 @@ NEWSPIDER_MODULE = 'transkermarktspider.spiders'
 USER_AGENT='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
 LOG_ENABLED = False
 
-CONCURRENT_REQUESTS = 100
-CONCURRENT_REQUESTS_PER_DOMAIN = 100
-AUTOTHROTTLE_ENABLED = False
-DOWNLOAD_TIMEOUT = 30
-
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
