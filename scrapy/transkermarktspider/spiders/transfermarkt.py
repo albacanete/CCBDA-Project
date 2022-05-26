@@ -91,7 +91,7 @@ class TransfermarktSpider(scrapy.Spider):
             name_link = link_player.split("/")[1]
             id_link = link_player.split("/")[4]
             create_link = "https://www.transfermarkt.com/" + name_link + "/leistungsdatendetails/spieler/" + id_link + "/plus/0?saison=" + \
-                          response.meta['year'] + "&verein=&liga=&wettbewerb=&pos=&trainer_id="
+                          str(response.meta['year']) + "&verein=&liga=&wettbewerb=&pos=&trainer_id="
             """if (name_player):
                 yield {
                     'name_player': name_player,
