@@ -7,6 +7,20 @@ from validate_email import validate_email
 
 from .models import *
 
+def page_not_found_view(request, exception):
+    return render(request, 'pages-error-404.html', status=404)
+
+def request(request):
+    if "email" in request.session:
+        return render(request, 'request.html')
+    else:
+        return redirect('/login')
+
+def history(request):
+    if "email" in request.session:
+        return render(request, 'history.html')
+    else:
+        return redirect('/login')
 
 def home(request):
     if "email" in request.session:
