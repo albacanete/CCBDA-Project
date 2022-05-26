@@ -12,19 +12,45 @@ def page_not_found_view(request, exception):
 
 def request(request):
     if "email" in request.session:
-        return render(request, 'request.html')
+        return render(request, 'request.html', {'request_nav': True})
     else:
         return redirect('/login')
 
 def history(request):
     if "email" in request.session:
-        return render(request, 'history.html')
+        return render(request, 'history.html', {'history_nav': True})
+    else:
+        return redirect('/login')
+
+def user_profile(request):
+    if "email" in request.session:
+        if request.method == 'POST':
+            user = User()
+            errors = []
+            email = request.session.get('email')
+            password = request.POST.get('password')
+            new_password = request.POST.get('new_password')
+            repeated_new_password = request.POST.get('repeated_new_password')
+
+            if user.login(email, password):
+                if new_password != repeated_new_password:
+                    errors.append("The password repeated is not the same")
+            else:
+                errors.append("Current password wrong!")
+
+            if not errors:
+                #status = user.changedPassword(email, new_password)
+                return render(request, 'users-profile.html', {'success': "Password changed!"})
+            else:
+                return render(request, 'users-profile.html', {'errors': errors})
+        else:
+            return render(request, 'users-profile.html')
     else:
         return redirect('/login')
 
 def home(request):
     if "email" in request.session:
-        return render(request, 'home.html')
+        return render(request, 'home.html', {'home_nav': True})
     else:
         return redirect('/login')
 

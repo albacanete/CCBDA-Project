@@ -28,7 +28,9 @@ urlpatterns = [
     path('login', views.login, name='login'),
     path('logout', views.logout, name='logout'),
     path('register', views.register, name='register'),
-    path('request', views.request, name="request")
+    path('request', views.request, name="request"),
+    path('user_profile', views.user_profile, name="user_profile"),
+    path('history', views.history, name="history")
 ]
 
 handler404 = "djangoProject3.views.page_not_found_view"
