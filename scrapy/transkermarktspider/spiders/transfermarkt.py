@@ -79,26 +79,16 @@ class TransfermarktSpider(scrapy.Spider):
             try:
                 birthday = int(player.css("td[class ='zentriert'] ::text").extract_first().split("(")[1].split(")")[0])
             except:
-                birthday = 0
-
-            try:
-                value_player = cleanString(player.css("td[class='rechts hauptlink'] a::text").extract_first())
-                money = change_money(value_player)
-            except:
-                value_player = 0
+                birthday = -1
+            value_player = cleanString(player.css("td[class='rechts hauptlink'] a::text").extract_first())
+            money = change_money(value_player)
+            if(money==0):
+                money=-1
             link_player = player.css("span[class='hide-for-small'] a::attr(href)").extract_first()
             name_link = link_player.split("/")[1]
             id_link = link_player.split("/")[4]
             create_link = "https://www.transfermarkt.com/" + name_link + "/leistungsdatendetails/spieler/" + id_link + "/plus/0?saison=" + \
                           str(response.meta['year']) + "&verein=&liga=&wettbewerb=&pos=&trainer_id="
-            """if (name_player):
-                yield {
-                    'name_player': name_player,
-                    'birthday': birthday,
-                    'value_player': value_player,
-                    'squad_name': response.meta['squad_name'],
-                    'year': response.meta['year'],
-                }"""
             if name_player:
                 yield response.follow(create_link,
                                       callback=self.parse_bio_player, dont_filter = True,
@@ -121,7 +111,7 @@ class TransfermarktSpider(scrapy.Spider):
             try:
                 minute = int(re.sub("[^0-9]", "", minute_played_t[1]))
             except:
-                minute=0
+                minute= -1
             games_played_t = 0
             goals_t = 0
             assists_t = 0
