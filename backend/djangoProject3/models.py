@@ -6,12 +6,12 @@ import bcrypt
 import uuid
 
 from boto3.dynamodb.conditions import Key
-
+"""
 USER_TABLE = os.environ['USER_TABLE']
 AWS_REGION = os.environ['AWS_REGION']
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-
+"""
 logger = logging.getLogger(__name__)
 
 class User(models.Model):
@@ -97,30 +97,58 @@ class Request(models.Model):
     #parameter_id = models.ForeignKey()
 
 class League(models.Model):
-    name = models.CharField(max_length=30)
-    country = models.CharField(max_length=30)
+    id_league = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=50)
 
 class Team(models.Model):
-    name = models.CharField(primary_key=True, max_length=30)
-    avg_age = models.PositiveIntegerField()
-    squad_value = models.PositiveBigIntegerField()
-    year = models.PositiveIntegerField()
+    id_team = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=50)
 
-class Players(models.Model):
-    name = models.CharField(max_length=30)
-    age = models.IntegerField()
-    role = models.CharField(max_length=30)
-    value = models.PositiveBigIntegerField()
-    squad = models.CharField(max_length=30)
+class Player(models.Model):
+    id_player = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=50)
+
+class Team_Status(models.Model):
+    id_team = models.ForeignKey(Team, on_delete=models.CASCADE())
+    id_league = models.ForeignKey(League, on_delete=models.CASCADE())
+    year = models.PositiveIntegerField()
+    value_team = models.PositiveBigIntegerField()
+    number_players = models.PositiveIntegerField()
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['idTeam', 'year'], name='unique_idTeam_year_combination'
+            )
+        ]
+
+
+class Player_Status(models.Model):
+    id_stats_player = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id_player = models.ForeignKey(Player, on_delete=models.CASCADE())
+    id_team = models.ForeignKey(Team, on_delete=models.CASCADE())
+    value_player = models.PositiveBigIntegerField()
+    year = models.PositiveIntegerField()
+    role = models.CharField(max_length=100)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['id_player', 'year', 'id_team'], name='unique_idPlayer_year_idTeam_combination'
+            )
+        ]
+
+
+class Stats_Player(models.Model):
+    id_stats_player= models.ForeignKey(Player_Status, on_delete=models.CASCADE())
     year = models.PositiveIntegerField()
     games = models.PositiveIntegerField()
     goals = models.PositiveIntegerField()
     assists = models.PositiveIntegerField()
     minutes = models.PositiveIntegerField()
-
-    # Make two unique fields in the table
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['name', 'squad'], name='players_constraint')
+            models.UniqueConstraint(
+                fields=['id_stats_player', 'year'], name='unique_idStatsPlayer_year_idTeam_combination'
+            )
         ]
-
