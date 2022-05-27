@@ -9,7 +9,7 @@ import json
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        f= open("/home/riccardo-cecco/projects/CCBDA-Project/scrapy/transfermarkt.json")
+        f= open("/home/oriol/Escritorio/CCBDA/CCBDA-Project/scrapy/transfermarkt.json")
         data= json.load(f)
         for i in data:
             #Team

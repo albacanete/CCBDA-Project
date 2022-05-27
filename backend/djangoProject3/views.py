@@ -4,17 +4,70 @@ from django.shortcuts import render, redirect
 from collections import Counter
 from django.core.exceptions import ValidationError
 from validate_email import validate_email
+from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+
 
 from .models import *
 
 def page_not_found_view(request, exception):
     return render(request, 'pages-error-404.html', status=404)
 
+@csrf_exempt
+def plotCreation(request):
+    if request.method == 'POST':
+        print("hello")
+        items = []
+        target = request.POST.get('target')
+        championship = request.POST.get('championship')
+        year = request.POST.get('year')
+        squad = request.POST.get('squad')
+        player = request.POST.get('player')
+        objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer')
+
+        for object in objects:
+            items.append(object[0]+":"+ object[1]+ "/")
+
+    return HttpResponse(items)
+
+
+
+@csrf_exempt
 def request(request):
-    if "email" in request.session:
+    if request.method == 'GET':
         return render(request, 'request.html', {'request_nav': True})
+
     else:
-        return redirect('/login')
+        items = []
+        # PARAMETERS OF THE SELECTION
+        if not request.POST.get('value_squad'):
+            championship = request.POST.get('value_championship')
+            year = request.POST.get('value_year')
+            objects = Team_Status.objects.filter(nameLeague=championship, year=year).values_list('nameTeam', flat=True)
+            for object in objects:
+                items.append(object+"/")
+        elif not request.POST.get('value_player'):
+            championship = request.POST.get('value_championship')
+            year = request.POST.get('value_year')
+            squad= request.POST.get('value_squad')
+            objects = Player_Status.objects.filter(nameLeague=championship, year=year, nameTeam=squad).values_list('namePlayer', flat=True)
+
+            for object in objects:
+                items.append(object + "/")
+        else:
+            championship = request.POST.get('value_championship')
+            year = request.POST.get('value_year')
+            squad = request.POST.get('value_squad')
+            player = request.POST.get('value_player')
+            objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer', flat=True)
+
+            for object in objects:
+                items.append(object + "/")
+        return HttpResponse(items)
+
+
+
+
 
 def history(request):
     if "email" in request.session:
@@ -79,7 +132,6 @@ def login(request):
 
 
 def register(request):
-    user = User()
     errors = []
     if request.method == 'GET':
         return render(request, 'register.html')
@@ -96,6 +148,13 @@ def register(request):
             errors.append("The password repeated is not the same as the original one")
 
         if not errors:
+            password_hashed = password.encode('utf-8')
+            # Generate salt
+            mySalt = bcrypt.gensalt()
+
+            # Hash password
+            hash = bcrypt.hashpw(password_hashed, mySalt)
+            user = User.objects.create_user('email', hash.decode('utf-8'), )
             status = user.register(email, password)
             if not status:
                 return render(request, 'register.html', {'success': "User registered!"})
