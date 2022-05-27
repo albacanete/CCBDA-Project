@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Id - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Id</a><br/>
+<br/>
+<h1>Id</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Id</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a> of a TeamCity entity.
+It appears in the web UI and is used in urls.
+If the entity has a uuid specified, then the id can be changed at any time.
+If uuid is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history, a commit graph).</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-relative-id/index.html">RelativeId</a></p>
+<p><a href="../-absolute-id/index.html">AbsoluteId</a></p>
+</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Id</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Full id to be used in TeamCity.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-absolute-id/index.html">AbsoluteId</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AbsoluteId</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Id</span></a></code>
+<p>Entity id to be used as is, without any prefixes provided by TeamCity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-relative-id/index.html">RelativeId</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">RelativeId</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Id</span></a></code>
+<p>Entity id relative to the project where versioned settings were enabled.
+When DSL executed the id of the project with enabled versioned settings
+is prepended to all relative ids. Can be used only in DSL generated with
+the 'Generate portable DSL scripts' option enabled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

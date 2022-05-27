@@ -1,0 +1,225 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DockerECRConnection - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.projectFeatures</a>&nbsp;/&nbsp;<a href="./index.html">DockerECRConnection</a><br/>
+<br/>
+<h1>DockerECRConnection</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DockerECRConnection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>This connection is used in
+<a href="https://www.jetbrains.com/help/teamcity/?Docker+Support">Docker Support build feature</a>.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="#">DockerSupportFeature</a></p>
+<p><a href="../docker-e-c-r-registry.html">dockerECRRegistry</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-credentials-provider/index.html">CredentialsProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CredentialsProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-credentials-provider/index.html"><span class="identifier">CredentialsProvider</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-credentials-type/index.html">CredentialsType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CredentialsType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-credentials-type/index.html"><span class="identifier">CredentialsType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-ecr-type/index.html">EcrType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">EcrType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-ecr-type/index.html"><span class="identifier">EcrType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DockerECRConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DockerECRConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">DockerECRConnection</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>This connection is used in
+<a href="https://www.jetbrains.com/help/teamcity/?Docker+Support">Docker Support build feature</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="credentials-provider.html">credentialsProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">credentialsProvider</span><span class="symbol">: </span><a href="-credentials-provider/index.html"><span class="identifier">CredentialsProvider</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="credentials-type.html">credentialsType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">credentialsType</span><span class="symbol">: </span><a href="-credentials-type/index.html"><span class="identifier">CredentialsType</span></a><span class="symbol">?</span></code>
+<p>AWS Credentials Type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="display-name.html">displayName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">displayName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>ECR connection display name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ecr-type.html">ecrType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ecrType</span><span class="symbol">: </span><a href="-ecr-type/index.html"><span class="identifier">EcrType</span></a><span class="symbol">?</span></code>
+<p>ECR type (defaults to ECR Private)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="region-code.html">regionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">regionCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>AWS region code. For example, us-east-1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="registry-id.html">registryId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">registryId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Registry ID (equals to Amazon Account ID) - a 12-digit number, such as 123456789012</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Project feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="access-key.html">accessKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">accessKey</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection$accessKey(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection.CredentialsProvider.AccessKey, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-credentials-provider/-access-key/index.html"><span class="identifier">AccessKey</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-credentials-provider/-access-key/index.html"><span class="identifier">AccessKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="access-keys.html">accessKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">accessKeys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-credentials-type/-access-keys/index.html"><span class="identifier">AccessKeys</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default-credentials-provider.html">defaultCredentialsProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">defaultCredentialsProvider</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-credentials-provider/-default-credentials-provider/index.html"><span class="identifier">DefaultCredentialsProvider</span></a></code>
+<p>Use Default Credentials Provider Chain</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ecr-private.html">ecrPrivate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ecrPrivate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-ecr-type/-ecr-private/index.html"><span class="identifier">EcrPrivate</span></a></code>
+<p>ECR Private (default)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ecr-public.html">ecrPublic</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ecrPublic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-ecr-type/-ecr-public/index.html"><span class="identifier">EcrPublic</span></a></code>
+<p>ECR Public</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="temp-credentials.html">tempCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">tempCredentials</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection$tempCredentials(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection.CredentialsType.TempCredentials, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-credentials-type/-temp-credentials/index.html"><span class="identifier">TempCredentials</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-credentials-type/-temp-credentials/index.html"><span class="identifier">TempCredentials</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Creates an instance of this project feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

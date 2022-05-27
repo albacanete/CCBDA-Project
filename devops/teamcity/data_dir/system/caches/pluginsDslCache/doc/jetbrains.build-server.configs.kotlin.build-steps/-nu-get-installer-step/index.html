@@ -1,0 +1,255 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NuGetInstallerStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">NuGetInstallerStep</a><br/>
+<br/>
+<h1>NuGetInstallerStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetInstallerStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Installer">NuGet installer step</a> to run nuget restore command</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../nu-get-installer.html">nuGetInstaller</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-update-mode/index.html">UpdateMode</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">UpdateMode</span></code>
+<p>Update mode</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-update-packages/index.html">UpdatePackages</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">UpdatePackages</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-update-packages/index.html"><span class="identifier">UpdatePackages</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NuGetInstallerStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">NuGetInstallerStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">NuGetInstallerStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Installer">NuGet installer step</a> to run nuget restore command</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="args.html">args</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Enter additional parameters to use when calling nuget pack command.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mode.html">mode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mode</span><span class="symbol">: </span><a href="-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">?</span></code>
+<p>Select NuGet.exe restore or NuGet.exe install command to restore packages</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="no-cache.html">noCache</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">noCache</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Disable looking up packages from local machine cache.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="projects.html">projects</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">projects</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specify the location of a solution or a packages.config file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sources.html">sources</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sources</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specifies NuGet package sources to use during the restore.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tool-path.html">toolPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">toolPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specify path to NuGet.exe.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-packages.html">updatePackages</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">updatePackages</span><span class="symbol">: </span><a href="-update-packages/index.html"><span class="identifier">UpdatePackages</span></a><span class="symbol">?</span></code>
+<p>Uses the NuGet update command to update all packages under solution</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="install.html">install</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep$install(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep.Mode.Install, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-mode/-install/index.html"><span class="identifier">Install</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-mode/-install/index.html"><span class="identifier">Install</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-params.html">updateParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateParams</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep$updateParams(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep.UpdatePackages.UpdateParams, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-update-packages/-update-params/index.html"><span class="identifier">UpdateParams</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-update-packages/-update-params/index.html"><span class="identifier">UpdateParams</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

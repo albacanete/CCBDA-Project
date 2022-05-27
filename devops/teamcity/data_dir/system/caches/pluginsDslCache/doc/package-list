@@ -1,0 +1,10 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:jetbrains.buildServer.configs.kotlin$toId(kotlin.String, kotlin.String)jetbrains.build-server.configs.kotlin/kotlin.-string/to-id.html
+jetbrains.buildServer.configs.kotlin
+jetbrains.buildServer.configs.kotlin.buildFeatures
+jetbrains.buildServer.configs.kotlin.buildSteps
+jetbrains.buildServer.configs.kotlin.failureConditions
+jetbrains.buildServer.configs.kotlin.projectFeatures
+jetbrains.buildServer.configs.kotlin.triggers
+jetbrains.buildServer.configs.kotlin.vcs

@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DslContext - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">DslContext</a><br/>
+<br/>
+<h1>DslContext</h1>
+<code><span class="keyword">object </span><span class="identifier">DslContext</span></code>
+<p>Context of DSL execution</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="base-dir.html">baseDir</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">baseDir</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
+<p>When DSL scripts are executed, current working directory can point to some temporary folder. This temporary folder may not have contents of .teamcity directory.
+If one needs to read some files from .teamcity/ directory, they should construct File instances with the baseDir property as parent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has-settings-root-id.html">hasSettingsRootId</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">hasSettingsRootId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns true if context provides an id of the settings VCS root.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-relative.html">isRelative</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isRelative</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns true if the context of DSL execution is relative.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-project-id.html">parentProjectId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parentProjectId</span><span class="symbol">: </span><a href="../-absolute-id/index.html"><span class="identifier">AbsoluteId</span></a></code>
+<p><a href="../-absolute-id/index.html">Absolute</a> parent id of the project where versioned settings are enabled.
+Can be used only in <a href="is-relative.html">relative DSL context</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project-id.html">projectId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">projectId</span><span class="symbol">: </span><a href="../-absolute-id/index.html"><span class="identifier">AbsoluteId</span></a></code>
+<p><a href="../-absolute-id/index.html">Absolute</a> id of the project where versioned settings are enabled.
+Can be used only in <a href="is-relative.html">relative DSL context</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project-name.html">projectName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">projectName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Name of the project where versioned settings are enabled.
+Can be used only in <a href="is-relative.html">relative DSL context</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settings-root.html">settingsRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">settingsRoot</span><span class="symbol">: </span><a href="../-vcs-root/index.html"><span class="identifier">VcsRoot</span></a></code>
+<p>VCS root where settings are stored. Contains only root id, doesn't contain
+<a href="../-vcs-root/type.html">vcs type</a> or <a href="../-parametrized/params.html">parameters</a>.
+Can be used only in <a href="is-relative.html">relative DSL context</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settings-root-id.html">settingsRootId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">settingsRootId</span><span class="symbol">: </span><a href="../-absolute-id/index.html"><span class="identifier">AbsoluteId</span></a></code>
+<p><a href="../-absolute-id/index.html">Absolute</a> id of the VCS root where settings are stored.
+Can be used only in <a href="is-relative.html">relative DSL context</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-parameters.html">addParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addParameters</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.DslContext$addParameters(kotlin.Array((((kotlin.String, )))))/pairs">pairs</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Add a parameter to this context, the function is intented to be used in Kotlin DSL tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear-parameters.html">clearParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="create-id.html">createId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createId</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.DslContext$createId(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-id/index.html"><span class="identifier">Id</span></a></code>
+<p>Creates <a href="../-relative-id/index.html">relative id</a> if context <a href="is-relative.html">is relative</a>, otherwise
+creates an <a href="../-absolute-id/index.html">absolute id</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-parameter.html">getParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.DslContext$getParameter(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.DslContext$getParameter(kotlin.String, kotlin.String)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Returns the value of the context parameter specified in Versioned Settings UI.
+If <a href="get-parameter.html#jetbrains.buildServer.configs.kotlin.DslContext$getParameter(kotlin.String, kotlin.String)/defaultValue">defaultValue</a> is null and the parameter is not defined, then DSL code will fail
+and the corresponding error will be shown in the UI.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

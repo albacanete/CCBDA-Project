@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DockerCommandStep.CommandType.Build - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../../index.html">DockerCommandStep</a>&nbsp;/&nbsp;<a href="../index.html">CommandType</a>&nbsp;/&nbsp;<a href="./index.html">Build</a><br/>
+<br/>
+<h1>Build</h1>
+<code><span class="keyword">class </span><span class="identifier">Build</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">CommandType</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-source/index.html">Source</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Source</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-source/index.html"><span class="identifier">Source</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Build</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="command-args.html">commandArgs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">commandArgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional arguments that will be passed to the command.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="context-dir.html">contextDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">contextDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>If blank, the folder containing the Dockerfile will be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="names-and-tags.html">namesAndTags</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">namesAndTags</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Newline-separated list of the image name:tag(s).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="platform.html">platform</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">platform</span><span class="symbol">: </span><a href="../../-image-platform/index.html"><span class="identifier">ImagePlatform</span></a><span class="symbol">?</span></code>
+<p>Specifies which Docker image platform will be used to run this build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="source.html">source</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">source</span><span class="symbol">: </span><a href="-source/index.html"><span class="identifier">Source</span></a><span class="symbol">?</span></code>
+<p>Specifies the source of the Dockerfile</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="content.html">content</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">content</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build$content(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build.Source.Content, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-source/-content/index.html"><span class="identifier">Content</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-source/-content/index.html"><span class="identifier">Content</span></a></code>
+<p>Use Dockerfile content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="file.html">file</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build$file(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build.Source.File, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-source/-file/index.html"><span class="identifier">File</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-source/-file/index.html"><span class="identifier">File</span></a></code>
+<p>Sets filesystem path to Dockerfile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="path.html">path</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><s><span class="identifier">path</span></s><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build$path(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build.Source.Path, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-source/-path/index.html"><span class="identifier">Path</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-source/-path/index.html"><span class="identifier">Path</span></a></code>
+<p>Sets filesystem path to Dockerfile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="url.html">url</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">url</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build$url(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build.Source.Url, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-source/-url/index.html"><span class="identifier">Url</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-source/-url/index.html"><span class="identifier">Url</span></a></code>
+<p>Sets Dockerfile URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep.CommandType.Build$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

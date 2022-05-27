@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GitVcsRoot.UserNameStyle - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.vcs</a>&nbsp;/&nbsp;<a href="../index.html">GitVcsRoot</a>&nbsp;/&nbsp;<a href="./index.html">UserNameStyle</a><br/>
+<br/>
+<h1>UserNameStyle</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">UserNameStyle</span></code>
+<p>Defines how TeamCity retrieves <a href="https://www.jetbrains.com/help/teamcity/?Managing+Users+and+User+Groups#ManagingUsersandUserGroups-vcsUsername">VCS username</a>
+from git commit.
+When the git config contains the following</p>
+<pre><code>[user]
+name = Joe Coder
+email = joe.coder@acme.com
+</code></pre>
+<p>then the git username in commit is <code>Joe Coder &lt;joe.coder@acme.com&gt;</code>.
+Different options specify which part of the git commit username is used in TeamCity.</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-n-a-m-e.html">NAME</a></p>
+</td>
+<td>
+<p>Use the name part, for full name <code>Joe Coder &lt;joe.coder@acme.com&gt;</code> it will be <code>Joe Coder</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-s-e-r-i-d.html">USERID</a></p>
+</td>
+<td>
+<p>Use part of the email before the @ sign, for full name <code>Joe Coder &lt;joe.coder@acme.com&gt;</code> it will be <code>joe.coder</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-e-m-a-i-l.html">EMAIL</a></p>
+</td>
+<td>
+<p>Use the email part, for full name <code>Joe Coder &lt;joe.coder@acme.com&gt;</code> it will be <code>joe.coder@acme.com</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-f-u-l-l.html">FULL</a></p>
+</td>
+<td>
+<p>Use full commit username, i.e. <code>Joe Coder &lt;joe.coder@acme.com&gt;</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

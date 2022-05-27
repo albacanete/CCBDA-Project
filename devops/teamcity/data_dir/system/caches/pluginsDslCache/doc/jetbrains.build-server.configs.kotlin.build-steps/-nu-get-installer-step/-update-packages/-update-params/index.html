@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NuGetInstallerStep.UpdatePackages.UpdateParams - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../../index.html">NuGetInstallerStep</a>&nbsp;/&nbsp;<a href="../index.html">UpdatePackages</a>&nbsp;/&nbsp;<a href="./index.html">UpdateParams</a><br/>
+<br/>
+<h1>UpdateParams</h1>
+<code><span class="keyword">class </span><span class="identifier">UpdateParams</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">UpdatePackages</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UpdateParams</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="args.html">args</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Enter additional parameters to use when calling nuget update command.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude-version.html">excludeVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">excludeVersion</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Exclude version from package folder names</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="include-pre-release.html">includePreRelease</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">includePreRelease</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Include pre-release packages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mode.html">mode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mode</span><span class="symbol">: </span><a href="../../-update-mode/index.html"><span class="identifier">UpdateMode</span></a><span class="symbol">?</span></code>
+<p>Select how to update packages: via a call to nuget update SolutionFile.sln or via calls to nuget update packages.config</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="use-safe.html">useSafe</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">useSafe</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Perform safe update.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

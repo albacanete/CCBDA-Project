@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ScheduleTrigger.TriggerBuild.OnWatchedBuildChange - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.triggers</a>&nbsp;/&nbsp;<a href="../../index.html">ScheduleTrigger</a>&nbsp;/&nbsp;<a href="../index.html">TriggerBuild</a>&nbsp;/&nbsp;<a href="./index.html">OnWatchedBuildChange</a><br/>
+<br/>
+<h1>OnWatchedBuildChange</h1>
+<code><span class="keyword">class </span><span class="identifier">OnWatchedBuildChange</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">TriggerBuild</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OnWatchedBuildChange</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-type.html">buildType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the build configuration where build is watched</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="promote-watched-build.html">promoteWatchedBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">promoteWatchedBuild</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether the trigger should <a href="https://www.jetbrains.com/help/teamcity/?Triggering+a+Custom+Build#TriggeringaCustomBuild-PromotingBuild">promote</a> the watched build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="watched-build-branch-filter.html">watchedBuildBranchFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">watchedBuildBranchFilter</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A branch filter to limit the set of watched builds by their branches.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="watched-build-rule.html">watchedBuildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">watchedBuildRule</span><span class="symbol">: </span><a href="../../-watched-build-rule/index.html"><span class="identifier">WatchedBuildRule</span></a><span class="symbol">?</span></code>
+<p>The rule to select the watched build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="watched-build-tag.html">watchedBuildTag</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">watchedBuildTag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A tag for the watched build when WatchedBuildRule.TAG rule is used</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

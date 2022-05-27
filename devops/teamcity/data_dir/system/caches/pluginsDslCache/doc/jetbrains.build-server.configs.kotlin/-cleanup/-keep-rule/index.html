@@ -1,0 +1,310 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cleanup.KeepRule - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="../index.html">Cleanup</a>&nbsp;/&nbsp;<a href="./index.html">KeepRule</a><br/>
+<br/>
+<h1>KeepRule</h1>
+<code><span class="keyword">class </span><span class="identifier">KeepRule</span></code>
+<p>Specifies a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-KeepRule">keep rule</a>.
+A keep rule defines what particular data to preserve during the clean-up.
+Multiple keep rules can be assigned to a project or build configuration.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-data-to-keep/index.html">DataToKeep</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DataToKeep</span></code>
+<p>Represents <a href="data-to-keep.html">dataToKeep</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-days-limit/index.html">DaysLimit</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DaysLimit</span></code>
+<p>Configures <a href="-keep-at-least/index.html">KeepAtLeast</a> which keeps builds based on their age</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-history-and-statistics/index.html">HistoryAndStatistics</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HistoryAndStatistics</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-data-to-keep/index.html"><span class="identifier">DataToKeep</span></a></code>
+<p>Holds configuration of history and statistics <a href="data-to-keep.html">dataToKeep</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-keep-at-least/index.html">KeepAtLeast</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KeepAtLeast</span></code>
+<p>Holds the range limit for this keep rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-keep-rule-filters/index.html">KeepRuleFilters</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KeepRuleFilters</span></code>
+<p>Holds all the filters used to pick out the builds this keep rule will preserve</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-preserve-artifacts/index.html">PreserveArtifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PreserveArtifacts</span></code>
+<p>Holds the artifacts pattern to keep</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">KeepRule</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Specifies a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-KeepRule">keep rule</a>.
+A keep rule defines what particular data to preserve during the clean-up.
+Multiple keep rules can be assigned to a project or build configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="apply-per-each-branch.html">applyPerEachBranch</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">applyPerEachBranch</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If set to true then the <a href="keep-at-least.html">keepAtLeast</a> will be applied to each branch selected by the branch filter (or to each branch in the configuration if no branch filter
+is specified) separately. <a href="apply-per-each-branch.html">applyPerEachBranch</a> could be used to enable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="data-to-keep.html">dataToKeep</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dataToKeep</span><span class="symbol">: </span><a href="-data-to-keep/index.html"><span class="identifier">DataToKeep</span></a><span class="symbol">?</span></code>
+<p>Specifies what data should be kept in builds preserved by this keep rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disabled.html">disabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">disabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Disables this rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>ID of this keep rule. Every keep rule must have an ID unique to the current project/build configuration. Any sequence of letters, digits and '_' signs is allowed.
+It's recommended to use human-readable IDs expressing the origin of the rule: e.g. 'keepAllReleases' or 'keepHistory'.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="keep-at-least.html">keepAtLeast</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">keepAtLeast</span><span class="symbol">: </span><a href="-keep-at-least/index.html"><span class="identifier">KeepAtLeast</span></a><span class="symbol">?</span></code>
+<p>Defines the limit for this keep rule. <a href="all-builds.html">allBuilds</a> will be used if not specified</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="preserve-artifacts-dependencies.html">preserveArtifactsDependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">preserveArtifactsDependencies</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If set to true and if this build configuration uses any artifact dependencies, then this keep rule will prevent deleting builds in build configurations
+where the artifact dependencies are used from.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-preserve-artifacts/index.html"><span class="identifier">PreserveArtifacts</span></a></code>
+<p>Specifies that all artifacts should be kept in this <a href="data-to-keep.html">HistoryAndStatistics</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="all-artifacts.html">allArtifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allArtifacts</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a></code>
+<p>Specifies that only artifacts should be kept in builds preserved by this keep rule. History and statistics will be automatically preserved, logs will be removed (if no other
+keep rule specifies keeping them).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="all-builds.html">allBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">allBuilds</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Specifies that this keep rule will preserve all builds matched by the selected filters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="apply-per-each-branch.html">applyPerEachBranch</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">applyPerEachBranch</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>If used, then <a href="keep-at-least.html">keepAtLeast</a> will be applied to each branch selected by the branch filter (or to each branch in the configuration if no branch filter
+is specified) separately.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="apply-to-builds.html">applyToBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">applyToBuilds</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$applyToBuilds(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-keep-rule-filters/index.html"><span class="identifier">KeepRuleFilters</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Allows specifying filters to pick out the builds this keep rule will preserve</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="artifacts.html">artifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">artifacts</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$artifacts(kotlin.Array((kotlin.String)))/patterns">patterns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a></code>
+<p>Specifies that only artifacts matched by <a href="artifacts.html#jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$artifacts(kotlin.Array((kotlin.String)))/patterns">patterns</a> should be kept in builds preserved by this keep rule. History and statistics will be automatically preserved, logs will be removed (if no other
+keep rule specifies keeping them).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-data-to-keep.html">buildDataToKeep</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildDataToKeep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$buildDataToKeep(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Parametrized, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-data-to-keep/index.html"><span class="identifier">DataToKeep</span></a></code>
+<p>Builds <a href="data-to-keep.html">dataToKeep</a> from parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-keep-at-least.html">buildKeepAtLeast</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildKeepAtLeast</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$buildKeepAtLeast(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Parametrized, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-keep-at-least/index.html"><span class="identifier">KeepAtLeast</span></a></code>
+<p>Constructs the <a href="keep-at-least.html">keepAtLeast</a> from raw parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="builds.html">builds</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">builds</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$builds(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Specifies that this keep rule will preserve all builds matched by the selected filters up to the <a href="builds.html#jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$builds(kotlin.Int)/n">n</a>th build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="by-pattern.html">byPattern</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">byPattern</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$byPattern(kotlin.Array((kotlin.String)))/patterns">patterns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-preserve-artifacts/index.html"><span class="identifier">PreserveArtifacts</span></a></code>
+<p>Specifies that all artifacts matched by <a href="by-pattern.html#jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$byPattern(kotlin.Array((kotlin.String)))/patterns">patterns</a> should be kept in this <a href="data-to-keep.html">HistoryAndStatistics</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="days.html">days</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">days</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$days(kotlin.Int)/n">n</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code>
+<p>Specifies that this keep rule will preserve all builds matched by the selected filters up to the <a href="days.html#jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$days(kotlin.Int)/n">n</a>th day since the current day</p>
+<code><span class="keyword">fun </span><span class="identifier">days</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$days(kotlin.Int, kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.DaysLimit, kotlin.Unit)))/n">n</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$days(kotlin.Int, kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.DaysLimit, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-days-limit/index.html"><span class="identifier">DaysLimit</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-keep-at-least/index.html"><span class="identifier">KeepAtLeast</span></a></code>
+<p>Specifies that this keep rule will preserve all builds matched by the selected filters up to the <a href="days.html#jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$days(kotlin.Int, kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.DaysLimit, kotlin.Unit)))/n">n</a>th day. Allows specifying the policy to
+select the limiting day in the <a href="-days-limit/since.html">DaysLimit.since</a> field.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="everything.html">everything</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">everything</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-data-to-keep/index.html"><span class="identifier">DataToKeep</span></a></code>
+<p>Specifies that everything should be kept in builds preserved by this keep rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="history-and-statistics.html">historyAndStatistics</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">historyAndStatistics</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a></code>
+<p>Specifies that only history and statistics should be kept in builds preserved by this keep rule. Logs and artifacts will be removed (if no other keep rule specifies keeping them).</p>
+<code><span class="keyword">fun </span><span class="identifier">historyAndStatistics</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$historyAndStatistics(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.HistoryAndStatistics, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a></code>
+<p>Specifies that history and statistics should be kept in builds preserved by this keep rule and allows to select which parts of build results (e.g. logs, artifacts) should also be kept.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logs.html">logs</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">logs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-history-and-statistics/index.html"><span class="identifier">HistoryAndStatistics</span></a></code>
+<p>Specifies that only logs should be kept in builds preserved by this keep rule. History and statistics will be automatically preserved, artifacts will be removed (if no other
+keep rule specifies keeping them).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="param.html">param</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">param</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$param(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule$param(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="statistics-only.html">statisticsOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">statisticsOnly</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-data-to-keep/index.html"><span class="identifier">DataToKeep</span></a></code>
+<p>Specifies that only statistics should be kept in builds preserved by this keep rule. Builds won't be visible in the build history, logs and artifacts will be removed (if no other keep rule
+specifies keeping them).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

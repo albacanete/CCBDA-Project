@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FileContentReplacer.RegexMode.REGEX_MIXED - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.buildFeatures</a>&nbsp;/&nbsp;<a href="../index.html">FileContentReplacer</a>&nbsp;/&nbsp;<a href="index.html">RegexMode</a>&nbsp;/&nbsp;<a href="./-r-e-g-e-x_-m-i-x-e-d.html">REGEX_MIXED</a><br/>
+<br/>
+<h1>REGEX_MIXED</h1>
+<a name="jetbrains.buildServer.configs.kotlin.buildFeatures.FileContentReplacer.RegexMode.REGEX_MIXED"></a>
+<code><span class="identifier">REGEX_MIXED</span></code>
+<p>Treat the search pattern as a regular expression (similarly
+to <a href="-r-e-g-e-x.html">REGEX</a>), but <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#quoteReplacement(java.lang.String)">quote</a> the
+replacement text (as in <a href="-f-i-x-e-d_-s-t-r-i-n-g-s.html">FIXED_STRINGS</a> mode). <code>\</code> and <code>$</code>
+characters have no special meaning.
+<a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#MULTILINE">MULTILINE</a> mode is on by default.
+Useful if the replacement text contains <code>%build.parameters%</code> which
+may be expanded to an arbitrary value.
+This mode is not available via the <em>TeamCity</em> UI.</p>
+</BODY>
+</HTML>

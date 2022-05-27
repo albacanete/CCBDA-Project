@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildStep.ExecutionMode - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="../index.html">BuildStep</a>&nbsp;/&nbsp;<a href="./index.html">ExecutionMode</a><br/>
+<br/>
+<h1>ExecutionMode</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ExecutionMode</span></code>
+<p>Specifies how build step should be executed in case of failures in other steps</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-d-e-f-a-u-l-t.html">DEFAULT</a></p>
+</td>
+<td>
+<p>step will not be executed if there are other failed steps</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-r-u-n_-o-n_-s-u-c-c-e-s-s.html">RUN_ON_SUCCESS</a></p>
+</td>
+<td>
+<p>will execute step only if status on server is "successful";
+server will be asked for build status</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-r-u-n_-o-n_-f-a-i-l-u-r-e.html">RUN_ON_FAILURE</a></p>
+</td>
+<td>
+<p>will execute step even if previous step(s) has failed,
+server will not be queried for build status.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-l-w-a-y-s.html">ALWAYS</a></p>
+</td>
+<td>
+<p>will execute step always, even if build was interrupted</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

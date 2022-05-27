@@ -1,0 +1,944 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>jetbrains.buildServer.configs.kotlin.buildSteps - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a><br/>
+<br/>
+<h2>Package jetbrains.buildServer.configs.kotlin.buildSteps</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-ant-build-step/index.html">AntBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AntBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Ant">build step</a> running ant script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-step-placeholder/index.html">BuildStepPlaceholder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildStepPlaceholder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Base class for a <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration+Template#BuildConfigurationTemplate-BuildStepPlaceholders">build step placeholder</a>.
+Build step placeholder is used in a build configuration template to indicate where the build steps of a configuration
+will go when it is attached to the template.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-sharp-script-custom-build-step/index.html">CSharpScriptCustomBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CSharpScriptCustomBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A build step running a C# script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-sharp-script-file-build-step/index.html">CSharpScriptFileBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CSharpScriptFileBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A build step running a C# script with from a specified file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-container-deployer/index.html">ContainerDeployer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ContainerDeployer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A Container Deployer build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-devenv-build-step/index.html">DevenvBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DevenvBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">Visual Studio IDE step</a> to run Visual Studio IDE command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-docker-build-step/index.html">DockerBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">DockerBuildStep</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Deprecated, was used for Docker Build build step.
+Please use <a href="https://www.jetbrains.com/help/teamcity/docker.html#Docker-DockerCommand">Docker command runner step</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-docker-command-step/index.html">DockerCommandStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DockerCommandStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/docker.html#Docker-DockerCommand">build step</a> for a generic docker command runner (can run Docker build, push, other...)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-docker-compose-step/index.html">DockerComposeStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DockerComposeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Docker+Compose">build step</a> for docker-compose step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-build-step/index.html">DotnetBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet build step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-clean-step/index.html">DotnetCleanStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetCleanStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet clean step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-custom-step/index.html">DotnetCustomStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetCustomStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet build step</a> to run a custom command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-ms-build-step/index.html">DotnetMsBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetMsBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">.NET msbuild step</a> to run .NET MSBuild</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-nuget-delete-step/index.html">DotnetNugetDeleteStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetNugetDeleteStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet nuget delete step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-nuget-push-step/index.html">DotnetNugetPushStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetNugetPushStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet nuget push step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-pack-step/index.html">DotnetPackStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetPackStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet pack step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-publish-step/index.html">DotnetPublishStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetPublishStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet publish step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-restore-step/index.html">DotnetRestoreStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetRestoreStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet restore step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-run-step/index.html">DotnetRunStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetRunStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet run step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-test-step/index.html">DotnetTestStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetTestStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet test step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dotnet-vs-test-step/index.html">DotnetVsTestStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DotnetVsTestStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">.NET vstest step</a> to run .NET VSTest</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-exec-build-step/index.html">ExecBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExecBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Command+Line">build step</a> running the specified executable with given arguments</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-f-t-p-upload/index.html">FTPUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FTPUpload</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An FTP Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-fx-cop-step/index.html">FxCopStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FxCopStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?FxCop">FxCop build step</a> is intended for inspecting .NET assemblies
+and reporting possible design, localization, performance, and security improvements.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-gradle-build-step/index.html">GradleBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GradleBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Gradle">build step</a> running gradle script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-kotlin-script-custom-build-step/index.html">KotlinScriptCustomBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KotlinScriptCustomBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A build step running a Kotlin script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-kotlin-script-file-build-step/index.html">KotlinScriptFileBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KotlinScriptFileBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A build step running a Kotlin script with from a specified file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-m-s-build-step/index.html">MSBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MSBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?MSBuild">build step</a> running MSBuild script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-m-s-test-step/index.html">MSTestStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MSTestStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running MSTest tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-m-spec-step/index.html">MSpecStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MSpecStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?MSpec">build step</a> running <a href="https://github.com/machine/machine.specifications">MSpec</a> tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-maven-build-step/index.html">MavenBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MavenBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Maven">build step</a> running maven</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-n-ant-step/index.html">NAntStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NAntStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?NAnt">build step</a> running NAnt scripts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-n-unit-step/index.html">NUnitStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NUnitStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?NUnit">build step</a> running NUnit tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-node-j-s-build-step/index.html">NodeJSBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NodeJSBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A Node.js build step</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nu-get-installer-step/index.html">NuGetInstallerStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetInstallerStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Installer">NuGet installer step</a> to run nuget restore command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nu-get-pack-step/index.html">NuGetPackStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetPackStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Pack">NuGet pack step</a> to run nuget pack command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nu-get-publish-step/index.html">NuGetPublishStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetPublishStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Publish">NuGet publish step</a> to run nuget push command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-power-shell-step/index.html">PowerShellStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PowerShellStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?PowerShell">build step</a> running PowerShell script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-python-build-step/index.html">PythonBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PythonBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A python build step</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-qodana/index.html">Qodana</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Qodana</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>null</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-rake-step/index.html">RakeStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RakeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Rake">Rake</a> build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-re-sharper-duplicates/index.html">ReSharperDuplicates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ReSharperDuplicates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?duplicates-finder-resharper">Duplicates finder (ReSharper) build step</a>
+to find C# and VB duplicate code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-re-sharper-inspections/index.html">ReSharperInspections</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ReSharperInspections</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?inspections-resharper">Inspections (ReSharper) build step</a>
+for gathering JetBrains ReSharper inspection results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-m-b-upload/index.html">SMBUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SMBUpload</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An SMB Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-s-h-exec/index.html">SSHExec</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SSHExec</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An SSH Exec build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-s-h-upload/index.html">SSHUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SSHUpload</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An SSH Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-script-build-step/index.html">ScriptBuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ScriptBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Command+Line">build step</a> running a script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-simple-build-tool/index.html">SimpleBuildTool</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleBuildTool</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Simple+Build+Tool+(Scala)">Simple Build Tool (Scala)</a>
+build step running SBT builds.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-v-s-test-step/index.html">VSTestStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VSTestStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running Visual Studio Tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-visual-studio-step/index.html">VisualStudioStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VisualStudioStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/pages/viewpage.action?pageId=74844955">build step</a> running Visual Studio solution.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-xcode-step/index.html">XcodeStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XcodeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?Xcode+Project">Xcode build step</a> for running Xcode projects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="ant.html">ant</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">ant</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$ant(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.AntBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-ant-build-step/index.html"><span class="identifier">AntBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-ant-build-step/index.html"><span class="identifier">AntBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Ant">build step</a> running ant script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="container-deployer.html">containerDeployer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">containerDeployer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$containerDeployer(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.ContainerDeployer, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-container-deployer/index.html"><span class="identifier">ContainerDeployer</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-container-deployer/index.html"><span class="identifier">ContainerDeployer</span></a></code>
+<p>Adds a Container Deployer build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csharp-file.html">csharpFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">csharpFile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$csharpFile(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.CSharpScriptFileBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-c-sharp-script-file-build-step/index.html"><span class="identifier">CSharpScriptFileBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-c-sharp-script-file-build-step/index.html"><span class="identifier">CSharpScriptFileBuildStep</span></a></code>
+<p>Adds a build step running a C# script from a specified file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csharp-script.html">csharpScript</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">csharpScript</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$csharpScript(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.CSharpScriptCustomBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-c-sharp-script-custom-build-step/index.html"><span class="identifier">CSharpScriptCustomBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-c-sharp-script-custom-build-step/index.html"><span class="identifier">CSharpScriptCustomBuildStep</span></a></code>
+<p>Adds a build step running a C# script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-build.html">dockerBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><s><span class="identifier">dockerBuild</span></s><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dockerBuild(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-docker-build-step/index.html"><span class="identifier">DockerBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-docker-build-step/index.html"><span class="identifier">DockerBuildStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-command.html">dockerCommand</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dockerCommand</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dockerCommand(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerCommandStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-docker-command-step/index.html"><span class="identifier">DockerCommandStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-docker-command-step/index.html"><span class="identifier">DockerCommandStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-compose.html">dockerCompose</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dockerCompose</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dockerCompose(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DockerComposeStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-docker-compose-step/index.html"><span class="identifier">DockerComposeStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-docker-compose-step/index.html"><span class="identifier">DockerComposeStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-build.html">dotnetBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetBuild</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetBuild(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-build-step/index.html"><span class="identifier">DotnetBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-build-step/index.html"><span class="identifier">DotnetBuildStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet build step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-clean.html">dotnetClean</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetClean</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetClean(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetCleanStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-clean-step/index.html"><span class="identifier">DotnetCleanStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-clean-step/index.html"><span class="identifier">DotnetCleanStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet clean step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-custom.html">dotnetCustom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetCustom</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetCustom(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetCustomStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-custom-step/index.html"><span class="identifier">DotnetCustomStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-custom-step/index.html"><span class="identifier">DotnetCustomStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet build step</a> to run a custom command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-devenv.html">dotnetDevenv</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetDevenv</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetDevenv(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DevenvBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-devenv-build-step/index.html"><span class="identifier">DevenvBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-devenv-build-step/index.html"><span class="identifier">DevenvBuildStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">Visual Studio IDE step</a> to run Visual Studio IDE command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-ms-build.html">dotnetMsBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetMsBuild</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetMsBuild(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetMsBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-ms-build-step/index.html"><span class="identifier">DotnetMsBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-ms-build-step/index.html"><span class="identifier">DotnetMsBuildStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">.NET msbuild step</a> to run .NET MSBuild</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-nuget-delete.html">dotnetNugetDelete</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetNugetDelete</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetNugetDelete(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetNugetDeleteStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-nuget-delete-step/index.html"><span class="identifier">DotnetNugetDeleteStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-nuget-delete-step/index.html"><span class="identifier">DotnetNugetDeleteStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet nuget delete step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-nuget-push.html">dotnetNugetPush</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetNugetPush</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetNugetPush(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetNugetPushStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-nuget-push-step/index.html"><span class="identifier">DotnetNugetPushStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-nuget-push-step/index.html"><span class="identifier">DotnetNugetPushStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet nuget push step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-pack.html">dotnetPack</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetPack</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetPack(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetPackStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-pack-step/index.html"><span class="identifier">DotnetPackStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-pack-step/index.html"><span class="identifier">DotnetPackStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet pack step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-publish.html">dotnetPublish</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetPublish</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetPublish(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetPublishStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-publish-step/index.html"><span class="identifier">DotnetPublishStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-publish-step/index.html"><span class="identifier">DotnetPublishStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet publish step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-restore.html">dotnetRestore</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetRestore</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetRestore(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetRestoreStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-restore-step/index.html"><span class="identifier">DotnetRestoreStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-restore-step/index.html"><span class="identifier">DotnetRestoreStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet restore step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-run.html">dotnetRun</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetRun</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetRun(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetRunStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-run-step/index.html"><span class="identifier">DotnetRunStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-run-step/index.html"><span class="identifier">DotnetRunStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet run step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-test.html">dotnetTest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetTest</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetTest(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetTestStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-test-step/index.html"><span class="identifier">DotnetTestStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-test-step/index.html"><span class="identifier">DotnetTestStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">dotnet test step</a> to run .NET CLI command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dotnet-vs-test.html">dotnetVsTest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">dotnetVsTest</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$dotnetVsTest(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.DotnetVsTestStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-dotnet-vs-test-step/index.html"><span class="identifier">DotnetVsTestStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dotnet-vs-test-step/index.html"><span class="identifier">DotnetVsTestStep</span></a></code>
+<p>Adds a <a href="https://github.com/JetBrains/teamcity-dotnet-plugin">.NET vstest step</a> to run .NET VSTest</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exec.html">exec</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">exec</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$exec(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.ExecBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-exec-build-step/index.html"><span class="identifier">ExecBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-exec-build-step/index.html"><span class="identifier">ExecBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Command+Line">build step</a> running the specified executable with given arguments</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ftp-upload.html">ftpUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">ftpUpload</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$ftpUpload(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FTPUpload, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-f-t-p-upload/index.html"><span class="identifier">FTPUpload</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-f-t-p-upload/index.html"><span class="identifier">FTPUpload</span></a></code>
+<p>Adds an FTP Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fx-cop.html">fxCop</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">fxCop</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$fxCop(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-fx-cop-step/index.html"><span class="identifier">FxCopStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-fx-cop-step/index.html"><span class="identifier">FxCopStep</span></a></code>
+<p>Add an <a href="https://www.jetbrains.com/help/teamcity/?FxCop">FxCop build step</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gradle.html">gradle</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">gradle</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$gradle(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.GradleBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-gradle-build-step/index.html"><span class="identifier">GradleBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-gradle-build-step/index.html"><span class="identifier">GradleBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Gradle">build step</a> running gradle script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlin-file.html">kotlinFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">kotlinFile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$kotlinFile(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.KotlinScriptFileBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-kotlin-script-file-build-step/index.html"><span class="identifier">KotlinScriptFileBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-kotlin-script-file-build-step/index.html"><span class="identifier">KotlinScriptFileBuildStep</span></a></code>
+<p>Adds a build step running a Kotlin script from a specified file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlin-script.html">kotlinScript</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">kotlinScript</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$kotlinScript(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.KotlinScriptCustomBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-kotlin-script-custom-build-step/index.html"><span class="identifier">KotlinScriptCustomBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-kotlin-script-custom-build-step/index.html"><span class="identifier">KotlinScriptCustomBuildStep</span></a></code>
+<p>Adds a build step running a Kotlin script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="maven.html">maven</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">maven</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$maven(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-maven-build-step/index.html"><span class="identifier">MavenBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-build-step/index.html"><span class="identifier">MavenBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Maven">build step</a> running maven</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ms-build.html">msBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">msBuild</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$msBuild(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-m-s-build-step/index.html"><span class="identifier">MSBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-m-s-build-step/index.html"><span class="identifier">MSBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?MSBuild">build step</a> running MSBuild script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mspec.html">mspec</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">mspec</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$mspec(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSpecStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-m-spec-step/index.html"><span class="identifier">MSpecStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-m-spec-step/index.html"><span class="identifier">MSpecStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?MSpec">build step</a> running <a href="https://github.com/machine/machine.specifications">MSpec</a> tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mstest.html">mstest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">mstest</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$mstest(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-m-s-test-step/index.html"><span class="identifier">MSTestStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-m-s-test-step/index.html"><span class="identifier">MSTestStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running MSTest tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nant.html">nant</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nant</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nant(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NAntStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-n-ant-step/index.html"><span class="identifier">NAntStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-n-ant-step/index.html"><span class="identifier">NAntStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?NAnt">build step</a> running NAnt scripts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="node-j-s.html">nodeJS</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nodeJS</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nodeJS(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NodeJSBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-node-j-s-build-step/index.html"><span class="identifier">NodeJSBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-node-j-s-build-step/index.html"><span class="identifier">NodeJSBuildStep</span></a></code>
+<p>Adds a Node.js build step</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nu-get-installer.html">nuGetInstaller</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nuGetInstaller</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nuGetInstaller(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetInstallerStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-nu-get-installer-step/index.html"><span class="identifier">NuGetInstallerStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-nu-get-installer-step/index.html"><span class="identifier">NuGetInstallerStep</span></a></code>
+<p>Adds a <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Installer">NuGet installer step</a> to run nuget restore command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nu-get-pack.html">nuGetPack</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nuGetPack</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nuGetPack(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetPackStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-nu-get-pack-step/index.html"><span class="identifier">NuGetPackStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-nu-get-pack-step/index.html"><span class="identifier">NuGetPackStep</span></a></code>
+<p>Adds a <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Pack">NuGet pack step</a> to run nuget pack command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nu-get-publish.html">nuGetPublish</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nuGetPublish</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nuGetPublish(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NuGetPublishStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-nu-get-publish-step/index.html"><span class="identifier">NuGetPublishStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-nu-get-publish-step/index.html"><span class="identifier">NuGetPublishStep</span></a></code>
+<p>Adds a <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Publish">NuGet publish step</a> to run nuget push command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nunit.html">nunit</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">nunit</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$nunit(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.NUnitStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-n-unit-step/index.html"><span class="identifier">NUnitStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-n-unit-step/index.html"><span class="identifier">NUnitStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?NUnit">build step</a> running NUnit tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="placeholder.html">placeholder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">placeholder</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$placeholder(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.BuildStepPlaceholder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-build-step-placeholder/index.html"><span class="identifier">BuildStepPlaceholder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-build-step-placeholder/index.html"><span class="identifier">BuildStepPlaceholder</span></a></code>
+<p>Inserts a <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration+Template#BuildConfigurationTemplate-BuildStepPlaceholders">build step placeholder</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="power-shell.html">powerShell</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">powerShell</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$powerShell(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.PowerShellStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-power-shell-step/index.html"><span class="identifier">PowerShellStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-power-shell-step/index.html"><span class="identifier">PowerShellStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?PowerShell">build step</a> running PowerShell script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="python.html">python</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">python</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$python(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.PythonBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-python-build-step/index.html"><span class="identifier">PythonBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-python-build-step/index.html"><span class="identifier">PythonBuildStep</span></a></code>
+<p>Adds a python build step</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="qodana.html">qodana</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">qodana</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$qodana(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-qodana/index.html"><span class="identifier">Qodana</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-qodana/index.html"><span class="identifier">Qodana</span></a></code>
+<p>Add 'Qodana' build step</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="rake.html">rake</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">rake</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$rake(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-rake-step/index.html"><span class="identifier">RakeStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-rake-step/index.html"><span class="identifier">RakeStep</span></a></code>
+<p>Add s <a href="https://www.jetbrains.com/help/teamcity/?Rake">Rake</a> build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="re-sharper-duplicates.html">reSharperDuplicates</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">reSharperDuplicates</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$reSharperDuplicates(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.ReSharperDuplicates, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-re-sharper-duplicates/index.html"><span class="identifier">ReSharperDuplicates</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-re-sharper-duplicates/index.html"><span class="identifier">ReSharperDuplicates</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?duplicates-finder-resharper">Duplicates finder (ReSharper) build step</a>
+to find C# and VB duplicate code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="re-sharper-inspections.html">reSharperInspections</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">reSharperInspections</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$reSharperInspections(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.ReSharperInspections, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-re-sharper-inspections/index.html"><span class="identifier">ReSharperInspections</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-re-sharper-inspections/index.html"><span class="identifier">ReSharperInspections</span></a></code>
+<p>Adds an <a href="https://www.jetbrains.com/help/teamcity/?inspections-resharper">Inspections (ReSharper) build step</a>
+for gathering JetBrains ReSharper inspection results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="script.html">script</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">script</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$script(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-script-build-step/index.html"><span class="identifier">ScriptBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-script-build-step/index.html"><span class="identifier">ScriptBuildStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Command+Line">build step</a> running a script with the specified content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="simple-build-tool.html">simpleBuildTool</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">simpleBuildTool</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$simpleBuildTool(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SimpleBuildTool, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-simple-build-tool/index.html"><span class="identifier">SimpleBuildTool</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-simple-build-tool/index.html"><span class="identifier">SimpleBuildTool</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Simple+Build+Tool+(Scala)">Simple Build Tool (Scala)</a>
+build step running SBT builds.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="smb-upload.html">smbUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">smbUpload</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$smbUpload(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SMBUpload, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-s-m-b-upload/index.html"><span class="identifier">SMBUpload</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-s-m-b-upload/index.html"><span class="identifier">SMBUpload</span></a></code>
+<p>Adds an SMB Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ssh-exec.html">sshExec</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">sshExec</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$sshExec(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-s-s-h-exec/index.html"><span class="identifier">SSHExec</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-s-s-h-exec/index.html"><span class="identifier">SSHExec</span></a></code>
+<p>Adds an SSH Exec build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ssh-upload.html">sshUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">sshUpload</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$sshUpload(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHUpload, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-s-s-h-upload/index.html"><span class="identifier">SSHUpload</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-s-s-h-upload/index.html"><span class="identifier">SSHUpload</span></a></code>
+<p>Adds an SSH Upload build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="visual-studio.html">visualStudio</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">visualStudio</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$visualStudio(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.VisualStudioStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-visual-studio-step/index.html"><span class="identifier">VisualStudioStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-visual-studio-step/index.html"><span class="identifier">VisualStudioStep</span></a></code>
+<p>Adds a <a href="https://confluence.jetbrains.com/pages/viewpage.action?pageId=74844955">build step</a> running Visual Studio solution</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="vstest.html">vstest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">vstest</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$vstest(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.VSTestStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-v-s-test-step/index.html"><span class="identifier">VSTestStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-v-s-test-step/index.html"><span class="identifier">VSTestStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running Visual Studio Tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xcode.html">xcode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../jetbrains.build-server.configs.kotlin/-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">xcode</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps$xcode(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-xcode-step/index.html"><span class="identifier">XcodeStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-xcode-step/index.html"><span class="identifier">XcodeStep</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Xcode+Project">build step</a> for running Xcode projects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

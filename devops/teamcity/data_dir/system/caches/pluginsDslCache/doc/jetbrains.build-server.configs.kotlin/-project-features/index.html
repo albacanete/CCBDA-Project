@@ -1,0 +1,402 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProjectFeatures - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">ProjectFeatures</a><br/>
+<br/>
+<h1>ProjectFeatures</h1>
+<code><span class="keyword">class </span><span class="identifier">ProjectFeatures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-project-feature/index.html">features</a> in a <a href="../-project/index.html">project</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ProjectFeatures</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Collection of <a href="../-project-feature/index.html">features</a> in a <a href="../-project/index.html">project</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="items.html">items</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">items</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="feature.html">feature</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">feature</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ProjectFeatures$feature(jetbrains.buildServer.configs.kotlin.ProjectFeature)/feature">feature</span><span class="symbol">:</span>&nbsp;<a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds the specified project feature</p>
+<code><span class="keyword">fun </span><span class="identifier">feature</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ProjectFeatures$feature(kotlin.Function1((jetbrains.buildServer.configs.kotlin.ProjectFeature, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Adds a project feature initialized with specified init block</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ProjectFeatures$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/active-storage.html">activeStorage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">activeStorage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$activeStorage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.ActiveStorage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-active-storage/index.html"><span class="identifier">ActiveStorage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-active-storage/index.html"><span class="identifier">ActiveStorage</span></a></code>
+<p>Adds an Active Storage project feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../amazon-e-c2-cloud-image.html">amazonEC2CloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">amazonEC2CloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$amazonEC2CloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-amazon-e-c2-cloud-image/index.html"><span class="identifier">AmazonEC2CloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../amazon-e-c2-cloud-profile.html">amazonEC2CloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">amazonEC2CloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$amazonEC2CloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-amazon-e-c2-cloud-profile/index.html"><span class="identifier">AmazonEC2CloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/azure-dev-ops-o-auth-connection.html">azureDevOpsOAuthConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">azureDevOpsOAuthConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$azureDevOpsOAuthConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.AzureDevOpsOAuthConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-azure-dev-ops-o-auth-connection/index.html"><span class="identifier">AzureDevOpsOAuthConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-azure-dev-ops-o-auth-connection/index.html"><span class="identifier">AzureDevOpsOAuthConnection</span></a></code>
+<p>Creates an Azure DevOps OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/azure-devops-connection.html">azureDevopsConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">azureDevopsConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$azureDevopsConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.AzureDevopsConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-azure-devops-connection/index.html"><span class="identifier">AzureDevopsConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-azure-devops-connection/index.html"><span class="identifier">AzureDevopsConnection</span></a></code>
+<p>Creates an Azure Devops/VSTS connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/bitbucket-cloud-connection.html">bitbucketCloudConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">bitbucketCloudConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$bitbucketCloudConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.BitbucketCloudConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-cloud-connection/index.html"><span class="identifier">BitbucketCloudConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-cloud-connection/index.html"><span class="identifier">BitbucketCloudConnection</span></a></code>
+<p>Creates a Bitbucket Cloud OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/bitbucket-issues.html">bitbucketIssues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">bitbucketIssues</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$bitbucketIssues(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.BitbucketIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-issue-tracker/index.html"><span class="identifier">BitbucketIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-issue-tracker/index.html"><span class="identifier">BitbucketIssueTracker</span></a></code>
+<p>Adds a project features enabling integration with Bitbucket issue tracker</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/bugzilla.html">bugzilla</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">bugzilla</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$bugzilla(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.BugzillaIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-bugzilla-issue-tracker/index.html"><span class="identifier">BugzillaIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-bugzilla-issue-tracker/index.html"><span class="identifier">BugzillaIssueTracker</span></a></code>
+<p>Enables integration with <a href="https://www.jetbrains.com/help/teamcity/?Bugzilla">Bugzilla</a> issue tracker</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/build-report-tab.html">buildReportTab</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">buildReportTab</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$buildReportTab(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.BuildReportTab, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-build-report-tab/index.html"><span class="identifier">BuildReportTab</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-build-report-tab/index.html"><span class="identifier">BuildReportTab</span></a></code>
+<p>Creates a custom tab for every build of the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../build-type-charts-order.html">buildTypeChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">buildTypeChartsOrder</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$buildTypeChartsOrder(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.ChartsOrder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-charts-order/index.html"><span class="identifier">ChartsOrder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../build-type-custom-chart.html">buildTypeCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">buildTypeCustomChart</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$buildTypeCustomChart(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CustomChart, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-custom-chart/index.html"><span class="identifier">CustomChart</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/cloud-integration.html">cloudIntegration</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">cloudIntegration</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$cloudIntegration(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.CloudIntegration, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-cloud-integration/index.html"><span class="identifier">CloudIntegration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-cloud-integration/index.html"><span class="identifier">CloudIntegration</span></a></code>
+<p>Adds a Cloud Integration project feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a></code>
+<p>Copies the receiver project features</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.ProjectFeatures, jetbrains.buildServer.configs.kotlin.ProjectFeatures)/target">target</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a></code>
+<p>Copies the receiver project features to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/docker-e-c-r-registry.html">dockerECRRegistry</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">dockerECRRegistry</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$dockerECRRegistry(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.DockerECRConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/index.html"><span class="identifier">DockerECRConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/index.html"><span class="identifier">DockerECRConnection</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/docker-registry.html">dockerRegistry</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">dockerRegistry</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$dockerRegistry(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.DockerRegistryConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-registry-connection/index.html"><span class="identifier">DockerRegistryConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-registry-connection/index.html"><span class="identifier">DockerRegistryConnection</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/ghe-connection.html">gheConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">gheConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$gheConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GHEConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-g-h-e-connection/index.html"><span class="identifier">GHEConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-g-h-e-connection/index.html"><span class="identifier">GHEConnection</span></a></code>
+<p>Creates a GitHub OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/github-connection.html">githubConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">githubConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$githubConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GitHubConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-connection/index.html"><span class="identifier">GitHubConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-connection/index.html"><span class="identifier">GitHubConnection</span></a></code>
+<p>Creates a GitHub OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/github-issues.html">githubIssues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">githubIssues</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$githubIssues(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GitHubIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-issue-tracker/index.html"><span class="identifier">GitHubIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-issue-tracker/index.html"><span class="identifier">GitHubIssueTracker</span></a></code>
+<p>Adds a project features enabling integration with GitHub issue tracker</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/gitlab-connection.html">gitlabConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">gitlabConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$gitlabConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GitLabConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-connection/index.html"><span class="identifier">GitLabConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-connection/index.html"><span class="identifier">GitLabConnection</span></a></code>
+<p>Creates a GitLab.com OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/gitlab-e-e-connection.html">gitlabEEConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">gitlabEEConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$gitlabEEConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GitLabEEConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-e-e-connection/index.html"><span class="identifier">GitLabEEConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-e-e-connection/index.html"><span class="identifier">GitLabEEConnection</span></a></code>
+<p>Creates a GitLab CE/EE OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/gitlab-issues.html">gitlabIssues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">gitlabIssues</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$gitlabIssues(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.GitLabIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-issue-tracker/index.html"><span class="identifier">GitLabIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-issue-tracker/index.html"><span class="identifier">GitLabIssueTracker</span></a></code>
+<p>Adds a project features enabling integration with GitLab issue tracker</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/jira.html">jira</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">jira</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$jira(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.JiraIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-jira-issue-tracker/index.html"><span class="identifier">JiraIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-jira-issue-tracker/index.html"><span class="identifier">JiraIssueTracker</span></a></code>
+<p>Enables integration with <a href="https://www.jetbrains.com/help/teamcity/?JIRA">JIRA</a> issue tracker</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../kubernetes-cloud-image.html">kubernetesCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">kubernetesCloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$kubernetesCloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-kubernetes-cloud-image/index.html"><span class="identifier">KubernetesCloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../kubernetes-cloud-profile.html">kubernetesCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">kubernetesCloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$kubernetesCloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-kubernetes-cloud-profile/index.html"><span class="identifier">KubernetesCloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/npm-registry.html">npmRegistry</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">npmRegistry</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$npmRegistry(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.NpmRegistryConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-npm-registry-connection/index.html"><span class="identifier">NpmRegistryConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-npm-registry-connection/index.html"><span class="identifier">NpmRegistryConnection</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/nu-get-feed.html">nuGetFeed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">nuGetFeed</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$nuGetFeed(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.NuGetFeed, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-nu-get-feed/index.html"><span class="identifier">NuGetFeed</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-nu-get-feed/index.html"><span class="identifier">NuGetFeed</span></a></code>
+<p>Enables <a href="https://confluence.jetbrains.com/display/TCDL/NuGet">TeamCity NuGet feed</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/perforce-admin-access.html">perforceAdminAccess</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">perforceAdminAccess</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$perforceAdminAccess(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.PerforceAdminConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-perforce-admin-connection/index.html"><span class="identifier">PerforceAdminConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-perforce-admin-connection/index.html"><span class="identifier">PerforceAdminConnection</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../project-charts-order.html">projectChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">projectChartsOrder</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$projectChartsOrder(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.ChartsOrder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-charts-order/index.html"><span class="identifier">ChartsOrder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../project-custom-chart.html">projectCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">projectCustomChart</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$projectCustomChart(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CustomChart, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-custom-chart/index.html"><span class="identifier">CustomChart</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/project-report-tab.html">projectReportTab</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">projectReportTab</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$projectReportTab(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.ProjectReportTab, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-project-report-tab/index.html"><span class="identifier">ProjectReportTab</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-project-report-tab/index.html"><span class="identifier">ProjectReportTab</span></a></code>
+<p>Creates a custom tab on a project report with content based on artifacts of some build under this project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/s3-storage.html">s3Storage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">s3Storage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$s3Storage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/index.html"><span class="identifier">S3Storage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/index.html"><span class="identifier">S3Storage</span></a></code>
+<p>Adds a Amazon S3 Artifact Storage project feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../shared-resource.html">sharedResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">sharedResource</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$sharedResource(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SharedResource, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a Shared Resource feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/slack-connection.html">slackConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">slackConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$slackConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.SlackConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-slack-connection/index.html"><span class="identifier">SlackConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-slack-connection/index.html"><span class="identifier">SlackConnection</span></a></code>
+<p>Creates a Slack connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/space-connection.html">spaceConnection</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">spaceConnection</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$spaceConnection(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.JetBrainsSpaceConnection, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-jet-brains-space-connection/index.html"><span class="identifier">JetBrainsSpaceConnection</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-jet-brains-space-connection/index.html"><span class="identifier">JetBrainsSpaceConnection</span></a></code>
+<p>Creates a JetBrains Space OAuth connection in the current project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/tfs-issue-tracker.html">tfsIssueTracker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">tfsIssueTracker</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$tfsIssueTracker(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.TfsIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-tfs-issue-tracker/index.html"><span class="identifier">TfsIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-tfs-issue-tracker/index.html"><span class="identifier">TfsIssueTracker</span></a></code>
+<p>Enables integration with <a href="https://www.jetbrains.com/help/teamcity/?Team+Foundation+Work+Items">Team Foundation Work Items</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/versioned-settings.html">versionedSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">versionedSettings</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$versionedSettings(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.VersionedSettings, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-versioned-settings/index.html"><span class="identifier">VersionedSettings</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-versioned-settings/index.html"><span class="identifier">VersionedSettings</span></a></code>
+<p>Enables <a href="https://www.jetbrains.com/help/teamcity/?Storing+Project+Settings+in+Version+Control">versioned settings</a> in the project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../vmware-v-sphere-cloud-image.html">vmwareVSphereCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">vmwareVSphereCloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$vmwareVSphereCloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.VMwareVSphereCloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-v-mware-v-sphere-cloud-image/index.html"><span class="identifier">VMwareVSphereCloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../vmware-v-sphere-cloud-profile.html">vmwareVSphereCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">vmwareVSphereCloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$vmwareVSphereCloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.VMwareVSphereCloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-v-mware-v-sphere-cloud-profile/index.html"><span class="identifier">VMwareVSphereCloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/youtrack.html">youtrack</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">youtrack</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures$youtrack(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.YouTrackIssueTracker, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.project-features/-you-track-issue-tracker/index.html"><span class="identifier">YouTrackIssueTracker</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-you-track-issue-tracker/index.html"><span class="identifier">YouTrackIssueTracker</span></a></code>
+<p>Enables integration with <a href="https://www.jetbrains.com/help/teamcity/?YouTrack">YouTrack</a> issue tracker</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

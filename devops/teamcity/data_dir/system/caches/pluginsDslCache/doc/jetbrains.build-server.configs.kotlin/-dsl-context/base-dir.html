@@ -1,0 +1,16 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DslContext.baseDir - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="index.html">DslContext</a>&nbsp;/&nbsp;<a href="./base-dir.html">baseDir</a><br/>
+<br/>
+<h1>baseDir</h1>
+<a name="jetbrains.buildServer.configs.kotlin.DslContext$baseDir"></a>
+<code><span class="keyword">val </span><span class="identifier">baseDir</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code>
+<p>When DSL scripts are executed, current working directory can point to some temporary folder. This temporary folder may not have contents of .teamcity directory.
+If one needs to read some files from .teamcity/ directory, they should construct File instances with the baseDir property as parent.</p>
+</BODY>
+</HTML>

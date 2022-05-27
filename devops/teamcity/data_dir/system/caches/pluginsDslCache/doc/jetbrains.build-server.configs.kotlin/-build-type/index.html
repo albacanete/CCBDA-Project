@@ -1,0 +1,399 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildType - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">BuildType</a><br/>
+<br/>
+<h1>BuildType</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">, </span><a href="../-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration">build configuration</a>.</p>
+<p>To appear in UI a buildType should be registered in a project using the <a href="../-project/build-type.html">buildType</a> method.</p>
+<p>The <a href="../-build-type-settings/id.html">id</a> and <a href="../-build-type-settings/name.html">name</a> are mandatory properties for a valid buildType (id can be omitted if it matches the class name).</p>
+<p>BuildType settings are grouped into blocks similar to tabs in the build configuration <a href="https://www.jetbrains.com/help/teamcity/?Creating+and+Editing+Build+Configurations">admin UI</a>:</p>
+<ul><li>options available on the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+General+Settings">General Settings</a> tab are defined as properties</li>
+<li><a href="../-build-type-settings/vcs.html">vcs()</a> corresponds to the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a> tab</li>
+<li><a href="../-build-type-settings/steps.html">steps()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Steps">Build Steps</a> tab</li>
+<li><a href="../-build-type-settings/triggers.html">triggers()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Triggers">Triggers</a> tab</li>
+<li><a href="../-build-type-settings/failure-conditions.html">failureConditions()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions">Failure Conditions</a> tab</li>
+<li><a href="../-build-type-settings/features.html">features()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">Build Features</a> tab</li>
+<li><a href="../-build-type-settings/dependencies.html">dependencies()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Dependencies">Dependencies</a> tab</li>
+<li><a href="../-build-type-settings/params.html">params()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Parameters">Parameters</a> tab</li>
+<li><a href="../-build-type-settings/requirements.html">requirements()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">Agent Requirements</a> tab</li>
+</ul>
+<p><strong>See Also</strong><br/>
+<p><a href="../-project/index.html">Project</a></p>
+<p><a href="../-template/index.html">Template</a></p>
+<p><a href="../-vcs-root/index.html">VcsRoot</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BuildType</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildType$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Creates a buildType and initializes it with the specified init block</p>
+<code><span class="identifier">BuildType</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration">build configuration</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dep-param-refs.html">depParamRefs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">depParamRefs</span><span class="symbol">: </span><a href="../-build-type-refs/index.html"><span class="identifier">BuildTypeRefs</span></a></code>
+<p>Helper for creating <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-DependenciesProperties">references to dependency parameters</a>
+of this buildType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="paused.html">paused</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">paused</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether the buildType is <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration#BuildConfiguration-BuildConfigurationState">paused</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse-dep-param-refs.html">reverseDepParamRefs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">reverseDepParamRefs</span><span class="symbol">: </span><a href="../-build-type-refs/index.html"><span class="identifier">BuildTypeRefs</span></a></code>
+<p>Helper for creating <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-OverridingDependenciesProperties">references to reverse dependency parameters</a>
+of this buildType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="templates.html">templates</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">templates</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a><span class="symbol">&gt;</span></code>
+<p>Ids of the templates this buildType is based on</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-type-settings/allow-external-status.html">allowExternalStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">allowExternalStatus</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If true, viewing of the configuration status is allowed externally.
+By default false.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/artifact-rules.html">artifactRules</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">artifactRules</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Artifact publishing rules. By default empty, ie. no artifacts will be published by build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/build-number-pattern.html">buildNumberPattern</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildNumberPattern</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build number pattern. By default "%build.counter%"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/description.html">description</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Description of a template or build configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/detect-hanging-builds.html">detectHangingBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">detectHangingBuilds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Enables hanging builds detection. By default true.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/enable-personal-builds.html">enablePersonalBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enablePersonalBuilds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Controls whether personal builds can be triggered in this build configuration.
+By default true.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/generated-build-configuration-checksum.html">generatedBuildConfigurationChecksum</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">generatedBuildConfigurationChecksum</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Checksum of settings that can be set in the build configurations generated by some plugin or REST API script</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span></code>
+<p>BuildType or template <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the entity has a <a href="../-build-type-settings/uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="../-build-type-settings/uuid.html">uuid</a> is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all buildTypes and templates on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/max-running-builds.html">maxRunningBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxRunningBuilds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Allows to set maximum number of simultaneously running builds.
+Default value is 0  - means there is no limit on a number of running builds.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/max-running-builds-per-branch.html">maxRunningBuildsPerBranch</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxRunningBuildsPerBranch</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Allows to set maximum number of simultaneously running builds per branch.
+Each line must be in form of branch:number, where branch is either a logical branch name or a pattern containing
+and number specifies the maximum number of builds which can be simultaneously running in each branch matching the pattern.
+0 means there is no limit.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>BuildType or template name. It must be unique across buildTypes and templates
+in a project.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/publish-artifacts.html">publishArtifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">publishArtifacts</span><span class="symbol">: </span><a href="../-publish-mode/index.html"><span class="identifier">PublishMode</span></a></code>
+<p>For which builds publish artifacts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="../-build-type-settings/-type/index.html"><span class="identifier">Type</span></a></code>
+<p>Type of this build configuration, when not specified treated as <a href="../-build-type-settings/-type/-r-e-g-u-l-a-r.html">Type.REGULAR</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/uuid.html">uuid</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">uuid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>BuildType or template uuid. TeamCity uses it to identify the entity.
+If uuid changes, TeamCity considers it to be a new entity. If uuid is
+missing, it is reconstructed from entity id.
+Uuid must be unique across all entities on the server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BuildType</span></a></code>
+<p>Creates an instance of this buildType via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="templates.html">templates</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">templates</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildType$templates(kotlin.Array((jetbrains.buildServer.configs.kotlin.Id)))/ids">ids</span><span class="symbol">:</span>&nbsp;<a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">templates</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildType$templates(kotlin.Array((jetbrains.buildServer.configs.kotlin.Template)))/ts">ts</span><span class="symbol">:</span>&nbsp;<a href="../-template/index.html"><span class="identifier">Template</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies a number of templates this buildType is based on</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildType$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-type-settings/cleanup.html">cleanup</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cleanup</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$cleanup(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-cleanup/index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures build <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-ProjectClean-upRules">clean-up rules</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/dependencies.html">dependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dependencies</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$dependencies(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Dependencies, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-dependencies/index.html"><span class="identifier">Dependencies</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Dependencies">dependencies</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/disable-settings.html">disableSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">disableSettings</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$disableSettings(kotlin.Array((kotlin.String)))/ids">ids</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Disables settings with the specified ids in this buildType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/failure-conditions.html">failureConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">failureConditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$failureConditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.FailureConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions">failure conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/features.html">features</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">features</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$features(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildFeatures, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-build-features/index.html"><span class="identifier">BuildFeatures</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">build features</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">id</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$id(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets the id to the specified value. Type of the id depends on the <a href="../-dsl-context/index.html">context</a>
+in which DSL is executed: it is <a href="../-relative-id/index.html">RelativeId</a> when DSL context <a href="../-dsl-context/is-relative.html">is relative</a>,
+otherwise it is <a href="../-absolute-id/index.html">AbsoluteId</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/option.html">option</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">option</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$option(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$option(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets option with specified name and value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/params.html">params</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">params</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$params(kotlin.Function1((jetbrains.buildServer.configs.kotlin.ParametrizedWithType, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-parametrized-with-type/index.html"><span class="identifier">ParametrizedWithType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures build <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Parameters">parameters</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/requirements.html">requirements</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">requirements</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$requirements(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Requirements, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-requirements/index.html"><span class="identifier">Requirements</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">agent requirements</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/steps.html">steps</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">steps</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$steps(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Steps">build steps</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/triggers.html">triggers</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">triggers</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$triggers(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-triggers/index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures build <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Triggers">triggers</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/vcs.html">vcs</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">vcs</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$vcs(kotlin.Function1((jetbrains.buildServer.configs.kotlin.VcsSettings, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

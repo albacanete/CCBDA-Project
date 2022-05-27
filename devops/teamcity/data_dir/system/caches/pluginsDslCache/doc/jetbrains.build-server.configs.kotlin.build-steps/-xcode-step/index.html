@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XcodeStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">XcodeStep</a><br/>
+<br/>
+<h1>XcodeStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XcodeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?Xcode+Project">Xcode build step</a> for running Xcode projects.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../xcode.html">xcode</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-build-type/index.html">BuildType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BuildType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XcodeStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XcodeStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">XcodeStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?Xcode+Project">Xcode build step</a> for running Xcode projects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="additional-command-line-parameters.html">additionalCommandLineParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">additionalCommandLineParameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Other command line parameters to be passed to the xcodebuild utility.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-actions.html">buildActions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildActions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Xcode build action(s). The default actions are clean and build.
+A space-separated list of the following actions is supported: clean, build, test, archive, installsrc, install;
+the order of actions will be preserved during execution.
+It is not recommended changing this field unless you are sure you want to change the number or order of actions.
+If your project is built under Xcode 5+, setting the runTests option
+automatically adds the test build action to the list (unless the option is already explicitly specified in the current field).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-type.html">buildType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildType</span><span class="symbol">: </span><a href="-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">?</span></code>
+<p>Select either a target-based (for project) or scheme-based (for project and workspace) build.
+Depending on the selection, the settings will vary.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project-path.html">projectPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">projectPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The path to a (.xcodeproj) project file or a (.xcworkspace) workspace file,
+should be relative to the checkout directory.
+For Xcode 3 build, only the path to the project file is supported.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run-tests.html">runTests</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runTests</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to run tests after your project is built.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="working-dir.html">workingDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workingDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Build+Working+Directory">Build working directory</a> for the executable,
+specify it if it is different from the <a href="https://www.jetbrains.com/help/teamcity/?Build+Checkout+Directory">checkout directory</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xcode-path.html">xcodePath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">xcodePath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The path to Xcode on the agent. The build will be run using this Xcode.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="scheme-based.html">schemeBased</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">schemeBased</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep$schemeBased(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep.BuildType.SchemeBased, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-build-type/-scheme-based/index.html"><span class="identifier">SchemeBased</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-build-type/-scheme-based/index.html"><span class="identifier">SchemeBased</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="target-based.html">targetBased</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">targetBased</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep$targetBased(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep.BuildType.TargetBased, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-build-type/-target-based/index.html"><span class="identifier">TargetBased</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-build-type/-target-based/index.html"><span class="identifier">TargetBased</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.XcodeStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

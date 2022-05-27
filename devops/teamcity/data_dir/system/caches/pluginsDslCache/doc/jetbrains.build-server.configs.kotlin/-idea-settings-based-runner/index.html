@@ -1,0 +1,240 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>IdeaSettingsBasedRunner - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">IdeaSettingsBasedRunner</a><br/>
+<br/>
+<h1>IdeaSettingsBasedRunner</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">IdeaSettingsBasedRunner</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-idea-settings/index.html">IdeaSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaSettings</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-idea-settings-delegate/index.html">IdeaSettingsDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaSettingsDelegate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parameter-delegate/index.html"><span class="identifier">ParameterDelegate</span></a><span class="symbol">&lt;</span><a href="-idea-settings/index.html"><span class="identifier">IdeaSettings</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="jvm-args.html">jvmArgs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">jvmArgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="path-to-project.html">pathToProject</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pathToProject</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="target-jdk-home.html">targetJdkHome</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">targetJdkHome</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="androidsdk.html">androidsdk</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">androidsdk</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$androidsdk(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.AndroidSdk, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-android-sdk/index.html"><span class="identifier">AndroidSdk</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ideajdk.html">ideajdk</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ideajdk</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$ideajdk(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.IdeaJdk, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-idea-jdk/index.html"><span class="identifier">IdeaJdk</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="jdk.html">jdk</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">jdk</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$jdk(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.Jdk, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-jdk/index.html"><span class="identifier">Jdk</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="library.html">library</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">library</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$library(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.Library, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-library/index.html"><span class="identifier">Library</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="pathvars.html">pathvars</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pathvars</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$pathvars(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.PathVariables, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-path-variables/index.html"><span class="identifier">PathVariables</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sdk.html">sdk</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sdk</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner$sdk(kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaSettingsBasedRunner.IdeaSettings.Sdk, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-settings/-sdk/index.html"><span class="identifier">Sdk</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-idea-duplicates/index.html">IdeaDuplicates</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaDuplicates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-idea-inspections/index.html">IdeaInspections</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaInspections</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-idea-runner/index.html">IdeaRunner</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaRunner</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

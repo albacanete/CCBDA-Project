@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PythonBuildStep.Command - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../index.html">PythonBuildStep</a>&nbsp;/&nbsp;<a href="./index.html">Command</a><br/>
+<br/>
+<h1>Command</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Command</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">Command</span></a><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-custom/index.html">Custom</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Custom</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-file/index.html">File</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">File</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-flake8/index.html">Flake8</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Flake8</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-module/index.html">Module</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Module</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pylint/index.html">Pylint</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Pylint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pytest/index.html">Pytest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Pytest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-script/index.html">Script</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Script</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-unittest/index.html">Unittest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Unittest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../jetbrains.build-server.configs.kotlin/-compound-param/value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-custom/index.html">Custom</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Custom</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-file/index.html">File</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">File</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-flake8/index.html">Flake8</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Flake8</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-module/index.html">Module</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Module</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pylint/index.html">Pylint</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Pylint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pytest/index.html">Pytest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Pytest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-script/index.html">Script</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Script</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-unittest/index.html">Unittest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Unittest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Command</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

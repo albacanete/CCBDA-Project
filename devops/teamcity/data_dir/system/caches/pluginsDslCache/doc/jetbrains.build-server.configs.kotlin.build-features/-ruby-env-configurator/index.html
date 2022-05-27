@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RubyEnvConfigurator - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildFeatures</a>&nbsp;/&nbsp;<a href="./index.html">RubyEnvConfigurator</a><br/>
+<br/>
+<h1>RubyEnvConfigurator</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RubyEnvConfigurator</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Ruby+Environment+Configurator">Ruby Environment Configurator</a>
+build feature passes Ruby interpreter to all build steps.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../ruby-env-configurator.html">rubyEnvConfigurator</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-method/index.html">Method</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Method</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-method/index.html"><span class="identifier">Method</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RubyEnvConfigurator</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RubyEnvConfigurator</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">RubyEnvConfigurator</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Ruby+Environment+Configurator">Ruby Environment Configurator</a>
+build feature passes Ruby interpreter to all build steps.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="fail-if-interpreter-not-found.html">failIfInterpreterNotFound</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">failIfInterpreterNotFound</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether fail a build if the Ruby environment configurator cannot pass the Ruby interpreter
+to the step execution environment because the interpreter wasn't found on the agent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="method.html">method</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">method</span><span class="symbol">: </span><a href="-method/index.html"><span class="identifier">Method</span></a><span class="symbol">?</span></code>
+<p>Ruby Environment Configurator method.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the feature is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Build feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="interpreter-and-gemset.html">interpreterAndGemset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">interpreterAndGemset</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$interpreterAndGemset(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.InterpreterAndGemset, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-interpreter-and-gemset/index.html"><span class="identifier">InterpreterAndGemset</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-interpreter-and-gemset/index.html"><span class="identifier">InterpreterAndGemset</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rbenv.html">rbenv</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rbenv</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$rbenv(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.Rbenv, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-rbenv/index.html"><span class="identifier">Rbenv</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-rbenv/index.html"><span class="identifier">Rbenv</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rbenv-config-directory.html">rbenvConfigDirectory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rbenvConfigDirectory</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$rbenvConfigDirectory(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.RbenvConfigDirectory, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-rbenv-config-directory/index.html"><span class="identifier">RbenvConfigDirectory</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-rbenv-config-directory/index.html"><span class="identifier">RbenvConfigDirectory</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ruby-interpreter.html">rubyInterpreter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rubyInterpreter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$rubyInterpreter(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.RubyInterpreter, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-ruby-interpreter/index.html"><span class="identifier">RubyInterpreter</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-ruby-interpreter/index.html"><span class="identifier">RubyInterpreter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rvm-config-directory.html">rvmConfigDirectory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rvmConfigDirectory</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$rvmConfigDirectory(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.RvmConfigDirectory, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-rvm-config-directory/index.html"><span class="identifier">RvmConfigDirectory</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-rvm-config-directory/index.html"><span class="identifier">RvmConfigDirectory</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rvmrc.html">rvmrc</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rvmrc</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$rvmrc(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator.Method.Rvmrc, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-method/-rvmrc/index.html"><span class="identifier">Rvmrc</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-method/-rvmrc/index.html"><span class="identifier">Rvmrc</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.RubyEnvConfigurator$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Creates an instance of this build feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

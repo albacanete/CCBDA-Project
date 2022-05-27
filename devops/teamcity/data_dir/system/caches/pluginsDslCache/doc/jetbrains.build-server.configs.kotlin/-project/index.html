@@ -1,0 +1,308 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Project - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Project</a><br/>
+<br/>
+<h1>Project</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Project</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-validatable/index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Project">project</a>.</p>
+<p>The <a href="id.html">id</a> and <a href="name.html">name</a> are mandatory properties for a valid project (id can be omitted if it matches the class name).</p>
+<p>The <a href="parent-id.html">parentId</a> property defines a place for this project in a <a href="https://www.jetbrains.com/help/teamcity/?Project#Project-ProjectHierarchy">project hierarchy</a>,
+it should be empty for the <a href="https://www.jetbrains.com/help/teamcity/?Project#Project-RootProject">Root project</a> on the server, and non-empty for other projects.</p>
+<p>To appear in UI project should be either registered via the <a href="../project.html">project</a> call in the <code>settings.kts</code>
+or added as a subproject to a registered project via the <a href="sub-project.html">subProject()</a> method.</p>
+<p>BuildTypes, templates, and vcsRoots can be registered in the project using the
+<a href="build-type.html">buildType</a>, <a href="template.html">template</a>, and <a href="vcs-root.html">vcsRoot</a> methods accordingly. BuildTypes and subprojects
+order can be specified via the <a href="build-types-order.html">buildTypesOrder</a> and <a href="sub-projects-order.html">subProjectsOrder</a> methods.</p>
+<p>Project parameters are defined inside the <a href="params.html">params</a> block.</p>
+<p>The <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-ProjectClean-upRules">cleanup tab</a>
+in the project admin UI contains clean-up rules for the project itself, its subprojects, and build
+configurations. In DSL the <a href="cleanup.html">cleanup</a> block in the project defines the clean-up rules for the project itself,
+subprojects and buildTypes can define their own clean-up rules or inherit them from the parent project(default).</p>
+<p>Other tabs in the project admin UI are either not stored in VCS (e.g. SSH keys), or are defined as
+project features in the <a href="features.html">features</a> block.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-build-type/index.html">BuildType</a></p>
+<p><a href="../-template/index.html">Template</a></p>
+<p><a href="../-vcs-root/index.html">VcsRoot</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Project</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Project, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Creates a project and initializes it with the specified init block</p>
+<code><span class="identifier">Project</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Project">project</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="archived.html">archived</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">archived</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether this project is <a href="https://www.jetbrains.com/help/teamcity/?Archiving+Projects">archived</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-types-order.html">buildTypesOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildTypesOrder</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">&gt;</span></code>
+<p>Specifies <a href="../-build-type/index.html">buildTypes</a> <a href="https://www.jetbrains.com/help/teamcity/?Ordering+Projects+and+Build+Configurations">order</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-types-order-ids.html">buildTypesOrderIds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildTypesOrderIds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a><span class="symbol">&gt;</span></code>
+<p>Specifies buildTypes <a href="https://www.jetbrains.com/help/teamcity/?Ordering+Projects+and+Build+Configurations">order</a>.
+Contains buildType ids. Can be also be filled by <a href="build-types-order.html">buildTypesOrder</a> property</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default-template.html">defaultTemplate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">defaultTemplate</span><span class="symbol">: </span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a><span class="symbol">?</span></code>
+<p>Id of default template. Null (by default) means no default template.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="description.html">description</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project description</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span></code>
+<p>Project <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the project has a <a href="uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="uuid.html">uuid</a> is omitted, then TeamCity treats a project with a changed id as
+a new project, all data associated with the old project will be lost (e.g.
+investigations). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all projects on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-id.html">parentId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parentId</span><span class="symbol">: </span><a href="../-absolute-id/index.html"><span class="identifier">AbsoluteId</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Identifier">Id</a> of the parent project,
+defines a place for this project in a
+<a href="https://www.jetbrains.com/help/teamcity/?Project#Project-ProjectHierarchy">project hierarchy</a>.
+Can be omitted in <a href="../-dsl-context/is-relative.html">relative context</a>, when the parent project is the
+<a href="https://www.jetbrains.com/help/teamcity/?Project#Project-RootProject">Root project</a>,
+or a project is added to its parent using the <a href="sub-project.html">subProject</a> method.
+Otherwise it is mandatory.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sub-projects-order.html">subProjectsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">subProjectsOrder</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a><span class="symbol">&gt;</span></code>
+<p>Specifies subprojects <a href="https://www.jetbrains.com/help/teamcity/?Ordering+Projects+and+Build+Configurations">order</a>,
+contains subproject ids.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uuid.html">uuid</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">uuid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project uuid. TeamCity uses it to identify a project. If uuid changes,
+TeamCity considers it to be a new project. If uuid is missing, it is
+reconstructed from entity id. Uuid must be unique across all entities
+on the server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-type.html">buildType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildType</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$buildType(jetbrains.buildServer.configs.kotlin.BuildType)/bt">bt</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Registers the specified buildType in this project</p>
+<code><span class="keyword">fun </span><span class="identifier">buildType</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$buildType(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a></code>
+<p>Registers a new buildType initialized with the specified block in this project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cleanup.html">cleanup</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cleanup</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$cleanup(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-cleanup/index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures project <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up">clean-up rules</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Project</span></a></code>
+<p>Creates an instance of this project via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="features.html">features</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">features</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$features(kotlin.Function1((jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Allows to specify project features</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">id</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$id(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets the id to the specified value. Type of the id depends on the <a href="../-dsl-context/index.html">context</a>
+in which DSL is executed: it is <a href="../-relative-id/index.html">RelativeId</a> when DSL context <a href="../-dsl-context/is-relative.html">is relative</a>,
+otherwise it is <a href="../-absolute-id/index.html">AbsoluteId</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="params.html">params</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">params</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$params(kotlin.Function1((jetbrains.buildServer.configs.kotlin.ParametrizedWithType, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-parametrized-with-type/index.html"><span class="identifier">ParametrizedWithType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures project parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent-id.html">parentId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parentId</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$parentId(kotlin.String)/absoluteId">absoluteId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sub-project.html">subProject</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">subProject</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$subProject(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Project, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Project</span></a></code>
+<p>Adds a subproject to this project</p>
+<code><span class="keyword">fun </span><span class="identifier">subProject</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$subProject(jetbrains.buildServer.configs.kotlin.Project)/subProject">subProject</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Project</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds the specified subproject to this project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sub-projects.html">subProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">subProjects</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$subProjects(kotlin.Array((jetbrains.buildServer.configs.kotlin.Project)))/projects">projects</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Project</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets subprojects of this project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="template.html">template</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">template</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$template(jetbrains.buildServer.configs.kotlin.Template)/template">template</span><span class="symbol">:</span>&nbsp;<a href="../-template/index.html"><span class="identifier">Template</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Registers the specified template in this project</p>
+<code><span class="keyword">fun </span><span class="identifier">template</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$template(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Template, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-template/index.html"><span class="identifier">Template</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-template/index.html"><span class="identifier">Template</span></a></code>
+<p>Registers a new template initialized with the specified init block in this project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="vcs-root.html">vcsRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">vcsRoot</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$vcsRoot(jetbrains.buildServer.configs.kotlin.VcsRoot)/root">root</span><span class="symbol">:</span>&nbsp;<a href="../-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Registers the specified VCS root in this project</p>
+<code><span class="keyword">fun </span><span class="identifier">vcsRoot</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Project$vcsRoot(kotlin.Function1((jetbrains.buildServer.configs.kotlin.VcsRoot, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-vcs-root/index.html"><span class="identifier">VcsRoot</span></a></code>
+<p>Registers a new VCS root initialized with specified init build in this project</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../sequential.html">sequential</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="identifier">sequential</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$sequential(jetbrains.buildServer.configs.kotlin.Project, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../-compound-stage/index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-compound-stage/index.html"><span class="identifier">CompoundStage</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,651 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompoundParam - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">CompoundParam</a><br/>
+<br/>
+<h1>CompoundParam</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CompoundParam</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CompoundParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundParam$<init>(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-parametrized/params.html">params</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">params</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-parametrized/boolean-parameter.html">booleanParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">booleanParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/trueValue">trueValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;"true"<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/falseValue">falseValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;"false"<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/compound-parameter.html">compoundParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-parametrized/compound-parameter.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">compoundParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$compoundParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-compound-delegate-provider/index.html"><span class="identifier">CompoundDelegateProvider</span></a><span class="symbol">&lt;</span><a href="../-parametrized/compound-parameter.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/copy-params-to.html">copyParamsTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">&gt;</span> <span class="identifier">copyParamsTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$copyParamsTo(jetbrains.buildServer.configs.kotlin.Parametrized.copyParamsTo.T)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../-parametrized/copy-params-to.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-parametrized/copy-params-to.html#T"><span class="identifier">T</span></a></code>
+<p>Copies parameters of this object to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/double-parameter.html">doubleParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doubleParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$doubleParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/enum-parameter.html">enumParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><span class="identifier">Enum</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">enumParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$enumParameter(kotlin.String, kotlin.collections.Map((jetbrains.buildServer.configs.kotlin.Parametrized.enumParameter.E, kotlin.String)))/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$enumParameter(kotlin.String, kotlin.collections.Map((jetbrains.buildServer.configs.kotlin.Parametrized.enumParameter.E, kotlin.String)))/mapping">mapping</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/find-raw-param.html">findRawParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findRawParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$findRawParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/has-param.html">hasParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$hasParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/int-parameter.html">intParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">intParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$intParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/param.html">param</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">param</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$param(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$param(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds parameter with specified name and value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/remove-raw-param.html">removeRawParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeRawParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$removeRawParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/string-parameter.html">stringParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stringParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$stringParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-f-t-p-upload/-auth-method/index.html">AuthMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthMethod</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-f-t-p-upload/-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-s-s-h-exec/-auth-method/index.html">AuthMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthMethod</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-s-s-h-exec/-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-s-s-h-upload/-auth-method/index.html">AuthMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthMethod</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-s-s-h-upload/-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.vcs/-git-vcs-root/-auth-method/index.html">AuthMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthMethod</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.vcs/-git-vcs-root/-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-kubernetes-cloud-profile/-auth-strategy/index.html">AuthStrategy</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthStrategy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-kubernetes-cloud-profile/-auth-strategy/index.html"><span class="identifier">AuthStrategy</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-issue-tracker/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-lab-issue-tracker/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-issue-tracker/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-bitbucket-issue-tracker/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-issue-tracker/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-git-hub-issue-tracker/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/-github/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/-github/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/-space/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/-space/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-github/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-github/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-gitlab/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-gitlab/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-bitbucket-server/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-bitbucket-server/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-bitbucket-cloud/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-bitbucket-cloud/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-azure-dev-ops/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-azure-dev-ops/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-jetbrains-space/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/-jetbrains-space/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-amazon-e-c2-cloud-profile/-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-amazon-e-c2-cloud-profile/-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/-aws-environment/index.html">AwsEnvironment</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AwsEnvironment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/-aws-environment/index.html"><span class="identifier">AwsEnvironment</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-pack-step/-base-dir/index.html">BaseDir</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BaseDir</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-pack-step/-base-dir/index.html"><span class="identifier">BaseDir</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.failure-conditions/-build-failure-on-metric/-compare-to/-build/-build-rule/index.html">BuildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BuildRule</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.failure-conditions/-build-failure-on-metric/-compare-to/-build/-build-rule/index.html"><span class="identifier">BuildRule</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-xcode-step/-build-type/index.html">BuildType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BuildType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-xcode-step/-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-command/index.html">Command</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Command</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-command/index.html"><span class="identifier">Command</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-command-step/-command-type/index.html">CommandType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CommandType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-command-step/-command-type/index.html"><span class="identifier">CommandType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.failure-conditions/-build-failure-on-metric/-compare-to/index.html">CompareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CompareTo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.failure-conditions/-build-failure-on-metric/-compare-to/index.html"><span class="identifier">CompareTo</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-s-build-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-s-build-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-spec-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-spec-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-ant-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-ant-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-unit-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-unit-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-devenv-build-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-devenv-build-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-custom-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-custom-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-ms-build-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-ms-build-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-test-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-test-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-vs-test-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-vs-test-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-s-test-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-m-s-test-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-v-s-test-step/-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-v-s-test-step/-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-maven-build-step/-coverage-engine/index.html">CoverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CoverageEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-maven-build-step/-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-ant-build-step/-coverage-engine/index.html">CoverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CoverageEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-ant-build-step/-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-gradle-build-step/-coverage-engine/index.html">CoverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CoverageEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-gradle-build-step/-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-idea-runner/-coverage-engine/index.html">CoverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CoverageEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-idea-runner/-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/-credentials/index.html">Credentials</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Credentials</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-s3-storage/-credentials/index.html"><span class="identifier">Credentials</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-credentials-provider/index.html">CredentialsProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CredentialsProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-credentials-provider/index.html"><span class="identifier">CredentialsProvider</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-credentials-type/index.html">CredentialsType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CredentialsType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-credentials-type/index.html"><span class="identifier">CredentialsType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-ecr-type/index.html">EcrType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">EcrType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.project-features/-docker-e-c-r-connection/-ecr-type/index.html"><span class="identifier">EcrType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-environment/index.html">Environment</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Environment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-environment/index.html"><span class="identifier">Environment</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-vs-test-step/-filter/index.html">Filter</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Filter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-dotnet-vs-test-step/-filter/index.html"><span class="identifier">Filter</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-fx-cop-step/-fx-cop-installation/index.html">FxCopInstallation</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">FxCopInstallation</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-fx-cop-step/-fx-cop-installation/index.html"><span class="identifier">FxCopInstallation</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-qodana/-inspection-profile/index.html">InspectionProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InspectionProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-qodana/-inspection-profile/index.html"><span class="identifier">InspectionProfile</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-fx-cop-step/-inspection-source/index.html">InspectionSource</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InspectionSource</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-fx-cop-step/-inspection-source/index.html"><span class="identifier">InspectionSource</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-simple-build-tool/-installation-mode/index.html">InstallationMode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InstallationMode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-simple-build-tool/-installation-mode/index.html"><span class="identifier">InstallationMode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-qodana/-linter/index.html">Linter</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Linter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-qodana/-linter/index.html"><span class="identifier">Linter</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-docker-support-feature/-login-to-registry/index.html">LoginToRegistry</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">LoginToRegistry</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-docker-support-feature/-login-to-registry/index.html"><span class="identifier">LoginToRegistry</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-maven-build-step/-maven-version/index.html">MavenVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">MavenVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-maven-build-step/-maven-version/index.html"><span class="identifier">MavenVersion</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-notifications/-notifier-settings/-slack-notifier/-message-format/index.html">MessageFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">MessageFormat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-notifications/-notifier-settings/-slack-notifier/-message-format/index.html"><span class="identifier">MessageFormat</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-ruby-env-configurator/-method/index.html">Method</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Method</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-ruby-env-configurator/-method/index.html"><span class="identifier">Method</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-ant-build-step/-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-ant-build-step/-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-installer-step/-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-installer-step/-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-ant-step/-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-n-ant-step/-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.vcs/-perforce-vcs-root/-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.vcs/-perforce-vcs-root/-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-notifications/-notifier-settings/index.html">NotifierSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">NotifierSettings</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-notifications/-notifier-settings/index.html"><span class="identifier">NotifierSettings</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-xcode-step/-build-type/-scheme-based/-output-directory/index.html">OutputDirectory</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">OutputDirectory</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-xcode-step/-build-type/-scheme-based/-output-directory/index.html"><span class="identifier">OutputDirectory</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-kubernetes-cloud-image/-pod-specification/index.html">PodSpecification</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">PodSpecification</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-kubernetes-cloud-image/-pod-specification/index.html"><span class="identifier">PodSpecification</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/index.html">Provider</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Provider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/-provider/index.html"><span class="identifier">Provider</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/index.html">Publisher</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Publisher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/-publisher/index.html"><span class="identifier">Publisher</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-python-version/index.html">PythonVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">PythonVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-python-build-step/-python-version/index.html"><span class="identifier">PythonVersion</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-rake-step/-rakefile/index.html">Rakefile</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Rakefile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-rake-step/-rakefile/index.html"><span class="identifier">Rakefile</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-rake-step/-ruby-interpreter-mode/index.html">RubyInterpreterMode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">RubyInterpreterMode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-rake-step/-ruby-interpreter-mode/index.html"><span class="identifier">RubyInterpreterMode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/-scheduling-policy/index.html">SchedulingPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">SchedulingPolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/-scheduling-policy/index.html"><span class="identifier">SchedulingPolicy</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-power-shell-step/-script-mode/index.html">ScriptMode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">ScriptMode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-power-shell-step/-script-mode/index.html"><span class="identifier">ScriptMode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-build-step/-source/index.html">Source</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Source</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-build-step/-source/index.html"><span class="identifier">Source</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-command-step/-command-type/-build/-source/index.html">Source</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Source</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-docker-command-step/-command-type/-build/-source/index.html"><span class="identifier">Source</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/-trigger-build/index.html">TriggerBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">TriggerBuild</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/-trigger-build/index.html"><span class="identifier">TriggerBuild</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-installer-step/-update-packages/index.html">UpdatePackages</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">UpdatePackages</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../../jetbrains.build-server.configs.kotlin.build-steps/-nu-get-installer-step/-update-packages/index.html"><span class="identifier">UpdatePackages</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

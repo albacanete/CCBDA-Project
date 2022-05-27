@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GitVcsRoot.AgentCleanPolicy - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.vcs</a>&nbsp;/&nbsp;<a href="../index.html">GitVcsRoot</a>&nbsp;/&nbsp;<a href="./index.html">AgentCleanPolicy</a><br/>
+<br/>
+<h1>AgentCleanPolicy</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">AgentCleanPolicy</span></code>
+<p>Specifies when the "git clean" command should be executed in case of agent-side checkout</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-n-e-v-e-r.html">NEVER</a></p>
+</td>
+<td>
+<p>Don't run the "git clean" command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-l-w-a-y-s.html">ALWAYS</a></p>
+</td>
+<td>
+<p>Run the "git clean" command before each build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-o-n_-b-r-a-n-c-h_-c-h-a-n-g-e.html">ON_BRANCH_CHANGE</a></p>
+</td>
+<td>
+<p>Run the "git clean" command if the branch in build is different comparing to the branch in the previous build on same agent</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

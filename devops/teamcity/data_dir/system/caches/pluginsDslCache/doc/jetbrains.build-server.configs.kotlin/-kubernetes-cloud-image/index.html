@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KubernetesCloudImage - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">KubernetesCloudImage</a><br/>
+<br/>
+<h1>KubernetesCloudImage</h1>
+<code><span class="keyword">class </span><span class="identifier">KubernetesCloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-cloud-image/index.html"><span class="identifier">CloudImage</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-pod-specification/index.html">PodSpecification</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">PodSpecification</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-pod-specification/index.html"><span class="identifier">PodSpecification</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pull-policy/index.html">PullPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PullPolicy</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">KubernetesCloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.KubernetesCloudImage$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">KubernetesCloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="agent-name-prefix.html">agentNamePrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">agentNamePrefix</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="max-instances-count.html">maxInstancesCount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxInstancesCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="pod-specification.html">podSpecification</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">podSpecification</span><span class="symbol">: </span><a href="-pod-specification/index.html"><span class="identifier">PodSpecification</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-cloud-image/agent-pool-id.html">agentPoolId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">agentPoolId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-image/profile-id.html">profileId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">profileId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="custom-template.html">customTemplate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">customTemplate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.KubernetesCloudImage$customTemplate(kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage.PodSpecification.CustomTemplate, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-pod-specification/-custom-template/index.html"><span class="identifier">CustomTemplate</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="deployment-template.html">deploymentTemplate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deploymentTemplate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.KubernetesCloudImage$deploymentTemplate(kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage.PodSpecification.DeploymentTemplate, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-pod-specification/-deployment-template/index.html"><span class="identifier">DeploymentTemplate</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="run-container.html">runContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">runContainer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.KubernetesCloudImage$runContainer(kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage.PodSpecification.RunContainer, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-pod-specification/-run-container/index.html"><span class="identifier">RunContainer</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.KubernetesCloudImage$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

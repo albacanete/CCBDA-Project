@@ -1,0 +1,434 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildFeature - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">BuildFeature</a><br/>
+<br/>
+<h1>BuildFeature</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="../-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">build feature</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BuildFeature</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildFeature$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildFeature, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Creates a build feature and initializes it with the specified init block</p>
+<code><span class="identifier">BuildFeature</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">build feature</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the feature is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Build feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-parametrized/params.html">params</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">params</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Creates an instance of this build feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildFeature$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-parametrized/boolean-parameter.html">booleanParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">booleanParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/trueValue">trueValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;"true"<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$booleanParameter(kotlin.String, kotlin.String, kotlin.String)/falseValue">falseValue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;"false"<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/compound-parameter.html">compoundParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="../-parametrized/compound-parameter.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">compoundParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$compoundParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-compound-delegate-provider/index.html"><span class="identifier">CompoundDelegateProvider</span></a><span class="symbol">&lt;</span><a href="../-parametrized/compound-parameter.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/copy-params-to.html">copyParamsTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">&gt;</span> <span class="identifier">copyParamsTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$copyParamsTo(jetbrains.buildServer.configs.kotlin.Parametrized.copyParamsTo.T)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../-parametrized/copy-params-to.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-parametrized/copy-params-to.html#T"><span class="identifier">T</span></a></code>
+<p>Copies parameters of this object to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/double-parameter.html">doubleParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doubleParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$doubleParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/enum-parameter.html">enumParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html"><span class="identifier">Enum</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">enumParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$enumParameter(kotlin.String, kotlin.collections.Map((jetbrains.buildServer.configs.kotlin.Parametrized.enumParameter.E, kotlin.String)))/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$enumParameter(kotlin.String, kotlin.collections.Map((jetbrains.buildServer.configs.kotlin.Parametrized.enumParameter.E, kotlin.String)))/mapping">mapping</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="../-parametrized/enum-parameter.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/find-raw-param.html">findRawParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findRawParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$findRawParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/has-param.html">hasParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$hasParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/int-parameter.html">intParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">intParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$intParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/param.html">param</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">param</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$param(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$param(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds parameter with specified name and value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/remove-raw-param.html">removeRawParam</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeRawParam</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$removeRawParam(kotlin.String)/paramName">paramName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parametrized/string-parameter.html">stringParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stringParameter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Parametrized$stringParameter(kotlin.String)/customName">customName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-single-delegate-provider/index.html"><span class="identifier">SingleDelegateProvider</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-approval/index.html">Approval</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Approval</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Build feature that allows to request manual approve before build starts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-assembly-info-patcher/index.html">AssemblyInfoPatcher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AssemblyInfoPatcher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?AssemblyInfo+Patcher">build feature</a> which updates the AssemblyVersion,
+AssemblyFileVersion and AssemblyInformationalVersion attributes in AssemblyInfo files under Properties folders.
+No additional attributes will be added, make sure you have all necessary attributes in the source code.
+Changed source files are reverted at the end of a build.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-auto-merge/index.html">AutoMerge</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AutoMerge</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Build feature enabling <a href="https://www.jetbrains.com/help/teamcity/?Automatic+Merge">automatic merge</a>
+in build configuration or template.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-commit-status-publisher/index.html">CommitStatusPublisher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CommitStatusPublisher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Commit+Status+Publisher">build feature</a> publishing
+status to external system</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-docker-support-feature/index.html">DockerSupportFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DockerSupportFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Docker+Support">Docker Support feature</a>
+tracks pushed images and adds a dedicated tab with information about them.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-failure-condition/index.html">FailureCondition</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FailureCondition</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions">failure condition</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-file-content-replacer/index.html">FileContentReplacer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileContentReplacer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?File+Content+Replacer">build feature</a> which processes text files by performing regular expressions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-free-disk-space/index.html">FreeDiskSpace</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FreeDiskSpace</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Build feature ensuring certain <a href="https://www.jetbrains.com/help/teamcity/?Free+Disk+Space">free disk space</a>
+on the agent before the build by deleting files managed by the TeamCity agent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-golang-feature/index.html">GolangFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GolangFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/golang.html">Golang feature</a>
+processing Golang tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-investigations-auto-assigner/index.html">InvestigationsAutoAssigner</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InvestigationsAutoAssigner</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://github.com/JetBrains/teamcity-investigations-auto-assigner">build feature</a> assigning
+investigations of build failures automatically based on heuristics</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-jira-cloud-integration/index.html">JiraCloudIntegration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JiraCloudIntegration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A build feature enabling integration with Jira Cloud via its Build and Deployment APIs</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-notifications/index.html">Notifications</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Notifications</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Build feature for notification rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-npm-connection-build-feature/index.html">NpmConnectionBuildFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NpmConnectionBuildFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Adds a connection to npm registry</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-nu-get-feed-credentials/index.html">NuGetFeedCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetFeedCredentials</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet+Feed+Credentials">build feature</a> to provide feed credentials.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-nu-get-packages-indexer/index.html">NuGetPackagesIndexer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NuGetPackagesIndexer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/NuGet">build feature</a> to index *.nupkg files in
+build artifacts into TeamCity NuGet Feed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-parallel-tests-feature/index.html">ParallelTestsFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ParallelTestsFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/parallel-tests.html">Parallel Tests Feature</a>
+can automatically split tests of a build into several batches, by test classes. It will run them in parallel on suitable build agents and gather results in a composite build overview.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-perfmon/index.html">Perfmon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Perfmon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://confluence.jetbrains.com/display/TCDL/Performance+Monitor">build feature</a> allows you to get the statistics on the CPU, disk and memory usage during a build run on a build agent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-pull-requests/index.html">PullRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PullRequests</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Pull+Requests">build feature</a> that introduces GitHub pull requests integration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-ruby-env-configurator/index.html">RubyEnvConfigurator</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RubyEnvConfigurator</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Ruby+Environment+Configurator">Ruby Environment Configurator</a>
+build feature passes Ruby interpreter to all build steps.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-shared-resources/index.html">SharedResources</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SharedResources</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Adds a Shared Resource build feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-ssh-agent/index.html">SshAgent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SshAgent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?SSH+Agent">build feature</a> which runs
+SSH agent during a build with the specified SSH key loaded</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-swabra/index.html">Swabra</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Swabra</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Build+Files+Cleaner+(Swabra)">build feature</a> cleaning files and processes created during a build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-vcs-labeling/index.html">VcsLabeling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VcsLabeling</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Build feature enabling <a href="https://www.jetbrains.com/help/teamcity/?VCS+Labeling#VCSLabeling-AutomaticVCSlabeling">automatic VCS labeling</a> in a build.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.build-features/-xml-report/index.html">XmlReport</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlReport</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/xml-report-processing.html">build feature</a> parses
+xml report produced by external tools and present them as build results</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

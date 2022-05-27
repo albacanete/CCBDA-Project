@@ -1,0 +1,299 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>S3Storage - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.projectFeatures</a>&nbsp;/&nbsp;<a href="./index.html">S3Storage</a><br/>
+<br/>
+<h1>S3Storage</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">S3Storage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Amazon S3 Artifact Storage</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../s3-storage.html">s3Storage</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-aws-environment/index.html">AwsEnvironment</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AwsEnvironment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-aws-environment/index.html"><span class="identifier">AwsEnvironment</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-credentials/index.html">Credentials</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Credentials</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-credentials/index.html"><span class="identifier">Credentials</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">S3Storage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">S3Storage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">S3Storage</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Amazon S3 Artifact Storage</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="access-key.html">accessKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accessKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>AWS account secret access key</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="access-key-i-d.html">accessKeyID</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accessKeyID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>AWS account access key ID</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aws-environment.html">awsEnvironment</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">awsEnvironment</span><span class="symbol">: </span><a href="-aws-environment/index.html"><span class="identifier">AwsEnvironment</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="bucket-name.html">bucketName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">bucketName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Bucket name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bucket-prefix.html">bucketPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">bucketPrefix</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Bucket path prefix</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cloud-front-download-distribution.html">cloudFrontDownloadDistribution</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cloudFrontDownloadDistribution</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Name of CloudFront distribution for downloads</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cloud-front-enabled.html">cloudFrontEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cloudFrontEnabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to use CloudFront for artifact transport</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cloud-front-private-key.html">cloudFrontPrivateKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cloudFrontPrivateKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Private key that corresponds to chosen public key</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cloud-front-public-key-id.html">cloudFrontPublicKeyId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cloudFrontPublicKeyId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of Public Key in CloudFront that has access to selected distribution</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cloud-front-upload-distribution.html">cloudFrontUploadDistribution</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cloudFrontUploadDistribution</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Name of CloudFront distribution for uploads</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="credentials.html">credentials</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">credentials</span><span class="symbol">: </span><a href="-credentials/index.html"><span class="identifier">Credentials</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-presigned-u-r-l-upload.html">enablePresignedURLUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enablePresignedURLUpload</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to use Pre-Signed URLs to upload</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="force-virtual-host-addressing.html">forceVirtualHostAddressing</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">forceVirtualHostAddressing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to force Virtual Host Addressing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multipart-chunksize.html">multipartChunksize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">multipartChunksize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specify the maximum allowed part size. Minimum value is 5MB.
+Allowed suffixes: KB, MB, GB, TB. Leave empty to use the default value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multipart-threshold.html">multipartThreshold</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">multipartThreshold</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Initiates multipart upload for files larger than the specified value.
+Minimum value is 5MB. Allowed suffixes: KB, MB, GB, TB.
+Leave empty to use the default value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="storage-name.html">storageName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">storageName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Storage name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="use-default-credential-provider-chain.html">useDefaultCredentialProviderChain</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">useDefaultCredentialProviderChain</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Use default credential provider chain</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Project feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="access-keys.html">accessKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">accessKeys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-credentials/-access-keys/index.html"><span class="identifier">AccessKeys</span></a></code>
+<p>Use pre-configured AWS account access keys</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom.html">custom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">custom</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage$custom(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage.AwsEnvironment.Custom, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-aws-environment/-custom/index.html"><span class="identifier">Custom</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-aws-environment/-custom/index.html"><span class="identifier">Custom</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">default</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage$default(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage.AwsEnvironment.Default, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-aws-environment/-default/index.html"><span class="identifier">Default</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-aws-environment/-default/index.html"><span class="identifier">Default</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="temporary.html">temporary</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">temporary</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage$temporary(kotlin.Function1((jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage.Credentials.Temporary, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-credentials/-temporary/index.html"><span class="identifier">Temporary</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-credentials/-temporary/index.html"><span class="identifier">Temporary</span></a></code>
+<p>Get temporary access keys via AWS STS</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.projectFeatures.S3Storage$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Creates an instance of this project feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-project-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildFailureOnMetric - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.failureConditions</a>&nbsp;/&nbsp;<a href="./index.html">BuildFailureOnMetric</a><br/>
+<br/>
+<h1>BuildFailureOnMetric</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildFailureOnMetric</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-failure-condition/index.html"><span class="identifier">FailureCondition</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions#BuildFailureConditions-Failbuildonmetricchange">build failure condition</a>
+failing build on metric change.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../fail-on-metric-change.html">failOnMetricChange</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-compare-to/index.html">CompareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CompareTo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-compare-to/index.html"><span class="identifier">CompareTo</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-metric-comparison/index.html">MetricComparison</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">MetricComparison</span></code>
+<p>A type of metric change</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-metric-type/index.html">MetricType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">MetricType</span></code>
+<p>A type of the metric</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-metric-unit/index.html">MetricUnit</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">MetricUnit</span></code>
+<p>Specifies how to treat the threshold specified in the failure condition</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BuildFailureOnMetric</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFailureOnMetric</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">BuildFailureOnMetric</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions#BuildFailureConditions-Failbuildonmetricchange">build failure condition</a>
+failing build on metric change.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="compare-to.html">compareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">compareTo</span><span class="symbol">: </span><a href="-compare-to/index.html"><span class="identifier">CompareTo</span></a><span class="symbol">?</span></code>
+<p>Specifies which value should be compared to the metric value in the build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="comparison.html">comparison</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">comparison</span><span class="symbol">: </span><a href="-metric-comparison/index.html"><span class="identifier">MetricComparison</span></a><span class="symbol">?</span></code>
+<p>On which type of metric change a build should fail</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="metric.html">metric</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">metric</span><span class="symbol">: </span><a href="-metric-type/index.html"><span class="identifier">MetricType</span></a><span class="symbol">?</span></code>
+<p>Type of the metric</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stop-build-on-failure.html">stopBuildOnFailure</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">stopBuildOnFailure</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Immediately stop the build if it fails due to this failure condition</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="threshold.html">threshold</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">threshold</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Threshold for build failure. A build will fail when a metric is changed more significantly than the specified threshold.
+Threshold change is treated according to the selected units. If not specified, the default value 1 is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="units.html">units</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">units</span><span class="symbol">: </span><a href="-metric-unit/index.html"><span class="identifier">MetricUnit</span></a><span class="symbol">?</span></code>
+<p>Specifies the unit of the given threshold (default metric units or percents)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build.html">build</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric$build(kotlin.Function1((jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-compare-to/-build/index.html"><span class="identifier">Build</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-compare-to/-build/index.html"><span class="identifier">Build</span></a></code>
+<p>The metric value in the build should be compared to the metric value from a build matched by the rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">value</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-compare-to/-value/index.html"><span class="identifier">Value</span></a></code>
+<p>The metric value in the build should be compared to the threshold</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-failure-condition/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

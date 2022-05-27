@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cleanup.KeepRule.KeepRuleFilters - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="../../index.html">Cleanup</a>&nbsp;/&nbsp;<a href="../index.html">KeepRule</a>&nbsp;/&nbsp;<a href="./index.html">KeepRuleFilters</a><br/>
+<br/>
+<h1>KeepRuleFilters</h1>
+<code><span class="keyword">class </span><span class="identifier">KeepRuleFilters</span></code>
+<p>Holds all the filters used to pick out the builds this keep rule will preserve</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-branch-filter/index.html">BranchFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BranchFilter</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-branch-state/index.html">BranchState</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">BranchState</span></code>
+<p>State of the build branch to match.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-in-branches/index.html">InBranches</a></p>
+</td>
+<td>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">InBranches</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-personal-state/index.html">PersonalState</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PersonalState</span></code>
+<p>Personal state of the build to match</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-status/index.html">Status</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Status</span></code>
+<p>Build status to match</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-with-tags/index.html">WithTags</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WithTags</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">KeepRuleFilters</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Holds all the filters used to pick out the builds this keep rule will preserve</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="in-personal-builds.html">inPersonalBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">inPersonalBuilds</span><span class="symbol">: </span><a href="-personal-state/index.html"><span class="identifier">PersonalState</span></a><span class="symbol">?</span></code>
+<p>Applies this keep rule to builds with the provided value of the "Personal" state. The keep rule will apply to all matching builds if this
+filter is not specified or null is provided.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="with-status.html">withStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">withStatus</span><span class="symbol">: </span><a href="-status/index.html"><span class="identifier">Status</span></a><span class="symbol">?</span></code>
+<p>Applies this keep rule to builds with the specified status. The keep rule will apply to all matching builds
+if the filter is not specified or null is provided.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="with-tags.html">withTags</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">withTags</span><span class="symbol">: </span><a href="-with-tags/index.html"><span class="identifier">WithTags</span></a><span class="symbol">?</span></code>
+<p>Applies this keep rule to builds with provided <a href="#">tags</a>. The keep rule will apply to all matching builds
+if the filter is not specified or an empty set is provided. Use <a href="any-of.html">anyOf</a> to specify the list of tags.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="any-of.html">anyOf</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">anyOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters$anyOf(kotlin.Array((kotlin.String)))/tags">tags</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-with-tags/index.html"><span class="identifier">WithTags</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="build-filter.html">buildFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildFilter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters$buildFilter(kotlin.String, kotlin.Function1((jetbrains.buildServer.configs.kotlin.Parametrized, kotlin.Unit)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters$buildFilter(kotlin.String, kotlin.Function1((jetbrains.buildServer.configs.kotlin.Parametrized, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Builds a filter from parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="failed.html">failed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">failed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-status/index.html"><span class="identifier">Status</span></a></code>
+<p>Matches failed builds only</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="in-branches.html">inBranches</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">inBranches</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters$inBranches(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule.KeepRuleFilters.InBranches, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-in-branches/index.html"><span class="identifier">InBranches</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Applies this keep rule to builds in branches matched by <a href="#">branchFilter</a> and <a href="#">branchState</a>. The keep rule will apply to all matching builds
+if the filter is not specified or an empty set is provided.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="non-personal.html">nonPersonal</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">nonPersonal</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-personal-state/index.html"><span class="identifier">PersonalState</span></a></code>
+<p>Matches non-personal builds only</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="only-personal.html">onlyPersonal</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onlyPersonal</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-personal-state/index.html"><span class="identifier">PersonalState</span></a></code>
+<p>Matches personal builds only</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="successful.html">successful</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">successful</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-status/index.html"><span class="identifier">Status</span></a></code>
+<p>Matches successful builds only</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

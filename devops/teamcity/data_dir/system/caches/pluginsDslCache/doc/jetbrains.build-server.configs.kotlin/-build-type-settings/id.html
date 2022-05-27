@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildTypeSettings.id - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="index.html">BuildTypeSettings</a>&nbsp;/&nbsp;<a href="./id.html">id</a><br/>
+<br/>
+<h1>id</h1>
+<a name="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$id"></a>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span></code>
+<p>Overrides <a href="../-id-owner/id.html">IdOwner.id</a></p>
+<p>BuildType or template <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the entity has a <a href="uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="uuid.html">uuid</a> is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all buildTypes and templates on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-id/index.html">Id</a></p>
+<p><a href="../kotlin.-string/to-id.html">toId</a></p>
+</p>
+<p><strong>Getter</strong><br/>
+<p>BuildType or template <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the entity has a <a href="uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="uuid.html">uuid</a> is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all buildTypes and templates on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+</p>
+<p><strong>Getter See Also</strong><br/>
+<p><a href="../-id/index.html">Id</a></p>
+<p><a href="../kotlin.-string/to-id.html">toId</a></p>
+</p>
+<p><strong>Setter</strong><br/>
+<p>BuildType or template <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the entity has a <a href="uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="uuid.html">uuid</a> is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all buildTypes and templates on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+</p>
+<p><strong>Setter See Also</strong><br/>
+<p><a href="../-id/index.html">Id</a></p>
+<p><a href="../kotlin.-string/to-id.html">toId</a></p>
+</p>
+<a name="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$id(kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">id</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildTypeSettings$id(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets the id to the specified value. Type of the id depends on the <a href="../-dsl-context/index.html">context</a>
+in which DSL is executed: it is <a href="../-relative-id/index.html">RelativeId</a> when DSL context <a href="../-dsl-context/is-relative.html">is relative</a>,
+otherwise it is <a href="../-absolute-id/index.html">AbsoluteId</a>.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildFailureOnText - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.failureConditions</a>&nbsp;/&nbsp;<a href="./index.html">BuildFailureOnText</a><br/>
+<br/>
+<h1>BuildFailureOnText</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildFailureOnText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-failure-condition/index.html"><span class="identifier">FailureCondition</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions#BuildFailureConditions-Failbuildonspecifictextinbuildlog">build failure condition</a>
+failing build on specific text in a build log.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../fail-on-text.html">failOnText</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-condition-type/index.html">ConditionType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ConditionType</span></code>
+<p>Defines how to treat the pattern specified in failure condition</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BuildFailureOnText</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BuildFailureOnText</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">BuildFailureOnText</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions#BuildFailureConditions-Failbuildonspecifictextinbuildlog">build failure condition</a>
+failing build on specific text in a build log.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="condition-type.html">conditionType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditionType</span><span class="symbol">: </span><a href="-condition-type/index.html"><span class="identifier">ConditionType</span></a><span class="symbol">?</span></code>
+<p>A type defining how to treat the specified pattern</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="failure-message.html">failureMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">failureMessage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The message to display in the UI and the build log when build fails</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pattern.html">pattern</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pattern</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The pattern to search for in the build log.
+Pattern interpretation depends on the selected conditionType.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="report-only-first-match.html">reportOnlyFirstMatch</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reportOnlyFirstMatch</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Create build problem only on the first match</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reverse</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether the matching should be reversed, ie. the build should fail if build log doesn't
+contain the specified pattern.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stop-build-on-failure.html">stopBuildOnFailure</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">stopBuildOnFailure</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Immediately stop the build if it fails due to this failure condition</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-failure-condition/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

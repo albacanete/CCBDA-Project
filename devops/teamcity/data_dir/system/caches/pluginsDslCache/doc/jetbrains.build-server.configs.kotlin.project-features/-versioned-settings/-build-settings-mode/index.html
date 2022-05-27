@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VersionedSettings.BuildSettingsMode - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.projectFeatures</a>&nbsp;/&nbsp;<a href="../index.html">VersionedSettings</a>&nbsp;/&nbsp;<a href="./index.html">BuildSettingsMode</a><br/>
+<br/>
+<h1>BuildSettingsMode</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">BuildSettingsMode</span></code>
+<p>Specifies what settings to use <a href="https://www.jetbrains.com/help/teamcity/?Storing+Project+Settings+in+Version+Control#StoringProjectSettingsinVersionControl-DefiningSettingstoApplytoBuilds">for builds</a></p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-u-s-e_-c-u-r-r-e-n-t_-s-e-t-t-i-n-g-s.html">USE_CURRENT_SETTINGS</a></p>
+</td>
+<td>
+<p>Builds use current project settings from the TeamCity server. Settings changes in branches, history and personal builds are ignored.
+Users cannot run a build with custom project settings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-r-e-f-e-r_-c-u-r-r-e-n-t_-s-e-t-t-i-n-g-s.html">PREFER_CURRENT_SETTINGS</a></p>
+</td>
+<td>
+<p>Builds use the latest project settings from the TeamCity server. Users can run a build with older project settings via the custom build dialog.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-r-e-f-e-r_-s-e-t-t-i-n-g-s_-f-r-o-m_-v-c-s.html">PREFER_SETTINGS_FROM_VCS</a></p>
+</td>
+<td>
+<p>Builds load settings from the versioned settings revision calculated for the build. Users can change configuration settings in personal builds
+from IDE or can run a build with project settings current on the TeamCity server via the custom build dialog.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="mapping.html">mapping</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">mapping</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

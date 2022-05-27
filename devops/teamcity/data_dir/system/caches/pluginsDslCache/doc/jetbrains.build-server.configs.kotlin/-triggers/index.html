@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Triggers - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Triggers</a><br/>
+<br/>
+<h1>Triggers</h1>
+<code><span class="keyword">class </span><span class="identifier">Triggers</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-trigger/index.html">build triggers</a> in <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Triggers</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Collection of <a href="../-trigger/index.html">build triggers</a> in <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="trigger.html">trigger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Triggers$trigger(jetbrains.buildServer.configs.kotlin.Trigger)/trigger">trigger</span><span class="symbol">:</span>&nbsp;<a href="../-trigger/index.html"><span class="identifier">Trigger</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds the specified trigger</p>
+<code><span class="keyword">fun </span><span class="identifier">trigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Triggers$trigger(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Trigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-trigger/index.html"><span class="identifier">Trigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-trigger/index.html"><span class="identifier">Trigger</span></a></code>
+<p>Adds a trigger initialized with the specified init block</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Triggers$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../branch-remote-run.html">branchRemoteRun</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">branchRemoteRun</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$branchRemoteRun(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.BranchRemoteRunTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../-branch-remote-run-trigger/index.html"><span class="identifier">BranchRemoteRunTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Triggers</span></a></code>
+<p>Copies the receiver triggers</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Triggers, jetbrains.buildServer.configs.kotlin.Triggers)/target">target</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Triggers</span></a></code>
+<p>Copies the receiver triggers to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/finish-build-trigger.html">finishBuildTrigger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">finishBuildTrigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$finishBuildTrigger(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.FinishBuildTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-finish-build-trigger/index.html"><span class="identifier">FinishBuildTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-finish-build-trigger/index.html"><span class="identifier">FinishBuildTrigger</span></a></code>
+<p>Adds <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Finish+Build+Trigger">Finish Build Trigger</a> to build configuration or template</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/maven-artifact.html">mavenArtifact</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">mavenArtifact</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$mavenArtifact(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.MavenArtifactDependencyTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-maven-artifact-dependency-trigger/index.html"><span class="identifier">MavenArtifactDependencyTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-maven-artifact-dependency-trigger/index.html"><span class="identifier">MavenArtifactDependencyTrigger</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Maven+Triggers#ConfiguringMavenTriggers-MavenArtifactDependencyTrigger">trigger</a>.
+running builds when there is a modification of the maven dependency content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/maven-snapshot.html">mavenSnapshot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">mavenSnapshot</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$mavenSnapshot(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.MavenSnapshotDependencyTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-maven-snapshot-dependency-trigger/index.html"><span class="identifier">MavenSnapshotDependencyTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-maven-snapshot-dependency-trigger/index.html"><span class="identifier">MavenSnapshotDependencyTrigger</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Maven+Triggers#ConfiguringMavenTriggers-MavenSnapshotDependencyTrigger">trigger</a>
+running builds when there is a modification of the snapshot dependency content in the remote repository.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/nu-get-dependency.html">nuGetDependency</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">nuGetDependency</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$nuGetDependency(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.NuGetDependency, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-nu-get-dependency/index.html"><span class="identifier">NuGetDependency</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-nu-get-dependency/index.html"><span class="identifier">NuGetDependency</span></a></code>
+<p>Adds <a href="https://www.jetbrains.com/help/teamcity/?NuGet+Dependency+Trigger">The NuGet Dependency Trigger</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/perforce-shelve-trigger.html">perforceShelveTrigger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">perforceShelveTrigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$perforceShelveTrigger(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.PerforceShelveTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-perforce-shelve-trigger/index.html"><span class="identifier">PerforceShelveTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-perforce-shelve-trigger/index.html"><span class="identifier">PerforceShelveTrigger</span></a></code>
+<p>Adds <a href="https://www.jetbrains.com/help/teamcity/?Perforce+Shelve+Trigger">Perforce Build Trigger</a> to build configuration or template</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/retry-build.html">retryBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">retryBuild</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$retryBuild(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.RetryBuildTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-retry-build-trigger/index.html"><span class="identifier">RetryBuildTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-retry-build-trigger/index.html"><span class="identifier">RetryBuildTrigger</span></a></code>
+<p>Adds Retry Build Trigger</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/schedule.html">schedule</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">schedule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$schedule(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/index.html"><span class="identifier">ScheduleTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-schedule-trigger/index.html"><span class="identifier">ScheduleTrigger</span></a></code>
+<p>Adds <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers">Schedule Build Trigger</a> to build configuration or template</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin.triggers/vcs.html">vcs</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">vcs</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers$vcs(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.VcsTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin.triggers/-vcs-trigger/index.html"><span class="identifier">VcsTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin.triggers/-vcs-trigger/index.html"><span class="identifier">VcsTrigger</span></a></code>
+<p>Adds <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Triggers">VCS trigger</a> to the build configuration or template</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CommitStatusPublisher.Publisher.Github - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildFeatures</a>&nbsp;/&nbsp;<a href="../../index.html">CommitStatusPublisher</a>&nbsp;/&nbsp;<a href="../index.html">Publisher</a>&nbsp;/&nbsp;<a href="./index.html">Github</a><br/>
+<br/>
+<h1>Github</h1>
+<code><span class="keyword">class </span><span class="identifier">Github</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Publisher</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Github</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="auth-type.html">authType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authType</span><span class="symbol">: </span><a href="-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">?</span></code>
+<p>Type of authentication</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="github-url.html">githubUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">githubUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>GitHub server URL.
+Use "https://api.github.com" for projects hosted at github.com. For GitHub enterprise use the URL in the
+following format: http{s}://{host}:{port}/api/v3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="password.html">password</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">password</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.CommitStatusPublisher.Publisher.Github$password(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.CommitStatusPublisher.Publisher.Github.AuthType.Password, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-type/-password/index.html"><span class="identifier">Password</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-type/-password/index.html"><span class="identifier">Password</span></a></code>
+<p>Password authentication</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="personal-token.html">personalToken</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">personalToken</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.CommitStatusPublisher.Publisher.Github$personalToken(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.CommitStatusPublisher.Publisher.Github.AuthType.PersonalToken, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-type/-personal-token/index.html"><span class="identifier">PersonalToken</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-type/-personal-token/index.html"><span class="identifier">PersonalToken</span></a></code>
+<p>Authentication using personal token</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.CommitStatusPublisher.Publisher.Github$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

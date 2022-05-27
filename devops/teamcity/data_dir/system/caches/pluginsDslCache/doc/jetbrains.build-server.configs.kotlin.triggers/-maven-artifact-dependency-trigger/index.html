@@ -1,0 +1,243 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MavenArtifactDependencyTrigger - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.triggers</a>&nbsp;/&nbsp;<a href="./index.html">MavenArtifactDependencyTrigger</a><br/>
+<br/>
+<h1>MavenArtifactDependencyTrigger</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MavenArtifactDependencyTrigger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-trigger/index.html"><span class="identifier">Trigger</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Maven+Triggers#ConfiguringMavenTriggers-MavenArtifactDependencyTrigger">trigger</a>
+running builds when there is a modification of the maven dependency content.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../maven-artifact.html">mavenArtifact</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MavenArtifactDependencyTrigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.MavenArtifactDependencyTrigger$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.MavenArtifactDependencyTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MavenArtifactDependencyTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">MavenArtifactDependencyTrigger</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Maven+Triggers#ConfiguringMavenTriggers-MavenArtifactDependencyTrigger">trigger</a>
+running builds when there is a modification of the maven dependency content.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="artifact-id.html">artifactId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">artifactId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A watched maven artifact id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="artifact-type.html">artifactType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">artifactType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A type of the watched artifact. By default, the type is "jar".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="classifier.html">classifier</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">classifier</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Optional classifier of the watched artifact.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="group-id.html">groupId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">groupId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A maven group identifier to the watched artifact belongs to</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="repo-id.html">repoId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">repoId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Maven repository ID to match authentication from applied maven settings</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="repo-url.html">repoUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">repoUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Maven repository URL</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="skip-if-running.html">skipIfRunning</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">skipIfRunning</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Do not trigger a build if currently running builds can produce this artifact</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-settings-path.html">userSettingsPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userSettingsPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The path to a user settings file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-settings-selection.html">userSettingsSelection</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userSettingsSelection</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Use one of the predefined settings files or provide a custom path. By default, the standard Maven settings file location is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="version.html">version</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">version</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Version or Version range</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/build-params.html">buildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">buildParams</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-trigger-build-parameters/index.html"><span class="identifier">TriggerBuildParameters</span></a></code>
+<p>Parameters that are added to triggered builds</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the trigger is enabled</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enforce-clean-checkout.html">enforceCleanCheckout</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enforceCleanCheckout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether the build should be triggered with <a href="https://www.jetbrains.com/help/teamcity/?Clean+Checkout">clean checkout</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enforce-clean-checkout-for-dependencies.html">enforceCleanCheckoutForDependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enforceCleanCheckoutForDependencies</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>When the enforceCleanCheckout is set to true specifies whether the <a href="https://www.jetbrains.com/help/teamcity/?Clean+Checkout">clean checkout</a>
+should also be applied to all dependencies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Trigger id, if not set will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Trigger type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.MavenArtifactDependencyTrigger$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/build-params.html">buildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildParams</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Trigger$buildParams(kotlin.Function1((jetbrains.buildServer.configs.kotlin.TriggerBuildParameters, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-trigger-build-parameters/index.html"><span class="identifier">TriggerBuildParameters</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures build parameters that are applied to triggered builds</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/clear-build-params.html">clearBuildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearBuildParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-trigger/index.html"><span class="identifier">Trigger</span></a></code>
+<p>Creates an instance of this trigger via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

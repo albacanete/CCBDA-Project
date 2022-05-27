@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cleanup - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Cleanup</a><br/>
+<br/>
+<h1>Cleanup</h1>
+<code><span class="keyword">class </span><span class="identifier">Cleanup</span></code>
+<p>Specifies <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up">clean-up rules</a> for <a href="../-project/index.html">project</a>, <a href="../-build-type/index.html">build configuration</a>,
+or <a href="../-template/index.html">template</a></p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-base-rule-wrapper/index.html">BaseRuleWrapper</a></p>
+</td>
+<td>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">BaseRuleWrapper</span></code>
+<p>Holds a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRule">base rule</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-keep-rule/index.html">KeepRule</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KeepRule</span></code>
+<p>Specifies a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-KeepRule">keep rule</a>.
+A keep rule defines what particular data to preserve during the clean-up.
+Multiple keep rules can be assigned to a project or build configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Cleanup</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Specifies <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up">clean-up rules</a> for <a href="../-project/index.html">project</a>, <a href="../-build-type/index.html">build configuration</a>,
+or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="keep-rules.html">keepRules</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keepRules</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="-keep-rule/index.html"><span class="identifier">KeepRule</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="prevent-dependency-cleanup.html">preventDependencyCleanup</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">preventDependencyCleanup</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Specifies whether <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRuleBehaviorforDependencyBuilds">dependency builds should be cleaned</a>.
+Null means use default, true means prevent clean-up, false means don't prevent clean-up.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$all(kotlin.Int, kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$all(kotlin.Int, kotlin.Int)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds an <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-Clean-upRules">'everything'-level</a> clean-up rule.
+Either <a href="all.html#jetbrains.buildServer.configs.kotlin.Cleanup$all(kotlin.Int, kotlin.Int)/days">days</a> or <a href="all.html#jetbrains.buildServer.configs.kotlin.Cleanup$all(kotlin.Int, kotlin.Int)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="artifacts.html">artifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">artifacts</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/artifactPatterns">artifactPatterns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds an <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-Clean-upRules">artifacts-level</a> clean-up rule.
+Either <a href="artifacts.html#jetbrains.buildServer.configs.kotlin.Cleanup$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/days">days</a> or <a href="artifacts.html#jetbrains.buildServer.configs.kotlin.Cleanup$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="base-rule.html">baseRule</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">baseRule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$baseRule(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-base-rule-wrapper/index.html"><span class="identifier">BaseRuleWrapper</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Specifies a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRule">base rule</a>.
+A base rule defines what data to clean up in general.
+Allows preserving a specified number of successful builds and/or choose the time period to keep builds in the history.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disable-keep-rule.html">disableKeepRule</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">disableKeepRule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$disableKeepRule(kotlin.String)/idToDisable">idToDisable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Disables an inherited keep rule by its ID</p>
+<code><span class="keyword">fun </span><span class="identifier">disableKeepRule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$disableKeepRule(jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule)/rule">rule</span><span class="symbol">:</span>&nbsp;<a href="-keep-rule/index.html"><span class="identifier">KeepRule</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Disables an inherited keep rule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="find-keep-rule-by-id.html">findKeepRuleById</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findKeepRuleById</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$findKeepRuleById(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-keep-rule/index.html"><span class="identifier">KeepRule</span></a><span class="symbol">?</span></code>
+<p>Finds a keep rule with the specified <a href="find-keep-rule-by-id.html#jetbrains.buildServer.configs.kotlin.Cleanup$findKeepRuleById(kotlin.String)/id">id</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="history.html">history</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">history</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$history(kotlin.Int, kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$history(kotlin.Int, kotlin.Int)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-Clean-upRules">history-level</a> clean-up rule.
+Either <a href="history.html#jetbrains.buildServer.configs.kotlin.Cleanup$history(kotlin.Int, kotlin.Int)/days">days</a> or <a href="history.html#jetbrains.buildServer.configs.kotlin.Cleanup$history(kotlin.Int, kotlin.Int)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="keep-rule.html">keepRule</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">keepRule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$keepRule(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Cleanup.KeepRule, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-keep-rule/index.html"><span class="identifier">KeepRule</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-keep-rule/index.html"><span class="identifier">KeepRule</span></a></code>
+<p>Creates and registeres a new keep rule for this clean-up definition. IDs must be specified for all keep rules.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="option.html">option</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">option</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$option(kotlin.String, kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$option(kotlin.String, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a specified clean-up option</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Cleanup</span></a></code>
+<p>Copies the receiver cleanup</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Cleanup, jetbrains.buildServer.configs.kotlin.Cleanup)/target">target</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Cleanup</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Cleanup</span></a></code>
+<p>Copies the receiver cleanup to the specified target</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

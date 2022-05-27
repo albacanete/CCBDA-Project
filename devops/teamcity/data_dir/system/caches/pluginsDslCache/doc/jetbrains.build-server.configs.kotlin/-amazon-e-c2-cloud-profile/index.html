@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AmazonEC2CloudProfile - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">AmazonEC2CloudProfile</a><br/>
+<br/>
+<h1>AmazonEC2CloudProfile</h1>
+<code><span class="keyword">class </span><span class="identifier">AmazonEC2CloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-cloud-profile/index.html"><span class="identifier">CloudProfile</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-auth-type/index.html">AuthType</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-regions/index.html">Regions</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">Regions</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AmazonEC2CloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AmazonEC2CloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="auth-type.html">authType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authType</span><span class="symbol">: </span><a href="-auth-type/index.html"><span class="identifier">AuthType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="max-instances-count.html">maxInstancesCount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxInstancesCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="region.html">region</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">region</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-cloud-profile/description.html">description</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/server-u-r-l.html">serverURL</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">serverURL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/terminate-after-build.html">terminateAfterBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">terminateAfterBuild</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/terminate-before-full-hour-minutes.html">terminateBeforeFullHourMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">terminateBeforeFullHourMinutes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/terminate-idle-minutes.html">terminateIdleMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">terminateIdleMinutes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/terminate-total-work-minutes.html">terminateTotalWorkMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">terminateTotalWorkMinutes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="access-key.html">accessKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">accessKey</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile$accessKey(kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile.AuthType.AccessKey, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-type/-access-key/index.html"><span class="identifier">AccessKey</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="instance-i-a-m-role.html">instanceIAMRole</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">instanceIAMRole</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-auth-type/-instance-i-a-m-role/index.html"><span class="identifier">InstanceIAMRole</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-cloud-profile/set-internal-params.html">setInternalParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setInternalParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

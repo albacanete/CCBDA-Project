@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildType.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="index.html">BuildType</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="jetbrains.buildServer.configs.kotlin.BuildType$&lt;init&gt;(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Unit)))"></a>
+<code><span class="identifier">BuildType</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildType$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="index.html"><span class="identifier">BuildType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Creates a buildType and initializes it with the specified init block</p>
+<h3>Parameters</h3>
+<p><a name="init"></a>
+<code>init</code> - initialization block</p>
+<p><strong>See Also</strong><br/>
+<p><a href="index.html">BuildType</a></p>
+</p>
+<a name="jetbrains.buildServer.configs.kotlin.BuildType$&lt;init&gt;()"></a>
+<code><span class="identifier">BuildType</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration">build configuration</a>.</p>
+<p>To appear in UI a buildType should be registered in a project using the <a href="../-project/build-type.html">buildType</a> method.</p>
+<p>The <a href="../-build-type-settings/id.html">id</a> and <a href="../-build-type-settings/name.html">name</a> are mandatory properties for a valid buildType (id can be omitted if it matches the class name).</p>
+<p>BuildType settings are grouped into blocks similar to tabs in the build configuration <a href="https://www.jetbrains.com/help/teamcity/?Creating+and+Editing+Build+Configurations">admin UI</a>:</p>
+<ul><li>options available on the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+General+Settings">General Settings</a> tab are defined as properties</li>
+<li><a href="../-build-type-settings/vcs.html">vcs()</a> corresponds to the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a> tab</li>
+<li><a href="../-build-type-settings/steps.html">steps()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Steps">Build Steps</a> tab</li>
+<li><a href="../-build-type-settings/triggers.html">triggers()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Triggers">Triggers</a> tab</li>
+<li><a href="../-build-type-settings/failure-conditions.html">failureConditions()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions">Failure Conditions</a> tab</li>
+<li><a href="../-build-type-settings/features.html">features()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">Build Features</a> tab</li>
+<li><a href="../-build-type-settings/dependencies.html">dependencies()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Dependencies">Dependencies</a> tab</li>
+<li><a href="../-build-type-settings/params.html">params()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Parameters">Parameters</a> tab</li>
+<li><a href="../-build-type-settings/requirements.html">requirements()</a> - <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">Agent Requirements</a> tab</li>
+</ul>
+<p><strong>See Also</strong><br/>
+<p><a href="../-project/index.html">Project</a></p>
+<p><a href="../-template/index.html">Template</a></p>
+<p><a href="../-vcs-root/index.html">VcsRoot</a></p>
+</p>
+</BODY>
+</HTML>

@@ -1,0 +1,1124 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>jetbrains.buildServer.configs.kotlin - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">jetbrains.buildServer.configs.kotlin</a><br/>
+<br/>
+<h2>Package jetbrains.buildServer.configs.kotlin</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-absolute-id/index.html">AbsoluteId</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AbsoluteId</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-id/index.html"><span class="identifier">Id</span></a></code>
+<p>Entity id to be used as is, without any prefixes provided by TeamCity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-abstract-stage/index.html">AbstractStage</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractStage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><a href="-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-amazon-e-c2-cloud-image/index.html">AmazonEC2CloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AmazonEC2CloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-image/index.html"><span class="identifier">CloudImage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-amazon-e-c2-cloud-profile/index.html">AmazonEC2CloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AmazonEC2CloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-profile/index.html"><span class="identifier">CloudProfile</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-artifact-dependency/index.html">ArtifactDependency</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ArtifactDependency</span></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Artifact+Dependencies">artifact dependency</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-artifact-rule/index.html">ArtifactRule</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ArtifactRule</span></code>
+<p>A rule specifying how to copy artifacts from dependency. Use methods of the
+companion object to create it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-base-rule/index.html">BaseRule</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BaseRule</span></code>
+<p>Clean-up rule, use one of the methods in <a href="-cleanup/index.html">Cleanup</a> to create it</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-branch-remote-run-trigger/index.html">BranchRemoteRunTrigger</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BranchRemoteRunTrigger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-trigger/index.html"><span class="identifier">Trigger</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-feature/index.html">BuildFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">build feature</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-features/index.html">BuildFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildFeatures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="-build-feature/index.html">build features</a> in <a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-rule/index.html">BuildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BuildRule</span></code>
+<p>A rule matching a build, use one of the methods in <a href="-artifact-dependency/index.html">ArtifactDependency</a> class to create it</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-step/index.html">BuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Steps">Build Step</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-step-conditions/index.html">BuildStepConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildStepConditions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-requirements/index.html"><span class="identifier">Requirements</span></a></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a> in a <a href="-build-step/index.html">build step</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-steps/index.html">BuildSteps</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildSteps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="-build-step/index.html">build steps</a> in <a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-type/index.html">BuildType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration">build configuration</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-type-charts-order/index.html">BuildTypeChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildTypeChartsOrder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-charts-order/index.html"><span class="identifier">ChartsOrder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-type-custom-chart/index.html">BuildTypeCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildTypeCustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-custom-chart/index.html"><span class="identifier">CustomChart</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-type-refs/index.html">BuildTypeRefs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildTypeRefs</span></code>
+<p>Provides methods for creating references to <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-ConfigurationParameters">buildType parameters</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-build-type-settings/index.html">BuildTypeSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildTypeSettings</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>Contains common settings between <a href="-build-type/index.html">BuildType</a> and <a href="-template/index.html">Template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-charts-order/index.html">ChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">ChartsOrder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-checkout-mode/index.html">CheckoutMode</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">CheckoutMode</span></code>
+<p>VCS <a href="https://www.jetbrains.com/help/teamcity/?VCS+Checkout+Mode">checkout mode</a>,
+specifies how sources are transferred to the build agent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-cleanup/index.html">Cleanup</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Cleanup</span></code>
+<p>Specifies <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up">clean-up rules</a> for <a href="-project/index.html">project</a>, <a href="-build-type/index.html">build configuration</a>,
+or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-cleanup-level/index.html">CleanupLevel</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">CleanupLevel</span></code>
+<p>Specifies what <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-Clean-upRules">data</a> should be cleaned.
+Each level includes the one(s) above it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-cloud-image/index.html">CloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-cloud-profile/index.html">CloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-compound-delegate-provider/index.html">CompoundDelegateProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CompoundDelegateProvider</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-compound-delegate-provider/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-compound-param/index.html">CompoundParam</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CompoundParam</span><span class="symbol">&lt;</span><span class="identifier">V</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-compound-param-delegate/index.html">CompoundParamDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CompoundParamDelegate</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-compound-param-delegate/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-delegate/index.html"><span class="identifier">ParameterDelegate</span></a><span class="symbol">&lt;</span><a href="-compound-param-delegate/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-compound-stage/index.html">CompoundStage</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">CompoundStage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-stage/index.html"><span class="identifier">Stage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-compound-stage-impl/index.html">CompoundStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CompoundStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compound-stage/index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="-abstract-stage/index.html"><span class="identifier">AbstractStage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-consumer/index.html">Consumer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Consumer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-custom-chart/index.html">CustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-dependencies/index.html">Dependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Dependencies</span></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Build+Dependencies+Setup">dependencies</a> in <a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dependency/index.html">Dependency</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Dependency</span></code>
+<p>Represents <a href="https://www.jetbrains.com/help/teamcity/?Dependent+Build">dependency</a> of one build on another</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-dependency-constructor/index.html">DependencyConstructor</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DependencyConstructor</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-dsl-context/index.html">DslContext</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">DslContext</span></code>
+<p>Context of DSL execution</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-error-consumer/index.html">ErrorConsumer</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ErrorConsumer</span></code>
+<p>Consumes validation errors</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-failure-action/index.html">FailureAction</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">FailureAction</span></code>
+<p>Action in case of <a href="https://www.jetbrains.com/help/teamcity/?Snapshot+Dependencies">snapshot dependency</a> failure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-failure-condition/index.html">FailureCondition</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FailureCondition</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Failure+Conditions">failure condition</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-failure-conditions/index.html">FailureConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FailureConditions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="-failure-condition/index.html">failure conditions</a> in <a href="-build-type/index.html">build configuration</a>
+or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-id/index.html">Id</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Id</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a> of a TeamCity entity.
+It appears in the web UI and is used in urls.
+If the entity has a uuid specified, then the id can be changed at any time.
+If uuid is omitted, then TeamCity treats an entity with a changed id as
+a new entity, all data associated with the old entity will be lost (e.g.
+a build history, a commit graph).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-id-generator/index.html">IdGenerator</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdGenerator</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-id-owner/index.html">IdOwner</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">IdOwner</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-idea-duplicates/index.html">IdeaDuplicates</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaDuplicates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-idea-settings-based-runner/index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-idea-inspections/index.html">IdeaInspections</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaInspections</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-idea-settings-based-runner/index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-idea-runner/index.html">IdeaRunner</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IdeaRunner</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-idea-settings-based-runner/index.html"><span class="identifier">IdeaSettingsBasedRunner</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-idea-settings-based-runner/index.html">IdeaSettingsBasedRunner</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">IdeaSettingsBasedRunner</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-step/index.html"><span class="identifier">BuildStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-kubernetes-cloud-image/index.html">KubernetesCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KubernetesCloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-image/index.html"><span class="identifier">CloudImage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-kubernetes-cloud-profile/index.html">KubernetesCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KubernetesCloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-profile/index.html"><span class="identifier">CloudProfile</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-options/index.html">Options</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Options</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parallel-stage-impl/index.html">ParallelStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParallelStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compound-stage/index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="-compound-stage-impl/index.html"><span class="identifier">CompoundStageImpl</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter/index.html">Parameter</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Parameter</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Parameters">Build parameter</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-delegate/index.html">ParameterDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ParameterDelegate</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-display/index.html">ParameterDisplay</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ParameterDisplay</span></code>
+<p>Specifies how parameter is shown in the <a href="https://www.jetbrains.com/help/teamcity/?Triggering+a+Custom+Build#TriggeringaCustomBuild-RunCustomBuilddialog">Run Custom Build</a> dialog</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-ref/index.html">ParameterRef</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterRef</span></code>
+<p>Reference to a parameter</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec/index.html">ParameterSpec</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">ParameterSpec</span></code>
+<p>Parameter <a href="https://www.jetbrains.com/help/teamcity/?Typed+Parameters#TypedParameters-AddingParameterSpecification">specification</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-checkbox/index.html">ParameterSpecCheckbox</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecCheckbox</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-free-form/index.html">ParameterSpecFreeForm</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecFreeForm</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-password/index.html">ParameterSpecPassword</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecPassword</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-regex/index.html">ParameterSpecRegex</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecRegex</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-select/index.html">ParameterSpecSelect</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecSelect</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parameter-spec-text/index.html">ParameterSpecText</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParameterSpecText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-spec/index.html"><span class="identifier">ParameterSpec</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parametrized/index.html">Parametrized</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Parametrized</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-parametrized-with-type/index.html">ParametrizedWithType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ParametrizedWithType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a></code>
+<p>Allows to add parameters to <a href="-project/index.html">project</a>, <a href="-build-type/index.html">build configuration</a>, or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-project/index.html">Project</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Project</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Project">project</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-project-charts-order/index.html">ProjectChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProjectChartsOrder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-charts-order/index.html"><span class="identifier">ChartsOrder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-project-custom-chart/index.html">ProjectCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProjectCustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-custom-chart/index.html"><span class="identifier">CustomChart</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-project-feature/index.html">ProjectFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ProjectFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents <a href="-project/index.html">project</a>-level feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-project-features/index.html">ProjectFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProjectFeatures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="-project-feature/index.html">features</a> in a <a href="-project/index.html">project</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-prop-init-once-delegate/index.html">PropInitOnceDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropInitOnceDelegate</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Can be specified as a delegate for some property.
+Collects all initializers for such properties but does not call them right there.
+Instead all initializers are called inside applyAllInitFunctions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-publish-mode/index.html">PublishMode</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PublishMode</span></code>
+<p>This class is used to describe condition for artifact publishing at the end of the build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-relative-id/index.html">RelativeId</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">RelativeId</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-id/index.html"><span class="identifier">Id</span></a></code>
+<p>Entity id relative to the project where versioned settings were enabled.
+When DSL executed the id of the project with enabled versioned settings
+is prepended to all relative ids. Can be used only in DSL generated with
+the 'Generate portable DSL scripts' option enabled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-requirement/index.html">Requirement</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Requirement</span></code>
+<p>An agent requirement, use methods in <a href="-requirements/index.html">Requirements</a> class to create it</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-requirement-type/index.html">RequirementType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">RequirementType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-requirements/index.html">Requirements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Requirements</span></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">agent requirements</a> in
+<a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-reuse-builds/index.html">ReuseBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ReuseBuilds</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Build+Dependencies+Setup#BuildDependenciesSetup-Reusingbuilds">Reuse builds</a> mode for <a href="-snapshot-dependency/index.html">snapshot dependencies</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sequential-stage-impl/index.html">SequentialStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SequentialStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compound-stage/index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="-compound-stage-impl/index.html"><span class="identifier">CompoundStageImpl</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-shared-resource/index.html">SharedResource</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SharedResource</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Adds a Shared Resource feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-shared-resources/index.html">SharedResources</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SharedResources</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Adds a Shared Resource build feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-single/index.html">Single</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Single</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><a href="-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="-abstract-stage/index.html"><span class="identifier">AbstractStage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-single-delegate-provider/index.html">SingleDelegateProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SingleDelegateProvider</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-single-param-delegate/index.html">SingleParamDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SingleParamDelegate</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parameter-delegate/index.html"><span class="identifier">ParameterDelegate</span></a><span class="symbol">&lt;</span><a href="-single-param-delegate/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-snapshot-dependency/index.html">SnapshotDependency</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SnapshotDependency</span></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Dependent+Build#DependentBuild-SnapshotDependency">snapshot dependency</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-stage/index.html">Stage</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Stage</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-stage-factory/index.html">StageFactory</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">StageFactory</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-template/index.html">Template</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Template</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration+Template">build template</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-trigger/index.html">Trigger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Trigger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Triggers">build trigger</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-trigger-build-parameters/index.html">TriggerBuildParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TriggerBuildParameters</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized-with-type/index.html"><span class="identifier">ParametrizedWithType</span></a></code>
+<p>Set of build parameters that are added to builds triggered by a trigger</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-triggers/index.html">Triggers</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Triggers</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-validatable/index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="-trigger/index.html">build triggers</a> in <a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-v-mware-v-sphere-cloud-image/index.html">VMwareVSphereCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">VMwareVSphereCloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-image/index.html"><span class="identifier">CloudImage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-v-mware-v-sphere-cloud-profile/index.html">VMwareVSphereCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">VMwareVSphereCloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-cloud-profile/index.html"><span class="identifier">CloudProfile</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-validatable/index.html">Validatable</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Validatable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-vcs-root/index.html">VcsRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VcsRoot</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="-validatable/index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>A base class representing TeamCity <a href="https://www.jetbrains.com/help/teamcity/?VCS+root">VCS root</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-vcs-root-entry/index.html">VcsRootEntry</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">VcsRootEntry</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-vcs-root-refs/index.html">VcsRootRefs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VcsRootRefs</span></code>
+<p>Provides methods for creating references to <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-VCSProperties">VCS related properties</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-vcs-settings/index.html">VcsSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">VcsSettings</span></code>
+<p>Contains settings from the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a>
+tab of <a href="-build-type/index.html">build configuration</a> or <a href="-template/index.html">template</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Annotations</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-team-city-dsl/index.html">TeamCityDsl</a></p>
+</td>
+<td>
+<code><span class="keyword">annotation</span> <span class="keyword">class </span><span class="identifier">TeamCityDsl</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-snapshot-dependency-options.html">SnapshotDependencyOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">SnapshotDependencyOptions</span>&nbsp;<span class="symbol">=</span>&nbsp;<a href="-snapshot-dependency/index.html"><span class="identifier">SnapshotDependency</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="kotlin.-string/index.html">kotlin.String</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-i-d_-g-e-n-e-r-a-t-o-r-s_-f-o-r_-t-e-m-p-l-a-t-e-s.html">ID_GENERATORS_FOR_TEMPLATES</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ID_GENERATORS_FOR_TEMPLATES</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-q.html">TQ</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">TQ</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Used to escape triple quotes inside multi-line strings</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="check-missing-uuids.html">checkMissingUuids</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">checkMissingUuids</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether a missing uuid should cause a validation error.
+If set to false (default) an omitted uuid is allowed and is later
+reconstructed by id of the entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="version.html">version</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">version</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Version of TeamCity in which kotlin code was generated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="amazon-e-c2-cloud-image.html">amazonEC2CloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">amazonEC2CloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$amazonEC2CloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-amazon-e-c2-cloud-image/index.html"><span class="identifier">AmazonEC2CloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="amazon-e-c2-cloud-profile.html">amazonEC2CloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">amazonEC2CloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$amazonEC2CloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-amazon-e-c2-cloud-profile/index.html"><span class="identifier">AmazonEC2CloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="branch-remote-run.html">branchRemoteRun</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-triggers/index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">branchRemoteRun</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$branchRemoteRun(jetbrains.buildServer.configs.kotlin.Triggers, kotlin.Function1((jetbrains.buildServer.configs.kotlin.BranchRemoteRunTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-branch-remote-run-trigger/index.html"><span class="identifier">BranchRemoteRunTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="build-type-charts-order.html">buildTypeChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">buildTypeChartsOrder</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$buildTypeChartsOrder(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.ChartsOrder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-charts-order/index.html"><span class="identifier">ChartsOrder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="build-type-custom-chart.html">buildTypeCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">buildTypeCustomChart</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$buildTypeCustomChart(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CustomChart, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-custom-chart/index.html"><span class="identifier">CustomChart</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">&gt;</span> <a href="copy.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="copy.html#T"><span class="identifier">T</span></a></code>
+<p>Copies the receiver VCS root.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">&gt;</span> <a href="copy.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copy(jetbrains.buildServer.configs.kotlin.copy.T, kotlin.Function1((jetbrains.buildServer.configs.kotlin.copy.T, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="copy.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="copy.html#T"><span class="identifier">T</span></a></code>
+<p>Copies the receiver VCS root and initialize it with the specified block.</p>
+<code><span class="keyword">fun </span><a href="-artifact-dependency/index.html"><span class="identifier">ArtifactDependency</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-artifact-dependency/index.html"><span class="identifier">ArtifactDependency</span></a></code>
+<p>Copies the receiver artifact dependency</p>
+<code><span class="keyword">fun </span><a href="-snapshot-dependency/index.html"><span class="identifier">SnapshotDependency</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-snapshot-dependency/index.html"><span class="identifier">SnapshotDependency</span></a></code>
+<p>Copies the receiver snapshot dependency</p>
+<code><span class="keyword">fun </span><a href="-dependency/index.html"><span class="identifier">Dependency</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-dependency/index.html"><span class="identifier">Dependency</span></a></code>
+<p>Copies the receiver dependency</p>
+<code><span class="keyword">fun </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a></code>
+<p>Copies the receiver build steps</p>
+<code><span class="keyword">fun </span><a href="-cleanup/index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-cleanup/index.html"><span class="identifier">Cleanup</span></a></code>
+<p>Copies the receiver cleanup</p>
+<code><span class="keyword">fun </span><a href="-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a></code>
+<p>Copies the receiver failure conditions</p>
+<code><span class="keyword">fun </span><a href="-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a></code>
+<p>Copies the receiver vcs settings</p>
+<code><span class="keyword">fun </span><a href="-triggers/index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-triggers/index.html"><span class="identifier">Triggers</span></a></code>
+<p>Copies the receiver triggers</p>
+<code><span class="keyword">fun </span><a href="-requirements/index.html"><span class="identifier">Requirements</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-requirements/index.html"><span class="identifier">Requirements</span></a></code>
+<p>Copies the receiver requirements</p>
+<code><span class="keyword">fun </span><a href="-dependencies/index.html"><span class="identifier">Dependencies</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-dependencies/index.html"><span class="identifier">Dependencies</span></a></code>
+<p>Copies the receiver dependencies</p>
+<code><span class="keyword">fun </span><a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a></code>
+<p>Copies the receiver build features</p>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a></code>
+<p>Copies the receiver project features</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy-settings-to.html">copySettingsTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">&gt;</span> <a href="copy-settings-to.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="identifier">copySettingsTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copySettingsTo(jetbrains.buildServer.configs.kotlin.copySettingsTo.T, jetbrains.buildServer.configs.kotlin.copySettingsTo.T)/target">target</span><span class="symbol">:</span>&nbsp;<a href="copy-settings-to.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="copy-settings-to.html#T"><span class="identifier">T</span></a></code>
+<p>Copies the receiver build settings to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">&gt;</span> <a href="copy-to.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.copyTo.T, jetbrains.buildServer.configs.kotlin.copyTo.T)/target">target</span><span class="symbol">:</span>&nbsp;<a href="copy-to.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="copy-to.html#T"><span class="identifier">T</span></a></code>
+<p>Copies the receiver VCS root to the specified target VCS root</p>
+<code><span class="keyword">fun </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.BuildSteps, jetbrains.buildServer.configs.kotlin.BuildSteps)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a></code>
+<p>Copies the receiver build steps to the specified target</p>
+<code><span class="keyword">fun </span><a href="-cleanup/index.html"><span class="identifier">Cleanup</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Cleanup, jetbrains.buildServer.configs.kotlin.Cleanup)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-cleanup/index.html"><span class="identifier">Cleanup</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-cleanup/index.html"><span class="identifier">Cleanup</span></a></code>
+<p>Copies the receiver cleanup to the specified target</p>
+<code><span class="keyword">fun </span><a href="-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.FailureConditions, jetbrains.buildServer.configs.kotlin.FailureConditions)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-failure-conditions/index.html"><span class="identifier">FailureConditions</span></a></code>
+<p>Copies the receiver failure conditions to the specified target</p>
+<code><span class="keyword">fun </span><a href="-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.VcsSettings, jetbrains.buildServer.configs.kotlin.VcsSettings)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-vcs-settings/index.html"><span class="identifier">VcsSettings</span></a></code>
+<p>Copies the receiver vcs settings to the specified target</p>
+<code><span class="keyword">fun </span><a href="-triggers/index.html"><span class="identifier">Triggers</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Triggers, jetbrains.buildServer.configs.kotlin.Triggers)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-triggers/index.html"><span class="identifier">Triggers</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-triggers/index.html"><span class="identifier">Triggers</span></a></code>
+<p>Copies the receiver triggers to the specified target</p>
+<code><span class="keyword">fun </span><a href="-requirements/index.html"><span class="identifier">Requirements</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Requirements, jetbrains.buildServer.configs.kotlin.Requirements)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-requirements/index.html"><span class="identifier">Requirements</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-requirements/index.html"><span class="identifier">Requirements</span></a></code>
+<p>Copies the receiver requirements to the specified target</p>
+<code><span class="keyword">fun </span><a href="-dependencies/index.html"><span class="identifier">Dependencies</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Dependencies, jetbrains.buildServer.configs.kotlin.Dependencies)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-dependencies/index.html"><span class="identifier">Dependencies</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-dependencies/index.html"><span class="identifier">Dependencies</span></a></code>
+<p>Copies the receiver dependencies to the specified target</p>
+<code><span class="keyword">fun </span><a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.BuildFeatures, jetbrains.buildServer.configs.kotlin.BuildFeatures)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a></code>
+<p>Copies the receiver build features to the specified target</p>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.ProjectFeatures, jetbrains.buildServer.configs.kotlin.ProjectFeatures)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a></code>
+<p>Copies the receiver project features to the specified target</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="idea-duplicates.html">ideaDuplicates</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">ideaDuplicates</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$ideaDuplicates(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaDuplicates, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-duplicates/index.html"><span class="identifier">IdeaDuplicates</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="idea-inspections.html">ideaInspections</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">ideaInspections</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$ideaInspections(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaInspections, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-inspections/index.html"><span class="identifier">IdeaInspections</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="idea-runner.html">ideaRunner</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-build-steps/index.html"><span class="identifier">BuildSteps</span></a><span class="symbol">.</span><span class="identifier">ideaRunner</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$ideaRunner(jetbrains.buildServer.configs.kotlin.BuildSteps, kotlin.Function1((jetbrains.buildServer.configs.kotlin.IdeaRunner, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-idea-runner/index.html"><span class="identifier">IdeaRunner</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="kubernetes-cloud-image.html">kubernetesCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">kubernetesCloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$kubernetesCloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-kubernetes-cloud-image/index.html"><span class="identifier">KubernetesCloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="kubernetes-cloud-profile.html">kubernetesCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">kubernetesCloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$kubernetesCloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.KubernetesCloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-kubernetes-cloud-profile/index.html"><span class="identifier">KubernetesCloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="prepare-relative-project.html">prepareRelativeProject</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">prepareRelativeProject</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$prepareRelativeProject(jetbrains.buildServer.configs.kotlin.Project)/project">project</span><span class="symbol">:</span>&nbsp;<a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="project.html">project</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">project</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$project(jetbrains.buildServer.configs.kotlin.Project)/project">project</span><span class="symbol">:</span>&nbsp;<a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">project</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$project(kotlin.Function1((jetbrains.buildServer.configs.kotlin.Project, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Defines TeamCity project</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project-charts-order.html">projectChartsOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">projectChartsOrder</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$projectChartsOrder(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.ChartsOrder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-charts-order/index.html"><span class="identifier">ChartsOrder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="project-custom-chart.html">projectCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">projectCustomChart</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$projectCustomChart(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CustomChart, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-custom-chart/index.html"><span class="identifier">CustomChart</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="relative-id-cannot-be-used.html">relativeIdCannotBeUsed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">relativeIdCannotBeUsed</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$relativeIdCannotBeUsed(kotlin.String, jetbrains.buildServer.configs.kotlin.Id)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$relativeIdCannotBeUsed(kotlin.String, jetbrains.buildServer.configs.kotlin.Id)/id">id</span><span class="symbol">:</span>&nbsp;<a href="-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="relative-id-in-absolute-hierarchy.html">relativeIdInAbsoluteHierarchy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">relativeIdInAbsoluteHierarchy</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$relativeIdInAbsoluteHierarchy(jetbrains.buildServer.configs.kotlin.Id)/id">id</span><span class="symbol">:</span>&nbsp;<a href="-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="report-relative-ids.html">reportRelativeIds</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reportRelativeIds</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$reportRelativeIds(jetbrains.buildServer.configs.kotlin.Project)/project">project</span><span class="symbol">:</span>&nbsp;<a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">reportRelativeIds</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$reportRelativeIds(jetbrains.buildServer.configs.kotlin.Project, kotlin.Boolean)/project">project</span><span class="symbol">:</span>&nbsp;<a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$reportRelativeIds(jetbrains.buildServer.configs.kotlin.Project, kotlin.Boolean)/rootProject">rootProject</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="run-privileged.html">runPrivileged</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">runPrivileged</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$runPrivileged(kotlin.Function0((jetbrains.buildServer.configs.kotlin.runPrivileged.T)))/function">function</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="run-privileged.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="run-privileged.html#T"><span class="identifier">T</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sequential.html">sequential</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project/index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="identifier">sequential</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$sequential(jetbrains.buildServer.configs.kotlin.Project, kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-compound-stage/index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-compound-stage/index.html"><span class="identifier">CompoundStage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="shared-resource.html">sharedResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">sharedResource</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$sharedResource(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SharedResource, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a Shared Resource feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shared-resources.html">sharedResources</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-build-features/index.html"><span class="identifier">BuildFeatures</span></a><span class="symbol">.</span><span class="identifier">sharedResources</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$sharedResources(jetbrains.buildServer.configs.kotlin.BuildFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SharedResources, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-shared-resources/index.html"><span class="identifier">SharedResources</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a Shared Resource build feature allows limiting concurrently running builds using a shared resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="vmware-v-sphere-cloud-image.html">vmwareVSphereCloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">vmwareVSphereCloudImage</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$vmwareVSphereCloudImage(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.VMwareVSphereCloudImage, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-v-mware-v-sphere-cloud-image/index.html"><span class="identifier">VMwareVSphereCloudImage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="vmware-v-sphere-cloud-profile.html">vmwareVSphereCloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-project-features/index.html"><span class="identifier">ProjectFeatures</span></a><span class="symbol">.</span><span class="identifier">vmwareVSphereCloudProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$vmwareVSphereCloudProfile(jetbrains.buildServer.configs.kotlin.ProjectFeatures, kotlin.Function1((jetbrains.buildServer.configs.kotlin.VMwareVSphereCloudProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-v-mware-v-sphere-cloud-profile/index.html"><span class="identifier">VMwareVSphereCloudProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

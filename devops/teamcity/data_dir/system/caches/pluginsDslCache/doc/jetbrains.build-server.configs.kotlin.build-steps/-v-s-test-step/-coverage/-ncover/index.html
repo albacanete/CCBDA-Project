@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VSTestStep.Coverage.Ncover - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../../index.html">VSTestStep</a>&nbsp;/&nbsp;<a href="../index.html">Coverage</a>&nbsp;/&nbsp;<a href="./index.html">Ncover</a><br/>
+<br/>
+<h1>Ncover</h1>
+<code><span class="keyword">class </span><span class="identifier">Ncover</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Coverage</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Ncover</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="args.html">args</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Write additional coverage tool specific arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="assemblies.html">assemblies</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">assemblies</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Write assembly names separated with new line. Leave blank for all assembly names
+(without paths and ".dll" or ".exe" extensions) to profile. Equivalent to //a NCover.Console option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude-attributes.html">excludeAttributes</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">excludeAttributes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>List of attributes making classes or methods to be excluded from coverage.
+Equivalent to //ea NCover.Console option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="explorer-args.html">explorerArgs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">explorerArgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Write additional explorer coverage tool specific arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="explorer-tool-path.html">explorerToolPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">explorerToolPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Path to explorer coverage tool</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="platform-bitness.html">platformBitness</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">platformBitness</span><span class="symbol">: </span><a href="../../-platform-bitness/index.html"><span class="identifier">PlatformBitness</span></a><span class="symbol">?</span></code>
+<p>Specify the .NET runtime bitness.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="platform-version.html">platformVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">platformVersion</span><span class="symbol">: </span><a href="../../-platform-version/index.html"><span class="identifier">PlatformVersion</span></a><span class="symbol">?</span></code>
+<p>Specify the .NET runtime version.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="report-order.html">reportOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reportOrder</span><span class="symbol">: </span><a href="../../-report-order/index.html"><span class="identifier">ReportOrder</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="report-type.html">reportType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reportType</span><span class="symbol">: </span><a href="../../-report-type/index.html"><span class="identifier">ReportType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tool-path.html">toolPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">toolPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Path to coverage tool</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.VSTestStep.Coverage.Ncover$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

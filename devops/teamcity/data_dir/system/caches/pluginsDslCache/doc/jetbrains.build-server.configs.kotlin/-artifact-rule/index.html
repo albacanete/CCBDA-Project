@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ArtifactRule - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">ArtifactRule</a><br/>
+<br/>
+<h1>ArtifactRule</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ArtifactRule</span></code>
+<p>A rule specifying how to copy artifacts from dependency. Use methods of the
+companion object to create it.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ArtifactRule</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule$<init>(kotlin.Boolean, kotlin.String, kotlin.String)/include">include</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule$<init>(kotlin.Boolean, kotlin.String, kotlin.String)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule$<init>(kotlin.Boolean, kotlin.String, kotlin.String)/dst">dst</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>A rule specifying how to copy artifacts from dependency. Use methods of the
+companion object to create it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dst.html">dst</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dst</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="include.html">include</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">include</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="src.html">src</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">src</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="as-string.html">asString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">asString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="exclude.html">exclude</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">exclude</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule.Companion$exclude(kotlin.String)/excludeLocation">excludeLocation</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ArtifactRule</span></a></code>
+<p>Creates a rule excluding the artifacts in the specified location</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="include.html">include</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">include</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule.Companion$include(kotlin.String)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ArtifactRule</span></a></code>
+<p>Creates an include rule copying the artifact from the specified src path to the same destination</p>
+<code><span class="keyword">fun </span><span class="identifier">include</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule.Companion$include(kotlin.String, kotlin.String)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule.Companion$include(kotlin.String, kotlin.String)/dst">dst</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ArtifactRule</span></a></code>
+<p>Creates an include rule copying the artifact from the specified src path to the given destination</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ArtifactRule.Companion$parse(kotlin.String)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">ArtifactRule</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

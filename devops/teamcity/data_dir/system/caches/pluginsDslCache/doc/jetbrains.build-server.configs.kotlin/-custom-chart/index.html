@@ -1,0 +1,237 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomChart - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">CustomChart</a><br/>
+<br/>
+<h1>CustomChart</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-abstract-series/index.html">AbstractSeries</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractSeries</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-axis-type/index.html">AxisType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">AxisType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-default-filters/index.html">DefaultFilters</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">DefaultFilters</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterParameterValue</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-format/index.html">Format</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Format</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-hide-filters/index.html">HideFilters</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">HideFilters</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterParameterValue</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-pattern-series/index.html">PatternSeries</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PatternSeries</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-abstract-series/index.html"><span class="identifier">AbstractSeries</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-serie/index.html">Serie</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Serie</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-abstract-series/index.html"><span class="identifier">AbstractSeries</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-series-key/index.html">SeriesKey</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SeriesKey</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default-filters.html">defaultFilters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">defaultFilters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-default-filters/index.html"><span class="identifier">DefaultFilters</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">format</span><span class="symbol">: </span><a href="-format/index.html"><span class="identifier">Format</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="height.html">height</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">height</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="hide-filters.html">hideFilters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">hideFilters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-hide-filters/index.html"><span class="identifier">HideFilters</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="series.html">series</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">series</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-abstract-series/index.html"><span class="identifier">AbstractSeries</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="series-title.html">seriesTitle</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">seriesTitle</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="title.html">title</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="width.html">width</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">width</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="y-axis-include-zero.html">yAxisIncludeZero</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">yAxisIncludeZero</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="y-axis-max.html">yAxisMax</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">yAxisMax</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="y-axis-min.html">yAxisMin</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">yAxisMin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="y-axis-type.html">yAxisType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">yAxisType</span><span class="symbol">: </span><a href="-axis-type/index.html"><span class="identifier">AxisType</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-project-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Project feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Project feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-project-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a></code>
+<p>Creates an instance of this project feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-feature/validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ProjectFeature$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-type-custom-chart/index.html">BuildTypeCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildTypeCustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CustomChart</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-custom-chart/index.html">ProjectCustomChart</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProjectCustomChart</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CustomChart</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

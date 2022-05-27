@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FxCopStep.InspectionSource.Assemblies - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../../index.html">FxCopStep</a>&nbsp;/&nbsp;<a href="../index.html">InspectionSource</a>&nbsp;/&nbsp;<a href="./index.html">Assemblies</a><br/>
+<br/>
+<h1>Assemblies</h1>
+<code><span class="keyword">class </span><span class="identifier">Assemblies</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">InspectionSource</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Assemblies</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="exclude.html">exclude</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">exclude</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Exclude wildcards to refine the included assemblies list.
+Assembly file names relative to the checkout root separated by spaces.
+Ant-like wildcards are supported. Example: bin*.dll</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="files.html">files</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">files</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Enter the paths to the assemblies to be inspected (use Ant-like wildcards to select files by a mask).
+FxCop will use default settings to inspect them.
+The paths should be relative to the Build Checkout Directory and separated by spaces.
+Note that there is a limitation to the maximum number of assemblies
+that can be specified here due to command-line string limitation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep.InspectionSource.Assemblies$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

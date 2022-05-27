@@ -1,0 +1,257 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SSHExec - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">SSHExec</a><br/>
+<br/>
+<h1>SSHExec</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SSHExec</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An SSH Exec build step.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../ssh-exec.html">sshExec</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-auth-method/index.html">AuthMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthMethod</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SSHExec</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SSHExec</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">SSHExec</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An SSH Exec build step.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="auth-method.html">authMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authMethod</span><span class="symbol">: </span><a href="-auth-method/index.html"><span class="identifier">AuthMethod</span></a><span class="symbol">?</span></code>
+<p>An SSH authentication method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="commands.html">commands</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">commands</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specify a new-line delimited set of commands that will be executed in the remote shell.
+The remote shell will be started in the home directory of an authenticated user.
+The shell output will be available in the TeamCity build log.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Optional. Default value: 22.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pty.html">pty</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pty</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Optional. Specify the type of the pty terminal. For example, "vt100".
+If empty, pty will not be allocated (default).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="target-url.html">targetUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">targetUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Target url in form {hostname|ip_address}<a href="path/to/target/folder">path/to/target/folder</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="custom-private-key.html">customPrivateKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">customPrivateKey</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$customPrivateKey(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec.AuthMethod.CustomPrivateKey, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-method/-custom-private-key/index.html"><span class="identifier">CustomPrivateKey</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-method/-custom-private-key/index.html"><span class="identifier">CustomPrivateKey</span></a></code>
+<p>Will try to perform private key authentication
+using the given public key file with given passphrase.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default-private-key.html">defaultPrivateKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">defaultPrivateKey</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$defaultPrivateKey(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec.AuthMethod.DefaultPrivateKey, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-method/-default-private-key/index.html"><span class="identifier">DefaultPrivateKey</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-method/-default-private-key/index.html"><span class="identifier">DefaultPrivateKey</span></a></code>
+<p>Will try to perform private key authentication using the ~/.ssh/config settings.
+If no settings file exists, will try to use the ~/.ssh/rsa_pub public key file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="password.html">password</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">password</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$password(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec.AuthMethod.Password, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-method/-password/index.html"><span class="identifier">Password</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-method/-password/index.html"><span class="identifier">Password</span></a></code>
+<p>Simple password authentication.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ssh-agent.html">sshAgent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sshAgent</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$sshAgent(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec.AuthMethod.SshAgent, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-method/-ssh-agent/index.html"><span class="identifier">SshAgent</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-method/-ssh-agent/index.html"><span class="identifier">SshAgent</span></a></code>
+<p>Use ssh-agent for authentication, the SSH-Agent build feature must be enabled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploaded-key.html">uploadedKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">uploadedKey</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$uploadedKey(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec.AuthMethod.UploadedKey, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-auth-method/-uploaded-key/index.html"><span class="identifier">UploadedKey</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-auth-method/-uploaded-key/index.html"><span class="identifier">UploadedKey</span></a></code>
+<p>Uses the key(s) uploaded to the project.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.SSHExec$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

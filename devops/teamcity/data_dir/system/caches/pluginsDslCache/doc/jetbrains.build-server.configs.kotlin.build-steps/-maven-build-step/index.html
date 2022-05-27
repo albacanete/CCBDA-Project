@@ -1,0 +1,455 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MavenBuildStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">MavenBuildStep</a><br/>
+<br/>
+<h1>MavenBuildStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MavenBuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Maven">build step</a> running maven</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../maven.html">maven</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-coverage-engine/index.html">CoverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CoverageEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-image-platform/index.html">ImagePlatform</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ImagePlatform</span></code>
+<p>Docker image platforms</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-maven-version/index.html">MavenVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">MavenVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-maven-version/index.html"><span class="identifier">MavenVersion</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-repository-scope/index.html">RepositoryScope</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">RepositoryScope</span></code>
+<p>Maven local repository scope.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MavenBuildStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MavenBuildStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">MavenBuildStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Maven">build step</a> running maven</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="coverage-engine.html">coverageEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">coverageEngine</span><span class="symbol">: </span><a href="-coverage-engine/index.html"><span class="identifier">CoverageEngine</span></a><span class="symbol">?</span></code>
+<p>Specifies coverage engine to use</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-image.html">dockerImage</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dockerImage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specifies which Docker image to use for running this build step. I.e. the build step will be run inside specified docker image, using 'docker run' wrapper.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-image-platform.html">dockerImagePlatform</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dockerImagePlatform</span><span class="symbol">: </span><a href="-image-platform/index.html"><span class="identifier">ImagePlatform</span></a><span class="symbol">?</span></code>
+<p>Specifies which Docker image platform will be used to run this build step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-pull.html">dockerPull</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dockerPull</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>If enabled, "docker pull <a href="docker-image.html">image</a>" will be run before docker run.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="docker-run-parameters.html">dockerRunParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">dockerRunParameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional docker run command arguments</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="goals.html">goals</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">goals</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Space-separated list of goals to execute</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-incremental.html">isIncremental</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isIncremental</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Enable incremental building</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jdk-home.html">jdkHome</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">jdkHome</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A path to <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-DefiningJava-relatedEnvironmentVariables">JDK</a> to use.
+By default the JAVA_HOME environment variable or the agent's own Java is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jvm-args.html">jvmArgs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">jvmArgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Space-separated list of additional arguments for JVM</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="local-repo-scope.html">localRepoScope</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">localRepoScope</span><span class="symbol">: </span><a href="-repository-scope/index.html"><span class="identifier">RepositoryScope</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="maven-version.html">mavenVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mavenVersion</span><span class="symbol">: </span><a href="-maven-version/index.html"><span class="identifier">MavenVersion</span></a><span class="symbol">?</span></code>
+<p>Maven version to use</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pom-location.html">pomLocation</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pomLocation</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Path to POM file. Should be relative to the checkout directory.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="runner-args.html">runnerArgs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runnerArgs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional Maven command line parameters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="use-own-local-repo.html">useOwnLocalRepo</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><s><span class="identifier">useOwnLocalRepo</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Use own local artifact repository</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-settings-path.html">userSettingsPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userSettingsPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The path to a user settings file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-settings-selection.html">userSettingsSelection</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userSettingsSelection</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Use one of the predefined settings files or provide a custom path. By default, the standard Maven settings file location is used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="working-dir.html">workingDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workingDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Custom working directory for maven. If not specified, the checkout directory is used.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="auto.html">auto</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">auto</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-auto/index.html"><span class="identifier">Auto</span></a></code>
+<p>Maven version specified by the M2_HOME environment variable.
+If the environment variable is empty, then the default Maven version provided by TeamCity server will be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_2.html">bundled_2</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_2</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_2/index.html"><span class="identifier">Bundled_2</span></a></code>
+<p>Use maven 2 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_0.html">bundled_3_0</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_0</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_0/index.html"><span class="identifier">Bundled_3_0</span></a></code>
+<p>Use maven 3.0.5 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_1.html">bundled_3_1</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_1</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_1/index.html"><span class="identifier">Bundled_3_1</span></a></code>
+<p>Use maven 3.1.1 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_2.html">bundled_3_2</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_2</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_2/index.html"><span class="identifier">Bundled_3_2</span></a></code>
+<p>Use maven 3.2.5 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_3.html">bundled_3_3</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_3</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_3/index.html"><span class="identifier">Bundled_3_3</span></a></code>
+<p>Use maven 3.3.9 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_5.html">bundled_3_5</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_5</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_5/index.html"><span class="identifier">Bundled_3_5</span></a></code>
+<p>Use maven 3.5.4 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bundled_3_6.html">bundled_3_6</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bundled_3_6</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-bundled_3_6/index.html"><span class="identifier">Bundled_3_6</span></a></code>
+<p>Use maven 3.6.3 bundled with TeamCity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom.html">custom</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">custom</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep$custom(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep.MavenVersion.Custom, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-maven-version/-custom/index.html"><span class="identifier">Custom</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-custom/index.html"><span class="identifier">Custom</span></a></code>
+<p>The custom Maven version found at the specified path</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><s><span class="identifier">default</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-default/index.html"><span class="identifier">Default</span></a></code>
+<p>In TeamCity 10.0 the meaning of this option was: Maven version specified in M2_HOME environment variable, if the environment variable is empty, then the Maven version 3.0.5.
+In TeamCity 2017.1 this option is renamed to auto(), please use it instead.
+If you want to always use the default Maven version provided by TeamCity server, switch to defaultProvidedVersion().</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default-provided-version.html">defaultProvidedVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">defaultProvidedVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-maven-version/-default-provided-version/index.html"><span class="identifier">DefaultProvidedVersion</span></a></code>
+<p>The default Maven version provided by TeamCity server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="idea.html">idea</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">idea</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep$idea(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep.CoverageEngine.Idea, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage-engine/-idea/index.html"><span class="identifier">Idea</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage-engine/-idea/index.html"><span class="identifier">Idea</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="jacoco.html">jacoco</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">jacoco</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep$jacoco(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep.CoverageEngine.Jacoco, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage-engine/-jacoco/index.html"><span class="identifier">Jacoco</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage-engine/-jacoco/index.html"><span class="identifier">Jacoco</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

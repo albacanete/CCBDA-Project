@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cleanup.BaseRuleWrapper - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="../index.html">Cleanup</a>&nbsp;/&nbsp;<a href="./index.html">BaseRuleWrapper</a><br/>
+<br/>
+<h1>BaseRuleWrapper</h1>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">BaseRuleWrapper</span></code>
+<p>Holds a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRule">base rule</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BaseRuleWrapper</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Holds a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRule">base rule</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="prevent-dependency-cleanup.html">preventDependencyCleanup</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">preventDependencyCleanup</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$all(kotlin.Int, kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$all(kotlin.Int, kotlin.Int)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds an <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-ProjectClean-upRules">'everything'-level</a> clean-up rule.
+Either <a href="all.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$all(kotlin.Int, kotlin.Int)/days">days</a> or <a href="all.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$all(kotlin.Int, kotlin.Int)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="artifacts.html">artifacts</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">artifacts</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/artifactPatterns">artifactPatterns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds an <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-BaseRule">artifacts-level</a> clean-up rule.
+Either <a href="artifacts.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/days">days</a> or <a href="artifacts.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$artifacts(kotlin.Int, kotlin.Int, kotlin.String)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="history.html">history</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">history</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$history(kotlin.Int, kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$history(kotlin.Int, kotlin.Int)/builds">builds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a <a href="https://www.jetbrains.com/help/teamcity/?Clean-Up#Clean-Up-Clean-upRules">history-level</a> clean-up rule.
+Either <a href="history.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$history(kotlin.Int, kotlin.Int)/days">days</a> or <a href="history.html#jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$history(kotlin.Int, kotlin.Int)/builds">builds</a> must be non-null. If they are both null, clean-up will not be configured.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="option.html">option</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">option</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$option(kotlin.String, kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Cleanup.BaseRuleWrapper$option(kotlin.String, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a specified clean-up option</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

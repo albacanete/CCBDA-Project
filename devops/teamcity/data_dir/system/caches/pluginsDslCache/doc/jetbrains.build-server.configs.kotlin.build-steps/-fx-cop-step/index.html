@@ -1,0 +1,292 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FxCopStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">FxCopStep</a><br/>
+<br/>
+<h1>FxCopStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FxCopStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?FxCop">FxCop build step</a> is intended for inspecting .NET assemblies
+and reporting possible design, localization, performance, and security improvements.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../fx-cop.html">fxCop</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-fx-cop-installation/index.html">FxCopInstallation</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">FxCopInstallation</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-fx-cop-installation/index.html"><span class="identifier">FxCopInstallation</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-fx-cop-version/index.html">FxCopVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">FxCopVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-inspection-source/index.html">InspectionSource</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InspectionSource</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-inspection-source/index.html"><span class="identifier">InspectionSource</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FxCopStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FxCopStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">FxCopStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An <a href="https://www.jetbrains.com/help/teamcity/?FxCop">FxCop build step</a> is intended for inspecting .NET assemblies
+and reporting possible design, localization, performance, and security improvements.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="additional-options.html">additionalOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">additionalOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional options for calling FxCopCmd executable.
+All entered options will be added to the beginning of the command line parameters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fail-on-analysis-error.html">failOnAnalysisError</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">failOnAnalysisError</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Fails build on analysis errors from FxCop such as:
+ANALYSIS_ERROR, ASSEMBLY_LOAD_ERROR, ASSEMBLY_REFERENCES_ERROR,
+PROJECT_LOAD_ERROR, RULE_LIBRARY_LOAD_ERROR, UNKNOWN_ERROR, OUTPUT_ERROR</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fx-cop-installation.html">fxCopInstallation</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fxCopInstallation</span><span class="symbol">: </span><a href="-fx-cop-installation/index.html"><span class="identifier">FxCopInstallation</span></a><span class="symbol">?</span></code>
+<p>When a build agent is started, it detects automatically whether FxCop is installed.
+If FxCop is detected, TeamCity defines the %system.FxCopRoot% agent system property.
+You can also use a custom installation of FxCop or the use FxCop checked in your version control.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore-generated-code.html">ignoreGeneratedCode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">ignoreGeneratedCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Sets /ignoregeneratedcode for FxCopCmd (note: it's supported since FxCop 1.36).
+Speeds up inspection.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inspection-source.html">inspectionSource</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">inspectionSource</span><span class="symbol">: </span><a href="-inspection-source/index.html"><span class="identifier">InspectionSource</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="report-x-s-l-t-file.html">reportXSLTFile</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reportXSLTFile</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>The path to the XSLT transformation file relative to the Build Checkout Directory or absolute on the agent machine.
+You can use the path to the detected FxCop on the target machine (i.e. %system.FxCopRoot%/Xml/FxCopReport.xsl).
+When the Report XSLT file option is set, the build runner will apply an XSLT transform to FxCop XML output and
+display the resulting HTML in a new FxCop tab on the build results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="search-in-dirs.html">searchInDirs</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">searchInDirs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Search the assemblies referenced by targets in the specified directories separated by spaces.
+Sets /d: options for FxCopCmd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="search-in-g-a-c.html">searchInGAC</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">searchInGAC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Search the assemblies referenced by targets in Global Assembly Cache.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="assemblies.html">assemblies</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">assemblies</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$assemblies(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep.InspectionSource.Assemblies, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-inspection-source/-assemblies/index.html"><span class="identifier">Assemblies</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-inspection-source/-assemblies/index.html"><span class="identifier">Assemblies</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="auto.html">auto</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">auto</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$auto(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep.FxCopInstallation.Auto, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-fx-cop-installation/-auto/index.html"><span class="identifier">Auto</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-fx-cop-installation/-auto/index.html"><span class="identifier">Auto</span></a></code>
+<p>Select to use the FxCop installation on an agent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="manual.html">manual</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">manual</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$manual(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep.FxCopInstallation.Manual, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-fx-cop-installation/-manual/index.html"><span class="identifier">Manual</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-fx-cop-installation/-manual/index.html"><span class="identifier">Manual</span></a></code>
+<p>Select to use a custom installation of FxCop (not the autodetected one),
+or if you do not have FxCop installed on the build agent
+(for example, you can place the FxCop tool in your source control, and check it out with the build sources).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project.html">project</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">project</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$project(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep.InspectionSource.Project, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-inspection-source/-project/index.html"><span class="identifier">Project</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-inspection-source/-project/index.html"><span class="identifier">Project</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.FxCopStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

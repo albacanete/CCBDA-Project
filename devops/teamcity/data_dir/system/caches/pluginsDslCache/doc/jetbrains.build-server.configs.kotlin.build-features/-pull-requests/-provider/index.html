@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PullRequests.Provider - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.buildFeatures</a>&nbsp;/&nbsp;<a href="../index.html">PullRequests</a>&nbsp;/&nbsp;<a href="./index.html">Provider</a><br/>
+<br/>
+<h1>Provider</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Provider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">Provider</span></a><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-azure-dev-ops/index.html">AzureDevOps</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AzureDevOps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-bitbucket-cloud/index.html">BitbucketCloud</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BitbucketCloud</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-bitbucket-server/index.html">BitbucketServer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BitbucketServer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-github/index.html">Github</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Github</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-gitlab/index.html">Gitlab</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Gitlab</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-jetbrains-space/index.html">JetbrainsSpace</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JetbrainsSpace</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../jetbrains.build-server.configs.kotlin/-compound-param/value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests.Provider$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-azure-dev-ops/index.html">AzureDevOps</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AzureDevOps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-bitbucket-cloud/index.html">BitbucketCloud</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BitbucketCloud</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-bitbucket-server/index.html">BitbucketServer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BitbucketServer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-github/index.html">Github</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Github</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-gitlab/index.html">Gitlab</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Gitlab</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-jetbrains-space/index.html">JetbrainsSpace</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JetbrainsSpace</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Provider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

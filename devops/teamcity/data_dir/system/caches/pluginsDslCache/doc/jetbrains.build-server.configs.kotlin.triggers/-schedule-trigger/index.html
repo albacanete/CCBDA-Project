@@ -1,0 +1,302 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ScheduleTrigger - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.triggers</a>&nbsp;/&nbsp;<a href="./index.html">ScheduleTrigger</a><br/>
+<br/>
+<h1>ScheduleTrigger</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ScheduleTrigger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-trigger/index.html"><span class="identifier">Trigger</span></a></code>
+<p>Base class for <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers">Schedule Build Triggers</a>.
+Schedule trigger runs builds by specified schedule.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../schedule.html">schedule</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-d-a-y/index.html">DAY</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">DAY</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-scheduling-policy/index.html">SchedulingPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">SchedulingPolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-scheduling-policy/index.html"><span class="identifier">SchedulingPolicy</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-trigger-build/index.html">TriggerBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">TriggerBuild</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-trigger-build/index.html"><span class="identifier">TriggerBuild</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-watched-build-rule/index.html">WatchedBuildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">WatchedBuildRule</span></code>
+<p>Specifies which build to watch</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ScheduleTrigger</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ScheduleTrigger</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">ScheduleTrigger</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Base class for <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers">Schedule Build Triggers</a>.
+Schedule trigger runs builds by specified schedule.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="branch-filter.html">branchFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">branchFilter</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-BranchFilterbranchFilter">Branch filter</a> specifies
+set of branches where build should be triggered</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-queue-optimization.html">enableQueueOptimization</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableQueueOptimization</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether the trigger should allow <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-BuildQueueOptimizationSettings">builds optimization</a>
+in the build queue. By default optimization is enabled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="scheduling-policy.html">schedulingPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">schedulingPolicy</span><span class="symbol">: </span><a href="-scheduling-policy/index.html"><span class="identifier">SchedulingPolicy</span></a><span class="symbol">?</span></code>
+<p>Specifies when the build should be triggered.
+Use <a href="daily.html">daily</a>, <a href="weekly.html">weekly</a>, or <a href="cron.html">cron</a> methods to specify it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trigger-build.html">triggerBuild</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">triggerBuild</span><span class="symbol">: </span><a href="-trigger-build/index.html"><span class="identifier">TriggerBuild</span></a><span class="symbol">?</span></code>
+<p>Specifies whether build should be triggered only when the specified <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-WatchedBuild">watched build changes</a>.
+Use <a href="always.html">always</a>, or <a href="on-watched-build-change.html">onWatchedBuildChange</a> methods to specify it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trigger-build-on-all-compatible-agents.html">triggerBuildOnAllCompatibleAgents</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">triggerBuildOnAllCompatibleAgents</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>When this option is enabled the build will be triggered on all enabled compatible agents</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trigger-rules.html">triggerRules</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">triggerRules</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specifies <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-VCSTriggerRules">trigger rules</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="with-pending-changes-only.html">withPendingChangesOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">withPendingChangesOnly</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether the trigger should run build only when there are pending changes in the build configuration</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/build-params.html">buildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">buildParams</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-trigger-build-parameters/index.html"><span class="identifier">TriggerBuildParameters</span></a></code>
+<p>Parameters that are added to triggered builds</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the trigger is enabled</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enforce-clean-checkout.html">enforceCleanCheckout</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enforceCleanCheckout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether the build should be triggered with <a href="https://www.jetbrains.com/help/teamcity/?Clean+Checkout">clean checkout</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/enforce-clean-checkout-for-dependencies.html">enforceCleanCheckoutForDependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enforceCleanCheckoutForDependencies</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>When the enforceCleanCheckout is set to true specifies whether the <a href="https://www.jetbrains.com/help/teamcity/?Clean+Checkout">clean checkout</a>
+should also be applied to all dependencies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Trigger id, if not set will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Trigger type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="always.html">always</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">always</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-trigger-build/-always/index.html"><span class="identifier">Always</span></a></code>
+<p>Don't watch any build, trigger build using the specified schedule</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cron.html">cron</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cron</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$cron(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger.SchedulingPolicy.Cron, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-scheduling-policy/-cron/index.html"><span class="identifier">Cron</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-scheduling-policy/-cron/index.html"><span class="identifier">Cron</span></a></code>
+<p>Build is triggered by time in the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-Examples">cron expression</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="daily.html">daily</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">daily</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$daily(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger.SchedulingPolicy.Daily, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-scheduling-policy/-daily/index.html"><span class="identifier">Daily</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-scheduling-policy/-daily/index.html"><span class="identifier">Daily</span></a></code>
+<p>Build is triggered <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-DateandTime">daily</a>
+on the specified hour and minuted in the given timezone</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-watched-build-change.html">onWatchedBuildChange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onWatchedBuildChange</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$onWatchedBuildChange(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger.TriggerBuild.OnWatchedBuildChange, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-trigger-build/-on-watched-build-change/index.html"><span class="identifier">OnWatchedBuildChange</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-trigger-build/-on-watched-build-change/index.html"><span class="identifier">OnWatchedBuildChange</span></a></code>
+<p>Trigger build only when the watched build changes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="weekly.html">weekly</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">weekly</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger$weekly(kotlin.Function1((jetbrains.buildServer.configs.kotlin.triggers.ScheduleTrigger.SchedulingPolicy.Weekly, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-scheduling-policy/-weekly/index.html"><span class="identifier">Weekly</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-scheduling-policy/-weekly/index.html"><span class="identifier">Weekly</span></a></code>
+<p>Build is triggered <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Schedule+Triggers#ConfiguringScheduleTriggers-DateandTime">weekly</a>
+on the specified day on the specified hour and minuted in the given timezone</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/build-params.html">buildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildParams</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Trigger$buildParams(kotlin.Function1((jetbrains.buildServer.configs.kotlin.TriggerBuildParameters, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-trigger-build-parameters/index.html"><span class="identifier">TriggerBuildParameters</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures build parameters that are applied to triggered builds</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/clear-build-params.html">clearBuildParams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearBuildParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build parameters</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-trigger/index.html"><span class="identifier">Trigger</span></a></code>
+<p>Creates an instance of this trigger via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-trigger/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

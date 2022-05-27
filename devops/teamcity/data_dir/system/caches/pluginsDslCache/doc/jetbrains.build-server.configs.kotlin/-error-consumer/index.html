@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ErrorConsumer - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">ErrorConsumer</a><br/>
+<br/>
+<h1>ErrorConsumer</h1>
+<code><span class="keyword">interface </span><span class="identifier">ErrorConsumer</span></code>
+<p>Consumes validation errors</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="consume-error.html">consumeError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">consumeError</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ErrorConsumer$consumeError(kotlin.String)/error">error</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Consumes a generic error not related to any property</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="consume-property-error.html">consumePropertyError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">consumePropertyError</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ErrorConsumer$consumePropertyError(kotlin.String, kotlin.String)/property">property</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ErrorConsumer$consumePropertyError(kotlin.String, kotlin.String)/error">error</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Consumes property error</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nested.html">nested</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nested</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ErrorConsumer$nested(kotlin.String, kotlin.Function0((kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.ErrorConsumer$nested(kotlin.String, kotlin.Function0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Runs specified block in a nested validation scope with provided description</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-consumer/index.html">Consumer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Consumer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ErrorConsumer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

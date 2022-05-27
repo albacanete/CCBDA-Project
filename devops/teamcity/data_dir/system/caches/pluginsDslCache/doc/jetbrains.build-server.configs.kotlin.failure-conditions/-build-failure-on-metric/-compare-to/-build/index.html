@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BuildFailureOnMetric.CompareTo.Build - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.failureConditions</a>&nbsp;/&nbsp;<a href="../../index.html">BuildFailureOnMetric</a>&nbsp;/&nbsp;<a href="../index.html">CompareTo</a>&nbsp;/&nbsp;<a href="./index.html">Build</a><br/>
+<br/>
+<h1>Build</h1>
+<code><span class="keyword">class </span><span class="identifier">Build</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">CompareTo</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-build-rule/index.html">BuildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">BuildRule</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-build-rule/index.html"><span class="identifier">BuildRule</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Build</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-rule.html">buildRule</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">buildRule</span><span class="symbol">: </span><a href="-build-rule/index.html"><span class="identifier">BuildRule</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-with-number.html">buildWithNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildWithNumber</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build$buildWithNumber(kotlin.Function1((jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build.BuildRule.BuildWithNumber, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-build-rule/-build-with-number/index.html"><span class="identifier">BuildWithNumber</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-build-rule/-build-with-number/index.html"><span class="identifier">BuildWithNumber</span></a></code>
+<p>Matches the build with the specified build number</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-with-tag.html">buildWithTag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildWithTag</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build$buildWithTag(kotlin.Function1((jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build.BuildRule.BuildWithTag, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-build-rule/-build-with-tag/index.html"><span class="identifier">BuildWithTag</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-build-rule/-build-with-tag/index.html"><span class="identifier">BuildWithTag</span></a></code>
+<p>Matches the build with the specified tag</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last-finished.html">lastFinished</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lastFinished</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-build-rule/-last-finished/index.html"><span class="identifier">LastFinished</span></a></code>
+<p>Matches the last finished build in the build configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last-pinned.html">lastPinned</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lastPinned</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-build-rule/-last-pinned/index.html"><span class="identifier">LastPinned</span></a></code>
+<p>Matches the last pinned build in the build configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last-successful.html">lastSuccessful</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lastSuccessful</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-build-rule/-last-successful/index.html"><span class="identifier">LastSuccessful</span></a></code>
+<p>Matches the last successful build in the build configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric.CompareTo.Build$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

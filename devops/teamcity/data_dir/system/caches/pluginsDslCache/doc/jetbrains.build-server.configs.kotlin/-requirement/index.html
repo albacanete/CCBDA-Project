@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Requirement - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Requirement</a><br/>
+<br/>
+<h1>Requirement</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Requirement</span></code>
+<p>An agent requirement, use methods in <a href="../-requirements/index.html">Requirements</a> class to create it</p>
+<h3>Parameters</h3>
+<p><a name="type"></a>
+<code>type</code> - requirement type</p>
+<p><a name="param"></a>
+<code>param</code> - parameter name</p>
+<p><a name="value"></a>
+<code>value</code> - value to check, might be null if requirement doesn't need a value</p>
+<p><a name="id"></a>
+<code>id</code> - optional requirement id, if not specified will be generated</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-requirements/more-than.html">Requirements.moreThan</a></p>
+<p><a href="../-requirements/no-more-than.html">Requirements.noMoreThan</a></p>
+<p><a href="../-requirements/less-than.html">Requirements.lessThan</a></p>
+<p><a href="../-requirements/no-less-than.html">Requirements.noLessThan</a></p>
+<p><a href="../-requirements/starts-with.html">Requirements.startsWith</a></p>
+<p><a href="../-requirements/contains.html">Requirements.contains</a></p>
+<p><a href="../-requirements/does-not-contain.html">Requirements.doesNotContain</a></p>
+<p><a href="../-requirements/ends-with.html">Requirements.endsWith</a></p>
+<p><a href="../-requirements/matches.html">Requirements.matches</a></p>
+<p><a href="../-requirements/does-not-match.html">Requirements.doesNotMatch</a></p>
+<p><a href="../-requirements/more-than-ver.html">Requirements.moreThanVer</a></p>
+<p><a href="../-requirements/no-more-than-ver.html">Requirements.noMoreThanVer</a></p>
+<p><a href="../-requirements/less-than-ver.html">Requirements.lessThanVer</a></p>
+<p><a href="../-requirements/no-less-than-ver.html">Requirements.noLessThanVer</a></p>
+<p><a href="../-requirements/exists.html">Requirements.exists</a></p>
+<p><a href="../-requirements/does-not-exist.html">Requirements.doesNotExist</a></p>
+<p><a href="../-requirements/equals.html">Requirements.equals</a></p>
+<p><a href="../-requirements/does-not-equal.html">Requirements.doesNotEqual</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Requirement</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirement$<init>(jetbrains.buildServer.configs.kotlin.RequirementType, kotlin.String, kotlin.String, kotlin.String)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../-requirement-type/index.html"><span class="identifier">RequirementType</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirement$<init>(jetbrains.buildServer.configs.kotlin.RequirementType, kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirement$<init>(jetbrains.buildServer.configs.kotlin.RequirementType, kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirement$<init>(jetbrains.buildServer.configs.kotlin.RequirementType, kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>An agent requirement, use methods in <a href="../-requirements/index.html">Requirements</a> class to create it</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>optional requirement id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="param.html">param</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">param</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>parameter name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">type</span><span class="symbol">: </span><a href="../-requirement-type/index.html"><span class="identifier">RequirementType</span></a></code>
+<p>requirement type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>value to check, might be null if requirement doesn't need a value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

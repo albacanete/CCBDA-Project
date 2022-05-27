@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SharedResources - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">SharedResources</a><br/>
+<br/>
+<h1>SharedResources</h1>
+<code><span class="keyword">class </span><span class="identifier">SharedResources</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Adds a Shared Resource build feature allows limiting concurrently running builds using a shared resource.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SharedResources</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SharedResources, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SharedResources</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-feature/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the feature is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Build feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="lock-all-values.html">lockAllValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lockAllValues</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockAllValues(jetbrains.buildServer.configs.kotlin.SharedResource)/sharedResource">sharedResource</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">lockAllValues</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockAllValues(kotlin.String)/sharedResourceName">sharedResourceName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a lock to all custom values in specified shared resource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lock-any-value.html">lockAnyValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lockAnyValue</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockAnyValue(jetbrains.buildServer.configs.kotlin.SharedResource)/sharedResource">sharedResource</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">lockAnyValue</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockAnyValue(kotlin.String)/sharedResourceName">sharedResourceName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a lock to any custom values in specified shared resource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lock-specific-value.html">lockSpecificValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lockSpecificValue</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockSpecificValue(jetbrains.buildServer.configs.kotlin.SharedResource, kotlin.String)/sharedResource">sharedResource</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockSpecificValue(jetbrains.buildServer.configs.kotlin.SharedResource, kotlin.String)/valueToLock">valueToLock</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">lockSpecificValue</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockSpecificValue(kotlin.String, kotlin.String)/sharedResourceName">sharedResourceName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$lockSpecificValue(kotlin.String, kotlin.String)/valueToLock">valueToLock</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a lock to specific custom value in specified shared resource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read-lock.html">readLock</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readLock</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$readLock(jetbrains.buildServer.configs.kotlin.SharedResource)/sharedResource">sharedResource</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">readLock</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$readLock(kotlin.String)/sharedResourceName">sharedResourceName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a read lock to specified shared resource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="write-lock.html">writeLock</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">writeLock</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$writeLock(jetbrains.buildServer.configs.kotlin.SharedResource)/sharedResource">sharedResource</span><span class="symbol">:</span>&nbsp;<a href="../-shared-resource/index.html"><span class="identifier">SharedResource</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">writeLock</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.SharedResources$writeLock(kotlin.String)/sharedResourceName">sharedResourceName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a write lock to specified shared resource</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Creates an instance of this build feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-feature/validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildFeature$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

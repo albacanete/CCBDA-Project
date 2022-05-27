@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MSBuildStep.Coverage.Partcover - </title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="../../index.html">MSBuildStep</a>&nbsp;/&nbsp;<a href="../index.html">Coverage</a>&nbsp;/&nbsp;<a href="./index.html">Partcover</a><br/>
+<br/>
+<h1>Partcover</h1>
+<code><span class="keyword">class </span><span class="identifier">Partcover</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Coverage</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Partcover</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="args.html">args</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Write additional coverage tool specific arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude-patterns.html">excludePatterns</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">excludePatterns</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>PartCover exclude patterns.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="include-patterns.html">includePatterns</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">includePatterns</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>PartCover include patterns.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="platform-bitness.html">platformBitness</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">platformBitness</span><span class="symbol">: </span><a href="../../-platform-bitness/index.html"><span class="identifier">PlatformBitness</span></a><span class="symbol">?</span></code>
+<p>Specify the .NET runtime bitness.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="platform-version.html">platformVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">platformVersion</span><span class="symbol">: </span><a href="../../-platform-version/index.html"><span class="identifier">PlatformVersion</span></a><span class="symbol">?</span></code>
+<p>Specify the .NET runtime version.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="registration.html">registration</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">registration</span><span class="symbol">: </span><a href="../../-registration/index.html"><span class="identifier">Registration</span></a><span class="symbol">?</span></code>
+<p>Specify the assemblies registration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tool-path.html">toolPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">toolPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Path to coverage tool</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xslt-transformations.html">xsltTransformations</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">xsltTransformations</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Write xslt transformation rules one per line in format: file.xslt=&gt;generatedFileName.html,
+where file.xslt path should be relative to checkout directory. Note that default xslt files
+bundled with PartCover 2.3 are broken and you need to write your own xslt files to be able to generate reports.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSBuildStep.Coverage.Partcover$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

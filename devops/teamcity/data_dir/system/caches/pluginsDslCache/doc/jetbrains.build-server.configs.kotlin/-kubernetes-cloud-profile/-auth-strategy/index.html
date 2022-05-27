@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>KubernetesCloudProfile.AuthStrategy - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="../index.html">KubernetesCloudProfile</a>&nbsp;/&nbsp;<a href="./index.html">AuthStrategy</a><br/>
+<br/>
+<h1>AuthStrategy</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">AuthStrategy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">AuthStrategy</span></a><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-client-certificate/index.html">ClientCertificate</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ClientCertificate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-default-service-account/index.html">DefaultServiceAccount</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DefaultServiceAccount</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-e-k-s/index.html">EKS</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EKS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-open-i-d/index.html">OpenID</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OpenID</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-token/index.html">Token</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Token</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-unauthorized/index.html">Unauthorized</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Unauthorized</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-username-and-password/index.html">UsernameAndPassword</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UsernameAndPassword</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../-compound-param/value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-client-certificate/index.html">ClientCertificate</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ClientCertificate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-default-service-account/index.html">DefaultServiceAccount</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DefaultServiceAccount</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-e-k-s/index.html">EKS</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EKS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-open-i-d/index.html">OpenID</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OpenID</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-token/index.html">Token</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Token</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-unauthorized/index.html">Unauthorized</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Unauthorized</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-username-and-password/index.html">UsernameAndPassword</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UsernameAndPassword</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AuthStrategy</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

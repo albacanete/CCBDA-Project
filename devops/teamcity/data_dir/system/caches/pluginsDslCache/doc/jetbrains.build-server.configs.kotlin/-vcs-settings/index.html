@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VcsSettings - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">VcsSettings</a><br/>
+<br/>
+<h1>VcsSettings</h1>
+<code><span class="keyword">class </span><span class="identifier">VcsSettings</span></code>
+<p>Contains settings from the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a>
+tab of <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">VcsSettings</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Contains settings from the <a href="https://www.jetbrains.com/help/teamcity/?Configuring+VCS+Settings">Version Control Settings</a>
+tab of <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="branch-filter.html">branchFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">branchFilter</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Defines branch filter to be used for branches coming from snapshot dependencies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-default-branch.html">buildDefaultBranch</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><s><span class="identifier">buildDefaultBranch</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether builds in the default branch are allowed and the default branch is shown in UI.
+By default true.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="checkout-dir.html">checkoutDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">checkoutDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Custom build checkout directory. By default empty, ie. build uses default checkout directory.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="checkout-mode.html">checkoutMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">checkoutMode</span><span class="symbol">: </span><a href="../-checkout-mode/index.html"><span class="identifier">CheckoutMode</span></a></code>
+<p>Defines a preferred <a href="https://www.jetbrains.com/help/teamcity/?VCS+Checkout+Mode">checkout mode</a> for the build.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clean-checkout.html">cleanCheckout</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cleanCheckout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If true, all files in build's working directory will be
+deleted before the build is started. By default false.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude-default-branch-changes.html">excludeDefaultBranchChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">excludeDefaultBranchChanges</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Whether changes reachable from the default branch should be excluded from other branches.
+By default false.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="show-dependencies-changes.html">showDependenciesChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">showDependenciesChanges</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If true, build will include snapshot dependencies changes when reporting changes on UI.
+By default false</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-entry.html">getEntry</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getEntry</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$getEntry(jetbrains.buildServer.configs.kotlin.Id)/rootId">rootId</span><span class="symbol">:</span>&nbsp;<a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-vcs-root-entry/index.html"><span class="identifier">VcsRootEntry</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="option.html">option</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">option</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$option(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$option(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets option with specified name and value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="remove-entry.html">removeEntry</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeEntry</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$removeEntry(jetbrains.buildServer.configs.kotlin.Id)/rootId">rootId</span><span class="symbol">:</span>&nbsp;<a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="root.html">root</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">root</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$root(jetbrains.buildServer.configs.kotlin.VcsRoot, kotlin.Array((kotlin.String)))/root">root</span><span class="symbol">:</span>&nbsp;<a href="../-vcs-root/index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$root(jetbrains.buildServer.configs.kotlin.VcsRoot, kotlin.Array((kotlin.String)))/rules">rules</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Attaches the specified VCS root with the given checkout rules to a template or buildType</p>
+<code><span class="keyword">fun </span><span class="identifier">root</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$root(jetbrains.buildServer.configs.kotlin.Id, kotlin.Array((kotlin.String)))/rootId">rootId</span><span class="symbol">:</span>&nbsp;<a href="../-id/index.html"><span class="identifier">Id</span></a><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsSettings$root(jetbrains.buildServer.configs.kotlin.Id, kotlin.Array((kotlin.String)))/rules">rules</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Attaches a VCS root with the specified id with the given checkout rules to a template or buildType.
+This method can be used to attach a VCS root which is not defined in Kotlin.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">VcsSettings</span></a></code>
+<p>Copies the receiver vcs settings</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.VcsSettings, jetbrains.buildServer.configs.kotlin.VcsSettings)/target">target</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">VcsSettings</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">VcsSettings</span></a></code>
+<p>Copies the receiver vcs settings to the specified target</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

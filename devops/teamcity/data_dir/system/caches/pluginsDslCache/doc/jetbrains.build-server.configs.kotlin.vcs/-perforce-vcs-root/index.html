@@ -1,0 +1,325 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PerforceVcsRoot - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.vcs</a>&nbsp;/&nbsp;<a href="./index.html">PerforceVcsRoot</a><br/>
+<br/>
+<h1>PerforceVcsRoot</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PerforceVcsRoot</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/index.html"><span class="identifier">VcsRoot</span></a></code>
+<p>Perforce <a href="https://www.jetbrains.com/help/teamcity/?Perforce">VCS root</a></p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-mode/index.html">Mode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Mode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PerforceVcsRoot</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PerforceVcsRoot</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">PerforceVcsRoot</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Perforce <a href="https://www.jetbrains.com/help/teamcity/?Perforce">VCS root</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="charset-name.html">charsetName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">charsetName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A charset to use on the client machine</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="checkout-revision.html">checkoutRevision</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">checkoutRevision</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Perforce#Perforce-perforceLabelToCheckout">Custom</a> Perforce revision to checkout</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mode.html">mode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mode</span><span class="symbol">: </span><a href="-mode/index.html"><span class="identifier">Mode</span></a><span class="symbol">?</span></code>
+<p>A mode of Perforce connection</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="non-stream-workspace.html">nonStreamWorkspace</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">nonStreamWorkspace</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>When set, the created Perforce workspace on agent will not be stream-enabled.
+The option allows using arbitrary checkout rules, but prohibits commits from agent into the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="p4-path.html">p4Path</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">p4Path</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A path to p4 executable</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="password.html">password</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">password</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A password for Perforce connection</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A Perforce server address in the "host:port" format</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run-p4-clean.html">runP4Clean</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runP4Clean</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether TeamCity should run 'p4 clean' command before the build</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="skip-have-list-update.html">skipHaveListUpdate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">skipHaveListUpdate</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Whether TeamCity should track files on the Perforce server on sync</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="support-utf16.html">supportUtf16</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">supportUtf16</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Enables support for files with UTF-16 encoding</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sync-options.html">syncOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">syncOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional options for the <a href="http://www.perforce.com/perforce/doc.current/manuals/cmdref/p4_sync.html">p4 sync</a> command</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="use-ticket-based-auth.html">useTicketBasedAuth</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><s><span class="identifier">useTicketBasedAuth</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="user-name.html">userName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A username for Perforce connection</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="workspace-options.html">workspaceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workspaceOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Perforce#Perforce-perforceWorkspaceOptions">Settings</a>
+for the <a href="http://www.perforce.com/perforce/doc.current/manuals/cmdref/p4_client.html#p4_client.form_fields">p4 client</a> command.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-id/index.html"><span class="identifier">Id</span></a><span class="symbol">?</span></code>
+<p>VCS root <a href="https://www.jetbrains.com/help/teamcity/?Identifier">id</a>.
+It appears in the web UI and is used in urls.
+If the VCS root has a <a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/uuid.html">uuid</a> specified, then the id can be changed at any time.
+If <a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/uuid.html">uuid</a> is omitted, then TeamCity treats a VCS root with a changed id as
+a new VCS root, all data associated with the old root will be lost (e.g.
+a commits graph). Id can also be used by some settings, e.g. as a
+part of parameter reference. If you change the id, you should find
+all its occurrences in the current project and change them too.
+Id must be unique across all VCS roots on the server.
+If id is missing, it will be generated from the class name (if the class is not from
+the <code>jetbrains.buildServer.configs.kotlin.v2019_2</code> package).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>VCS root name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/param-refs.html">paramRefs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">paramRefs</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root-refs/index.html"><span class="identifier">VcsRootRefs</span></a></code>
+<p>Helper for creating <a href="https://www.jetbrains.com/help/teamcity/?Predefined+Build+Parameters#PredefinedBuildParameters-VCSProperties">references to parameters</a> of this VCS root</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/poll-interval.html">pollInterval</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pollInterval</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>VCS root polling interval</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>VCS type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/uuid.html">uuid</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">uuid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>VCS root uuid. TeamCity uses it to identify the VCS root.
+If uuid changes, TeamCity considers it to be a new entity. If uuid is
+missing, it is reconstructed from VCS root id.
+Uuid must be unique across all entities on the server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="client.html">client</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">client</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot$client(kotlin.Function1((jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot.Mode.Client, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-mode/-client/index.html"><span class="identifier">Client</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-mode/-client/index.html"><span class="identifier">Client</span></a></code>
+<p>Connect to to Perforce using the specified <a href="https://www.jetbrains.com/help/teamcity/?Perforce#Perforce-perforceClientOptionDescription">client name</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-mapping.html">clientMapping</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clientMapping</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot$clientMapping(kotlin.Function1((jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot.Mode.ClientMapping, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-mode/-client-mapping/index.html"><span class="identifier">ClientMapping</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-mode/-client-mapping/index.html"><span class="identifier">ClientMapping</span></a></code>
+<p>Connect to Perforce using the specified <a href="https://www.jetbrains.com/help/teamcity/?Perforce#Perforce-perforceClientMappingOptionDescription">client mapping</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stream.html">stream</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot$stream(kotlin.Function1((jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot.Mode.Stream, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-mode/-stream/index.html"><span class="identifier">Stream</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-mode/-stream/index.html"><span class="identifier">Stream</span></a></code>
+<p>Connect to <a href="https://www.jetbrains.com/help/teamcity/?Perforce#Perforce-perforceStreamOptionDescription">Perforce stream</a> with specified name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/index.html"><span class="identifier">VcsRoot</span></a></code>
+<p>Creates an instance of this VCS root via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsRoot$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">id</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsRoot$id(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets the id to the specified value. Type of the id depends on the <a href="../../jetbrains.build-server.configs.kotlin/-dsl-context/index.html">context</a>
+in which DSL is executed: it is <a href="../../jetbrains.build-server.configs.kotlin/-relative-id/index.html">RelativeId</a> when DSL context <a href="../../jetbrains.build-server.configs.kotlin/-dsl-context/is-relative.html">is relative</a>,
+otherwise it is <a href="../../jetbrains.build-server.configs.kotlin/-absolute-id/index.html">AbsoluteId</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-vcs-root/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GitVcsRoot.AgentCheckoutPolicy - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">jetbrains.buildServer.configs.kotlin.vcs</a>&nbsp;/&nbsp;<a href="../index.html">GitVcsRoot</a>&nbsp;/&nbsp;<a href="./index.html">AgentCheckoutPolicy</a><br/>
+<br/>
+<h1>AgentCheckoutPolicy</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">AgentCheckoutPolicy</span></code>
+<p>Policy for checking out sources on agent</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-a-u-t-o.html">AUTO</a></p>
+</td>
+<td>
+<p>Uses shallow clone for short-lived agents and mirrors for regular long-lived agents.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-s-e_-m-i-r-r-o-r-s.html">USE_MIRRORS</a></p>
+</td>
+<td>
+<p>Creates repository mirror on the agent machine and shares it between different builds with the same fetch URL. Most optimal approach for large repositories and long-lived agents.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-n-o_-m-i-r-r-o-r-s.html">NO_MIRRORS</a></p>
+</td>
+<td>
+<p>Performs checkout right into the checkout directory without creating a mirror. Less optimal in terms of disk usage than mirrors.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-h-a-l-l-o-w_-c-l-o-n-e.html">SHALLOW_CLONE</a></p>
+</td>
+<td>
+<p>Uses git shallow clone to checkout build revision (--depth 1). Ideal for short-lived agents.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

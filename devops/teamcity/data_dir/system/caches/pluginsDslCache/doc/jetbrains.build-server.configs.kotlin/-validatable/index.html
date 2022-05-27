@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Validatable - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Validatable</a><br/>
+<br/>
+<h1>Validatable</h1>
+<code><span class="keyword">interface </span><span class="identifier">Validatable</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Validatable$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-feature/index.html">BuildFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Adding+Build+Features">build feature</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-features/index.html">BuildFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildFeatures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-build-feature/index.html">build features</a> in <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-step/index.html">BuildStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Steps">Build Step</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-steps/index.html">BuildSteps</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildSteps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-build-step/index.html">build steps</a> in <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type/index.html">BuildType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration">build configuration</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-build-type-settings/index.html">BuildTypeSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuildTypeSettings</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>Contains common settings between <a href="../-build-type/index.html">BuildType</a> and <a href="../-template/index.html">Template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-image/index.html">CloudImage</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CloudImage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-cloud-profile/index.html">CloudProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CloudProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-project-feature/index.html"><span class="identifier">ProjectFeature</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-failure-conditions/index.html">FailureConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FailureConditions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-failure-condition/index.html">failure conditions</a> in <a href="../-build-type/index.html">build configuration</a>
+or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project/index.html">Project</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Project</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Project">project</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-feature/index.html">ProjectFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ProjectFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents <a href="../-project/index.html">project</a>-level feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-project-features/index.html">ProjectFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProjectFeatures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-project-feature/index.html">features</a> in a <a href="../-project/index.html">project</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-template/index.html">Template</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Template</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-build-type-settings/index.html"><span class="identifier">BuildTypeSettings</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Represents TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Build+Configuration+Template">build template</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-trigger/index.html">Trigger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Trigger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>TeamCity <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Build+Triggers">build trigger</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-triggers/index.html">Triggers</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Triggers</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Validatable</span></a></code>
+<p>Collection of <a href="../-trigger/index.html">build triggers</a> in <a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-vcs-root/index.html">VcsRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VcsRoot</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-parametrized/index.html"><span class="identifier">Parametrized</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Validatable</span></a><span class="symbol">, </span><a href="../-id-owner/index.html"><span class="identifier">IdOwner</span></a></code>
+<p>A base class representing TeamCity <a href="https://www.jetbrains.com/help/teamcity/?VCS+root">VCS root</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

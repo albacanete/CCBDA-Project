@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Single - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Single</a><br/>
+<br/>
+<h1>Single</h1>
+<code><span class="keyword">class </span><span class="identifier">Single</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><a href="../-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="../-abstract-stage/index.html"><span class="identifier">AbstractStage</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Single</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Single$<init>(jetbrains.buildServer.configs.kotlin.Project, jetbrains.buildServer.configs.kotlin.BuildType)/project">project</span><span class="symbol">:</span>&nbsp;<a href="../-project/index.html"><span class="identifier">Project</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Single$<init>(jetbrains.buildServer.configs.kotlin.Project, jetbrains.buildServer.configs.kotlin.BuildType)/buildType">buildType</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-type.html">buildType</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">buildType</span><span class="symbol">: </span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-abstract-stage/project.html">project</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">project</span><span class="symbol">: </span><a href="../-project/index.html"><span class="identifier">Project</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-dependency-on.html">buildDependencyOn</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildDependencyOn</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Single$buildDependencyOn(jetbrains.buildServer.configs.kotlin.Stage, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/stage">stage</span><span class="symbol">:</span>&nbsp;<a href="../-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Single$buildDependencyOn(jetbrains.buildServer.configs.kotlin.Stage, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="build-types.html">buildTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-dependency-constructor/build-dependencies.html">buildDependencies</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildDependencies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-abstract-stage/dependency-options.html">dependencyOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dependencyOptions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.AbstractStage$dependencyOptions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-stage/depends-on.html">dependsOn</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">dependsOn</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.BuildType)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/buildTypes">buildTypes</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.BuildType)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">dependsOn</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.Stage)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/stages">stages</span><span class="symbol">:</span>&nbsp;<a href="../-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.Stage)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

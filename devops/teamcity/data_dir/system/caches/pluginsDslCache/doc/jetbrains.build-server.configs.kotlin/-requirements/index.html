@@ -1,0 +1,243 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Requirements - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">Requirements</a><br/>
+<br/>
+<h1>Requirements</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Requirements</span></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">agent requirements</a> in
+<a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Requirements</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Configuring+Agent+Requirements">agent requirements</a> in
+<a href="../-build-type/index.html">build configuration</a> or <a href="../-template/index.html">template</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="contains.html">contains</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$contains(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$contains(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$contains(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter contains the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="does-not-contain.html">doesNotContain</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doesNotContain</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotContain(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotContain(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotContain(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter does not contain the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="does-not-equal.html">doesNotEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doesNotEqual</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotEqual(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotEqual(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotEqual(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is not equal to the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="does-not-exist.html">doesNotExist</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doesNotExist</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotExist(kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotExist(kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the parameter with the specified name does not exist on the agent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="does-not-match.html">doesNotMatch</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doesNotMatch</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotMatch(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotMatch(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$doesNotMatch(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter does not match the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ends-with.html">endsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$endsWith(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$endsWith(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$endsWith(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter ends with the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$equals(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$equals(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$equals(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is equal to the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exists.html">exists</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">exists</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$exists(kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$exists(kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the parameter with the specified name exists on the agent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="less-than.html">lessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThan(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThan(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThan(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is less than the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="less-than-ver.html">lessThanVer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lessThanVer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThanVer(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThanVer(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$lessThanVer(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is less than the given value as a version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="matches.html">matches</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">matches</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$matches(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$matches(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$matches(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter matches the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="more-than.html">moreThan</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moreThan</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThan(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThan(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThan(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is greater than the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="more-than-ver.html">moreThanVer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">moreThanVer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThanVer(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThanVer(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$moreThanVer(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is greater than the given value as a version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="no-less-than.html">noLessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">noLessThan</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThan(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThan(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThan(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is not less than the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="no-less-than-ver.html">noLessThanVer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">noLessThanVer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThanVer(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThanVer(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noLessThanVer(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is not less than the given value as a version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="no-more-than.html">noMoreThan</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">noMoreThan</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThan(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThan(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThan(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is not greater than the given value</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="no-more-than-ver.html">noMoreThanVer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">noMoreThanVer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThanVer(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThanVer(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$noMoreThanVer(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter is not greater than the given value as a version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requirement.html">requirement</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">requirement</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$requirement(jetbrains.buildServer.configs.kotlin.Requirement)/r">r</span><span class="symbol">:</span>&nbsp;<a href="../-requirement/index.html"><span class="identifier">Requirement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds the specified requirement</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="starts-with.html">startsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$startsWith(kotlin.String, kotlin.String, kotlin.String)/param">param</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$startsWith(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Requirements$startsWith(kotlin.String, kotlin.String, kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds a requirement that the value of the specified parameter starts with the given value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Requirements</span></a><span class="symbol">.</span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Requirements</span></a></code>
+<p>Copies the receiver requirements</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../copy-to.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Requirements</span></a><span class="symbol">.</span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin$copyTo(jetbrains.buildServer.configs.kotlin.Requirements, jetbrains.buildServer.configs.kotlin.Requirements)/target">target</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Requirements</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Requirements</span></a></code>
+<p>Copies the receiver requirements to the specified target</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-build-step-conditions/index.html">BuildStepConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildStepConditions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Requirements</span></a></code>
+<p>Collection of <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a> in a <a href="../-build-step/index.html">build step</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

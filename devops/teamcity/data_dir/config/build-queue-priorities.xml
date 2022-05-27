@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<priority-classes>
+  <priority-class id="PERSONAL" name="Personal" priority="0" description="Contains all personal builds" />
+</priority-classes>
+

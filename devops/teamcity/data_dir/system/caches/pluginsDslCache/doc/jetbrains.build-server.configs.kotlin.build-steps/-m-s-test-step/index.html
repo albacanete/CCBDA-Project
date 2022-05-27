@@ -1,0 +1,329 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MSTestStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">MSTestStep</a><br/>
+<br/>
+<h1>MSTestStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MSTestStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running MSTest tests</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../mstest.html">mstest</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-coverage/index.html">Coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Coverage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-platform-bitness/index.html">PlatformBitness</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PlatformBitness</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-platform-version/index.html">PlatformVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PlatformVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-registration/index.html">Registration</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Registration</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-report-order/index.html">ReportOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ReportOrder</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-report-type/index.html">ReportType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ReportType</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MSTestStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MSTestStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">MSTestStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Visual+Studio+Tests">build step</a> running MSTest tests</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="args.html">args</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">args</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional parameters to add to the command line for MSTest</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="coverage.html">coverage</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">coverage</span><span class="symbol">: </span><a href="-coverage/index.html"><span class="identifier">Coverage</span></a><span class="symbol">?</span></code>
+<p>Specifies coverage tool to use</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude-test-file-names.html">excludeTestFileNames</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">excludeTestFileNames</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Newline-separated list of assemblies to be excluded from test run.
+<a href="https://www.jetbrains.com/help/teamcity/?Wildcards">Wildcards</a> are supported.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="include-test-file-names.html">includeTestFileNames</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">includeTestFileNames</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Newline-separated list of assemblies to be included in test run.
+<a href="https://www.jetbrains.com/help/teamcity/?Wildcards">Wildcards</a> are supported.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="metadata.html">metadata</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">metadata</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A value for the /testmetadata: argument</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mstest-path.html">mstestPath</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mstestPath</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A path to test engine. TeamCity detects test engine installation on the agent,
+to run the detected engine use the following paths:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mstest_testlist.html">mstest_testlist</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">mstest_testlist</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Newline-separated list of testlist names from metadata to run.
+Every line will be translated into the <a href="https://msdn.microsoft.com/en-us/library/ms182489(VS.80).aspx#testlist">/testlist:</a> argument.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="results-file.html">resultsFile</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">resultsFile</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A value for the <a href="https://msdn.microsoft.com/en-us/library/ms182489(VS.80).aspx#resultsfile">/resultsfile:</a> command line argument</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run-if-unique-match-found.html">runIfUniqueMatchFound</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runIfUniqueMatchFound</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>When set to true, TeamCity will run the test only if a unique match is found for any specified test name in the testsToRun property</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run-settings.html">runSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runSettings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A path to run settings configuration file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tests-to-run.html">testsToRun</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">testsToRun</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Newline-separated list of individual tests to run.
+Each test nae will be translated into the <a href="https://msdn.microsoft.com/en-us/library/ms182489(VS.80).aspx#test">/test:</a> argument.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dotcover.html">dotcover</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dotcover</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$dotcover(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep.Coverage.Dotcover, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage/-dotcover/index.html"><span class="identifier">Dotcover</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage/-dotcover/index.html"><span class="identifier">Dotcover</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ncover.html">ncover</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ncover</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$ncover(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep.Coverage.Ncover, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage/-ncover/index.html"><span class="identifier">Ncover</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage/-ncover/index.html"><span class="identifier">Ncover</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ncover3.html">ncover3</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ncover3</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$ncover3(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep.Coverage.Ncover3, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage/-ncover3/index.html"><span class="identifier">Ncover3</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage/-ncover3/index.html"><span class="identifier">Ncover3</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="partcover.html">partcover</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">partcover</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$partcover(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep.Coverage.Partcover, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-coverage/-partcover/index.html"><span class="identifier">Partcover</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-coverage/-partcover/index.html"><span class="identifier">Partcover</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.MSTestStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,385 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Qodana - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">Qodana</a><br/>
+<br/>
+<h1>Qodana</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Qodana</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>null</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../qodana.html">qodana</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-android-version/index.html">AndroidVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">AndroidVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-inspection-profile/index.html">InspectionProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">InspectionProfile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-inspection-profile/index.html"><span class="identifier">InspectionProfile</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-s-version/index.html">JSVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">JSVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-v-m-community-version/index.html">JVMCommunityVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">JVMCommunityVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-v-m-version/index.html">JVMVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">JVMVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-linter/index.html">Linter</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Linter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-linter/index.html"><span class="identifier">Linter</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-h-p-version/index.html">PHPVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PHPVersion</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-python-version/index.html">PythonVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">PythonVersion</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Qodana</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Qodana</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">Qodana</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>null</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="arguments-command-docker.html">argumentsCommandDocker</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">argumentsCommandDocker</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Arguments for running docker image</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="arguments-entry-point-docker.html">argumentsEntryPointDocker</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">argumentsEntryPointDocker</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Entry points for running docker image</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="collect-anonymous-statistics.html">collectAnonymousStatistics</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">collectAnonymousStatistics</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>By setting this property, you agree to let Qodana collect statistical information during linter
+execution to analyze it later and improve linter performance.
+All data is collected anonymously in accordance with the JetBrains Privacy Policy: https://www.jetbrains.com/legal/docs/privacy/privacy/</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inspection-profile.html">inspectionProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">inspectionProfile</span><span class="symbol">: </span><a href="-inspection-profile/index.html"><span class="identifier">InspectionProfile</span></a><span class="symbol">?</span></code>
+<p>Inspection profile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="linter.html">linter</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">linter</span><span class="symbol">: </span><a href="-linter/index.html"><span class="identifier">Linter</span></a><span class="symbol">?</span></code>
+<p>Linter that performs the analysis</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="project-key.html">projectKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">projectKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Provide this name if you have several Qodana steps in one build or you combine several builds into
+one composite configuration. If empty, autogenerated step name will be used</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="report-as-tests.html">reportAsTests</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">reportAsTests</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Enable report problems as tests</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tools.html">tools</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">tools</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Tool names separated by ','. Example tool = "Code Inspection"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="working-dir.html">workingDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workingDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Working directory</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="android.html">android</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">android</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$android(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.Android, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-android/index.html"><span class="identifier">Android</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-android/index.html"><span class="identifier">Android</span></a></code>
+<p>Official Docker image to analyse Android projects</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-linter.html">customLinter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">customLinter</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$customLinter(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.CustomLinter, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-custom-linter/index.html"><span class="identifier">CustomLinter</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-custom-linter/index.html"><span class="identifier">CustomLinter</span></a></code>
+<p>Custom Docker image</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-profile.html">customProfile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">customProfile</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$customProfile(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.InspectionProfile.CustomProfile, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-inspection-profile/-custom-profile/index.html"><span class="identifier">CustomProfile</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-inspection-profile/-custom-profile/index.html"><span class="identifier">CustomProfile</span></a></code>
+<p>Path to the custom profile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">default</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-inspection-profile/-default/index.html"><span class="identifier">Default</span></a></code>
+<p>Default inspection profile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="embedded.html">embedded</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">embedded</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$embedded(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.InspectionProfile.Embedded, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-inspection-profile/-embedded/index.html"><span class="identifier">Embedded</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-inspection-profile/-embedded/index.html"><span class="identifier">Embedded</span></a></code>
+<p>Select embedded profile name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="javascript.html">javascript</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">javascript</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$javascript(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.Javascript, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-javascript/index.html"><span class="identifier">Javascript</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-javascript/index.html"><span class="identifier">Javascript</span></a></code>
+<p>Official Docker image to analyse JavaScript projects</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jvm.html">jvm</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">jvm</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$jvm(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.Jvm, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-jvm/index.html"><span class="identifier">Jvm</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-jvm/index.html"><span class="identifier">Jvm</span></a></code>
+<p>Official Docker image to analyse JVM projects</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jvm-community.html">jvmCommunity</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">jvmCommunity</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$jvmCommunity(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.JvmCommunity, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-jvm-community/index.html"><span class="identifier">JvmCommunity</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-jvm-community/index.html"><span class="identifier">JvmCommunity</span></a></code>
+<p>Official Docker image to analyse JVM projects with IntelliJ Community edition</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="php.html">php</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">php</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$php(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.Php, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-php/index.html"><span class="identifier">Php</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-php/index.html"><span class="identifier">Php</span></a></code>
+<p>Official Docker image to analyse PHP projects</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="python.html">python</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">python</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$python(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.Qodana.Linter.Python, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-linter/-python/index.html"><span class="identifier">Python</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-linter/-python/index.html"><span class="identifier">Python</span></a></code>
+<p>Official Docker image to analyse Python projects</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.Qodana$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

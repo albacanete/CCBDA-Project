@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FileContentReplacer - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildFeatures</a>&nbsp;/&nbsp;<a href="./index.html">FileContentReplacer</a><br/>
+<br/>
+<h1>FileContentReplacer</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileContentReplacer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?File+Content+Replacer">build feature</a> which processes text files by performing regular expressions</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../replace-content.html">replaceContent</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-file-encoding/index.html">FileEncoding</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">FileEncoding</span></code>
+<p>File Encoding</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-regex-mode/index.html">RegexMode</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">RegexMode</span></code>
+<p>Controls the way the search pattern and the replacement text
+are interpreted.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FileContentReplacer</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.FileContentReplacer$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildFeatures.FileContentReplacer, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FileContentReplacer</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">FileContentReplacer</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?File+Content+Replacer">build feature</a> which processes text files by performing regular expressions</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="case-sensitive-pattern.html">caseSensitivePattern</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">caseSensitivePattern</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether the search should be case-sensitive. Enabled by default.
+A value of <code>false</code> sets <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#CASE_INSENSITIVE">CASE_INSENSITIVE</a> and <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#UNICODE_CASE">UNICODE_CASE</a> flags.
+Set to <code>false</code> for case-insensitive languages (e.g. <em>Visual Basic</em>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-encoding-name.html">customEncodingName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">customEncodingName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>A name of the custom encoding to use, works when encoding is set to FileEncoding.CUSTOM</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encoding.html">encoding</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">encoding</span><span class="symbol">: </span><a href="-file-encoding/index.html"><span class="identifier">FileEncoding</span></a><span class="symbol">?</span></code>
+<p>A file encoding to use</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fail-build-if-no-files-match-pattern.html">failBuildIfNoFilesMatchPattern</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">failBuildIfNoFilesMatchPattern</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Enables/disables build failure in case there are no files matching the specified file pattern. Enabled by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="file-rules.html">fileRules</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">fileRules</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Comma- or newline-separated set of rules in the form of <code>+|-:[path relative to the checkout directory]</code>,
+wildcards are supported</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pattern.html">pattern</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pattern</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Pattern to search for, either in the <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html">regular expression</a> (default) or in the <a href="-regex-mode/-f-i-x-e-d_-s-t-r-i-n-g-s.html">fixed strings</a> format, depending on the <a href="regex-mode.html">regexMode</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="regex-mode.html">regexMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">regexMode</span><span class="symbol">: </span><a href="-regex-mode/index.html"><span class="identifier">RegexMode</span></a><span class="symbol">?</span></code>
+<p>Controls the way the search pattern and the replacement text
+are interpreted. The default is <a href="-regex-mode/-r-e-g-e-x.html">RegexMode.REGEX</a>. Set to
+<a href="-regex-mode/-f-i-x-e-d_-s-t-r-i-n-g-s.html">RegexMode.FIXED_STRINGS</a> to perform a <em>fixed strings</em> search.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="replacement.html">replacement</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">replacement</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Replacement text.
+In <a href="-regex-mode/-r-e-g-e-x.html">REGEX</a> <a href="regex-mode.html">mode</a>, <strong><code>$N</code></strong> sequence
+references <strong><code>N</code></strong>-th capturing group. All backslashes (<strong><code>\</code></strong>)
+and dollar signs (<strong><code>$</code></strong>) without a special meaning should be
+quoted (as <strong><code>\\</code></strong> and <strong><code>\$</code></strong>, respectively).
+In <a href="-regex-mode/-r-e-g-e-x_-m-i-x-e-d.html">REGEX_MIXED</a> and <a href="-regex-mode/-f-i-x-e-d_-s-t-r-i-n-g-s.html">FIXED_STRINGS</a> modes, backslashes (<strong><code>\</code></strong>) and dollar
+signs (<strong><code>$</code></strong>) have no special meaning.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the feature is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Build feature id, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build feature type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildFeatures.FileContentReplacer$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/index.html"><span class="identifier">BuildFeature</span></a></code>
+<p>Creates an instance of this build feature via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-feature/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

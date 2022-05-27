@@ -1,0 +1,343 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RakeStep - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin.buildSteps</a>&nbsp;/&nbsp;<a href="./index.html">RakeStep</a><br/>
+<br/>
+<h1>RakeStep</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RakeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Rake">Rake</a> build step.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../rake.html">rake</a></p>
+</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-rakefile/index.html">Rakefile</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Rakefile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-rakefile/index.html"><span class="identifier">Rakefile</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-ruby-interpreter-mode/index.html">RubyInterpreterMode</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">RubyInterpreterMode</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-compound-param/index.html"><span class="identifier">CompoundParam</span></a><span class="symbol">&lt;</span><a href="-ruby-interpreter-mode/index.html"><span class="identifier">RubyInterpreterMode</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RakeStep</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RakeStep</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code><code><span class="identifier">RakeStep</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://www.jetbrains.com/help/teamcity/?Rake">Rake</a> build step.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cucumber-options.html">cucumberOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cucumberOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Rake will be invoked with a "CUCUMBER_OPTS={internal options} {user options}".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-cucumber.html">enableCucumber</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableCucumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to attach Cucumber framework results to Tests tab of the Build Results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-r-spec.html">enableRSpec</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableRSpec</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to attach RSpec framework results to Tests tab of the Build Results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-shoulda.html">enableShoulda</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableShoulda</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to attach Shoulda framework results to Tests tab of the Build Results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-test-spec.html">enableTestSpec</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableTestSpec</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to attach Test-Spec framework results to Tests tab of the Build Results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-test-unit.html">enableTestUnit</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableTestUnit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to attach Test::Unit framework results to Tests tab of the Build Results page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exec-bundle.html">execBundle</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">execBundle</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>If your project uses the Bundler requirements manager and your Rakefile doesn't load the bundler setup script,
+this option will allow you to launch rake tasks using the bundle exec command emulation.
+If you want to execute bundle install command, you need to do it in the Command Line step before the Rake step.
+Also, remember to set up the Ruby environment configurator build feature to automatically pass Ruby interpreter to the command line runner.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="interpreter-additional-parameters.html">interpreterAdditionalParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">interpreterAdditionalParameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Additional parameters for interpreter, useful for JRuby interpreters. E.g. '-J-Xmx512m'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="rake-additional-parameters.html">rakeAdditionalParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rakeAdditionalParameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Specified parameters will be added to rake command line.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="rakefile.html">rakefile</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rakefile</span><span class="symbol">: </span><a href="-rakefile/index.html"><span class="identifier">Rakefile</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rspec-spec-options.html">rspecSpecOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rspecSpecOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Rake will be invoked with a "SPEC_OPTS={internal options} {user options}".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ruby-interpreter-mode.html">rubyInterpreterMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rubyInterpreterMode</span><span class="symbol">: </span><a href="-ruby-interpreter-mode/index.html"><span class="identifier">RubyInterpreterMode</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tasks.html">tasks</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">tasks</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Space-separated tasks names if you don't want to use the default task.
+For example, test:functionals or mytask:test mytask:test2.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="track-invoke-execute-stages.html">trackInvokeExecuteStages</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">trackInvokeExecuteStages</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code>
+<p>Whether to enable showing Invoke stage data in the build log.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="working-dir.html">workingDir</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workingDir</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p><a href="https://www.jetbrains.com/help/teamcity/?Build+Working+Directory">Build working directory</a> for ant script,
+specify it if it is different from the <a href="https://www.jetbrains.com/help/teamcity/?Build+Checkout+Directory">checkout directory</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a></code>
+<p>Optional collection of build step execution conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enabled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Specifies whether the step is enabled, true by default</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/execution-mode.html">executionMode</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">executionMode</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html"><span class="identifier">ExecutionMode</span></a></code>
+<p>Build step <a href="../../jetbrains.build-server.configs.kotlin/-build-step/-execution-mode/index.html">execution mode</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Id of the step, if not specified will be generated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/type.html">type</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Build step type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="content.html">content</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">content</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$content(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep.Rakefile.Content, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-rakefile/-content/index.html"><span class="identifier">Content</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-rakefile/-content/index.html"><span class="identifier">Content</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">default</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-ruby-interpreter-mode/-default/index.html"><span class="identifier">Default</span></a></code>
+<p>Use Ruby interpreter settings defined in the Ruby environment configurator build feature settings
+or the interpreter will be searched in the PATH.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="file.html">file</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">file</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$file(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep.Rakefile.File, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-rakefile/-file/index.html"><span class="identifier">File</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-rakefile/-file/index.html"><span class="identifier">File</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="path.html">path</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">path</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$path(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep.RubyInterpreterMode.Path, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-ruby-interpreter-mode/-path/index.html"><span class="identifier">Path</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-ruby-interpreter-mode/-path/index.html"><span class="identifier">Path</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="rvm.html">rvm</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">rvm</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$rvm(kotlin.Function1((jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep.RubyInterpreterMode.Rvm, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="-ruby-interpreter-mode/-rvm/index.html"><span class="identifier">Rvm</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-ruby-interpreter-mode/-rvm/index.html"><span class="identifier">Rvm</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.buildSteps.RakeStep$validate(jetbrains.buildServer.configs.kotlin.ErrorConsumer)/consumer">consumer</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-error-consumer/index.html"><span class="identifier">ErrorConsumer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Validates this object and reports found errors to the provided consumer</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/clear-conditions.html">clearConditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearConditions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes all configured build step conditions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">conditions</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.BuildStep$conditions(kotlin.Function1((jetbrains.buildServer.configs.kotlin.BuildStepConditions, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="../../jetbrains.build-server.configs.kotlin/-build-step-conditions/index.html"><span class="identifier">BuildStepConditions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Configures <a href="https://www.jetbrains.com/help/teamcity/?Build+Step+Conditions">build step conditions</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../jetbrains.build-server.configs.kotlin/-build-step/index.html"><span class="identifier">BuildStep</span></a></code>
+<p>Creates an instance of this build step via reflection using a no argument constructor,
+used during copying. Throws an error if this class doesn't have a default constructor.
+Subclasses can override it to create an instance without using a default constructor.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../jetbrains.build-server.configs.kotlin/-build-step/to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

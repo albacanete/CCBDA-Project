@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>VcsRoot.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="index.html">VcsRoot</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="jetbrains.buildServer.configs.kotlin.VcsRoot$&lt;init&gt;(kotlin.Function1((jetbrains.buildServer.configs.kotlin.VcsRoot, kotlin.Unit)))"></a>
+<code><span class="identifier">VcsRoot</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.VcsRoot$<init>(kotlin.Function1((jetbrains.buildServer.configs.kotlin.VcsRoot, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<a href="index.html"><span class="identifier">VcsRoot</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Creates a VCS root and initializes it with the specified init block</p>
+<h3>Parameters</h3>
+<p><a name="init"></a>
+<code>init</code> - initialization block</p>
+<p><strong>See Also</strong><br/>
+<p><a href="index.html">VcsRoot</a></p>
+</p>
+<a name="jetbrains.buildServer.configs.kotlin.VcsRoot$&lt;init&gt;()"></a>
+<code><span class="identifier">VcsRoot</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A base class representing TeamCity <a href="https://www.jetbrains.com/help/teamcity/?VCS+root">VCS root</a>.</p>
+<p>To appear in UI a VCS root should be registered in a project using the <a href="../-project/vcs-root.html">vcsRoot</a> method.</p>
+<p>VCS root can be attached to a build configuration or template with specified checkout rules using
+the <a href="../-vcs-settings/root.html">root()</a> method in the <a href="../-build-type-settings/vcs.html">vcs()</a> block.</p>
+<p>The <a href="id.html">id</a>, <a href="name.html">name</a>, and <a href="type.html">type</a> are mandatory properties for a valid VCS root (id can be omitted if it matches the class name).</p>
+<p>VCS root parameters can be defined via the <a href="../-parametrized/param.html">param</a> method. TeamCity vcs plugins
+extend this class and provide a typed DSL which makes editing parameters easier.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-project/index.html">Project</a></p>
+<p><a href="../-build-type/index.html">BuildType</a></p>
+<p><a href="../-template/index.html">Template</a></p>
+</p>
+</BODY>
+</HTML>

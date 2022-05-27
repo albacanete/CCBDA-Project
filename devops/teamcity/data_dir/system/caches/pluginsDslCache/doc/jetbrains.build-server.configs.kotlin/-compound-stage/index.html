@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompoundStage - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">jetbrains.buildServer.configs.kotlin</a>&nbsp;/&nbsp;<a href="./index.html">CompoundStage</a><br/>
+<br/>
+<h1>CompoundStage</h1>
+<code><span class="keyword">interface </span><span class="identifier">CompoundStage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-stage/index.html"><span class="identifier">Stage</span></a></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-type.html">buildType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildType</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$buildType(jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/bt">bt</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$buildType(jetbrains.buildServer.configs.kotlin.BuildType, kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parallel.html">parallel</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">parallel</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$parallel(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$parallel(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CompoundStage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sequential.html">sequential</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">sequential</span><span class="symbol">(</span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$sequential(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.CompoundStage$sequential(kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.CompoundStage, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CompoundStage</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-stage/build-types.html">buildTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-stage/depends-on.html">dependsOn</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">dependsOn</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.BuildType)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/buildTypes">buildTypes</span><span class="symbol">:</span>&nbsp;<a href="../-build-type/index.html"><span class="identifier">BuildType</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.BuildType)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">dependsOn</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.Stage)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/stages">stages</span><span class="symbol">:</span>&nbsp;<a href="../-stage/index.html"><span class="identifier">Stage</span></a><span class="symbol">, </span><span class="identifier" id="jetbrains.buildServer.configs.kotlin.Stage$dependsOn(kotlin.Array((jetbrains.buildServer.configs.kotlin.Stage)), kotlin.Function1((jetbrains.buildServer.configs.kotlin.SnapshotDependency, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="../-snapshot-dependency-options.html"><span class="identifier">SnapshotDependencyOptions</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-compound-stage-impl/index.html">CompoundStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CompoundStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="../-abstract-stage/index.html"><span class="identifier">AbstractStage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-parallel-stage-impl/index.html">ParallelStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParallelStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="../-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="../-compound-stage-impl/index.html"><span class="identifier">CompoundStageImpl</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-sequential-stage-impl/index.html">SequentialStageImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SequentialStageImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CompoundStage</span></a><span class="symbol">, </span><a href="../-dependency-constructor/index.html"><span class="identifier">DependencyConstructor</span></a><span class="symbol">, </span><a href="../-compound-stage-impl/index.html"><span class="identifier">CompoundStageImpl</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
