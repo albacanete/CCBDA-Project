@@ -27,8 +27,7 @@ class TransfermarktSpider(scrapy.Spider):
     start_urls = ['https://www.transfermarkt.com/']
 
     def parse(self, response):
-        #championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]
-        championships = ["premier-league"]
+        championships = ["serie-a", "premier-league", "primera-division", "ligue-1", "bundesliga"]
         for championship in championships:
             for i in range(2010, 2022):
                 link = ""
