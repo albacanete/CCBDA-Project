@@ -1,0 +1,7 @@
+pandas
+matplotlib
+sklearn
+jupyterlab
+seaborn
+bleach == 4.1.0
+xgboost
