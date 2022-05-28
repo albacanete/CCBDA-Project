@@ -51,14 +51,17 @@ def request(request):
                 championship = request.POST.get('value_championship')
                 year = request.POST.get('value_year')
                 objects = Team_Status.objects.filter(nameLeague=championship, year=year).values_list('nameTeam', flat=True)
+                objects = sorted(objects)
                 for object in objects:
                     items.append(object+"/")
+
             elif not request.POST.get('value_player'):
                 championship = request.POST.get('value_championship')
                 year = request.POST.get('value_year')
-                squad= request.POST.get('value_squad')
+                squad = request.POST.get('value_squad')
                 objects = Player_Status.objects.filter(nameLeague=championship, year=year, nameTeam=squad).values_list('namePlayer', flat=True)
 
+                objects = sorted(objects)
                 for object in objects:
                     items.append(object + "/")
             else:
@@ -68,6 +71,7 @@ def request(request):
                 player = request.POST.get('value_player')
                 objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer', flat=True)
 
+                objects = sorted(objects)
                 for object in objects:
                     items.append(object + "/")
 
