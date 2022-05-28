@@ -107,7 +107,9 @@
       tag = "latest";
       contents = [ self.packages.${system}.backend ];
       config = {
-        Cmd = [ "manage" "runserver" ];
+        Cmd = [
+          "${pkgs.bash}/bin/bash" "-c" "manage migrate --run-syncdb && manage parseData && manage runserver"
+        ];
         ExposedPorts = {
           "8000/tcp" = {};
         };
