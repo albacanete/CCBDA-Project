@@ -85,9 +85,11 @@
                         </select>
                       </div>
                     </div>
+                    <br/>
+                    <br/>
                     <div class="row">
                       <div class="col-12">
-                        <button class="btn btn-primary w-100" name="create_model" value="true" type="submit">Create model</button>
+                        <button class="btn btn-primary w-100" id="submit-button" disabled name="create_model" value="true" type="submit">Create model</button>
                       </div>
                     </div>
                   </form>
@@ -112,7 +114,7 @@
                                 data: {
                                   labels: x_label,
                                   datasets: [{
-                                    label: 'Line Chart',
+                                    label: 'Function value player',
                                     data: y_label,
                                     fill: false,
                                     borderColor: 'rgb(75, 192, 192)',

@@ -22,6 +22,7 @@ function selectFunction(item) {
 
         document.getElementById(text.concat(number_id + i).toString()).value ="-1";
       }
+      $('#submit-button').prop('disabled', true)
     } else {
       if (number_id !== 1 && number_id !== 2){
         var next_select = document.getElementById(text.concat(number_id + 1).toString());
@@ -38,7 +39,6 @@ function selectFunction(item) {
             success: function(data) {
               $('#target_model_4 option:not(:first)').remove();
               $('#target_model5 option:not(:first)').remove();
-              console.log(data);
               const myArray = data.split("/");
               for(let i = 0; i<myArray.length; i++) {
                 var option = document.createElement("option");
@@ -70,11 +70,11 @@ function selectFunction(item) {
 
               next_select.appendChild(option);
             }
-
               next_select.style.display = "block";
               }
         });
         }
+
 
       }else {
         if (number_id === 2){
@@ -87,5 +87,7 @@ function selectFunction(item) {
 
 
     }
+  }else {
+    $('#submit-button').prop('disabled', false);
   }
 }
