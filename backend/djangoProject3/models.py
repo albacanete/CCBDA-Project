@@ -6,13 +6,22 @@ import bcrypt
 import uuid
 
 from boto3.dynamodb.conditions import Key
+
 """
 USER_TABLE = os.environ['USER_TABLE']
 AWS_REGION = os.environ['AWS_REGION']
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 """
+
 logger = logging.getLogger(__name__)
+
+class User(models.Model):
+    email = models.EmailField(unique=True, null =True)
+    password = models.CharField(max_length=250, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 """class User(models.Model):
     email = models.EmailField()
