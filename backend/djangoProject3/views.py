@@ -5,6 +5,7 @@ from collections import Counter
 from django.core.exceptions import ValidationError
 from validate_email import validate_email
 from django.contrib.auth.models import User
+
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -41,11 +42,19 @@ def request(request):
             years = []
             values = []
 
+
             for i in items:
                 years.append(i[0])
                 values.append(i[1])
 
-            return render(request, 'request.html', {'history_nav': True, 'years': years, 'values': values, 'name': player})
+            user = User.objects.get(email=request.session['email'])
+            field_object = User._meta.get_field('id')
+            user_id = field_object.value_from_object(user)
+
+            request_player = Request(target=target, nameLeague=championship, year=year, nameTeam=squad, namePlayer=player, user_id=user_id)
+            request_player.save()
+
+            return render(request, 'request.html', {'request_nav': True, 'years': years, 'values': values, 'name': player})
         else:
             items = []
             # PARAMETERS OF THE SELECTION
@@ -80,14 +89,23 @@ def request(request):
             return HttpResponse(items)
 
 
-
-
-
 def history(request):
-    if "email" in request.session:
-        return render(request, 'history.html', {'history_nav': True})
-    else:
-        return redirect('/login')
+    if request.method == "GET":
+        if "email" in request.session:
+            requests = []
+            user = User.objects.get(email=request.session['email'])
+            field_object = User._meta.get_field('id')
+            user_id = field_object.value_from_object(user)
+            try:
+                requests_objects = Request.objects.filter(user_id=user_id).values_list('target', 'nameLeague', 'year', 'nameTeam', 'namePlayer', 'created_at')
+                for req in requests_objects:
+                    requests.append(req)
+
+                return render(request, 'history.html', {'history_nav': True, 'requests': requests})
+            except:
+                return render(request, 'history.html', {'history_nav': True})
+        else:
+            return redirect('/login')
 
 def user_profile(request):
     if "email" in request.session:
