@@ -166,14 +166,24 @@ def register(request):
 
             # Hash password
             hash = bcrypt.hashpw(password_hashed, mySalt)
-            user = User.objects.create_user('email', hash.decode('utf-8'), )
-            status = user.register(email, password)
+            try:
+                user = User(email=email, password=hash.decode('utf-8'))
+                user.save()
+            except:
+                errors.append("Something wrong, user already registered?")
+
+            if not errors:
+                return render(request, 'register.html', {'success': "User registered!"})
+            else:
+                return render(request, 'register.html', {'errors': errors})
+
+            """status = user.register(email, password)
             if not status:
                 return render(request, 'register.html', {'success': "User registered!"})
             else:
                 for error in status:
                     errors.append(error)
-                return render(request, 'register.html', {'errors': errors})
+                return render(request, 'register.html', {'errors': errors})"""
         else:
             return render(request, 'register.html', {'errors': errors})
 
