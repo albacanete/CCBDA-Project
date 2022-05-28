@@ -15,8 +15,6 @@ function selectFunction(item) {
     names_s.push(item.name);
   }
 
-  console.log(values_s)
-
   if (number_id !== total_numbers){
     let text = "target_model_";
     if (item_value == -1) {
@@ -40,7 +38,6 @@ function selectFunction(item) {
               var option = document.createElement("option");
               option.value = myArray[i];
               option.text = myArray[i];
-
               next_select.appendChild(option);
             }
               next_select.style.display = "block";
@@ -53,11 +50,8 @@ function selectFunction(item) {
           url: "/request",
           data: {value_championship: values_s[0], value_year: values_s[1], value_squad: values_s[2]},
           success: function(data) {
-
             const myArray = data.split("/");
-
             for(let i = 0; i<myArray.length; i++) {
-              console.log(myArray[i]);
               var option = document.createElement("option");
               option.value = myArray[i];
               option.text = myArray[i];

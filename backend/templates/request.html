@@ -25,7 +25,7 @@
                 <div class="card-body">
 
                   <h5 class="card-title">Create the model <span>/Select all the options to create the model</span></h5>
-                  <form method="POST">
+                  <form method="POST" action="/request">
                     {% csrf_token %}
                     <!-- BEGIN:Values to select -->
                     <div class="row">
@@ -86,78 +86,53 @@
                     </div>
                     <div class="row">
                       <div class="col-12">
-                        <button class="btn btn-primary w-100" type="submit">Create model</button>
+                        <button class="btn btn-primary w-100" name="create_model" value="true" type="submit">Create model</button>
                       </div>
                     </div>
                   </form>
-                  {% if years %} {% for year in years %} {{ year }}{% endfor %}{% endif %}
-
-
                   <!-- END:Values to select -->
+                  {% if years %}
+                    <!-- Line Chart -->
+                    <div class="col-lg-6">
 
-                  <!-- Line Chart -->
-                  <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Line Chart</h5>
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ name }}</h5>
 
-              <!-- Line Chart -->
-              <canvas id="lineChart" style="max-height: 400px;"></canvas>
-              <script>
-                function doForm() {
-                  var data = new FormData();
-                  data.append("player", document.getElementById("player").value);
-                  console.log(data)
-                  $.ajax({
-                  type: "POST",
-                  url: "/plot_create",
-                  data: {player: document.getElementById("target_model_5").value},
-                  success: function(data) {
-                      const element = data.split("/");
-                      const e = element.split(":");
-                      const values = [];
-                      const years = [];
-                      for(let i=0; i<e.length;i=i+2)
-                        years.push(e[i]);
-                        values.push(e[i+1]);
-                    }
+                          <!-- Line Chart -->
+                          <canvas id="lineChart" style="max-height: 400px;"></canvas>
 
-                });
+                          <script>
+                            {% if years %}var x_label = {{ years }};{% endif %}
+                            {% if values %}var y_label = {{ values }};{% endif %}
+                            document.addEventListener("DOMContentLoaded", () => {
+                              new Chart(document.querySelector('#lineChart'), {
+                                type: 'line',
+                                data: {
+                                  labels: x_label,
+                                  datasets: [{
+                                    label: 'Line Chart',
+                                    data: y_label,
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1
+                                  }]
+                                },
+                                options: {
+                                  scales: {
+                                    y: {
+                                      beginAtZero: true
+                                    }
+                                  }
+                                }
+                              });
+                            });
+                          </script>
+                          <!-- End Line CHart -->
 
-                }
-
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#lineChart'), {
-                    type: 'line',
-                    data: {
-                      labels: [10,20],
-                      datasets: [{
-                        label: 'Line Chart',
-                        data: [10,20],
-                        fill: false,
-                        borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                      }]
-                    },
-                    options: {
-                      scales: {
-                        y: {
-                          beginAtZero: true
-                        }
-                      }
-                    }
-                  });
-                });
-              </script>
-              <!-- End Line CHart -->
-
-            </div>
-          </div>
-        </div>
-
-
-                {% if items %}
-
+                        </div>
+                      </div>
+                    </div>
                   {% endif %}
 
                 </div>

@@ -13,24 +13,6 @@ from .models import *
 def page_not_found_view(request, exception):
     return render(request, 'pages-error-404.html', status=404)
 
-@csrf_exempt
-def plotCreation(request):
-    if request.method == 'POST':
-        print("hello")
-        items = []
-        target = request.POST.get('target')
-        championship = request.POST.get('championship')
-        year = request.POST.get('year')
-        squad = request.POST.get('squad')
-        player = request.POST.get('player')
-        objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer')
-
-        for object in objects:
-            items.append(object[0]+":"+ object[1]+ "/")
-
-    return HttpResponse(items)
-
-
 
 @csrf_exempt
 def request(request):
@@ -38,32 +20,58 @@ def request(request):
         return render(request, 'request.html', {'request_nav': True})
 
     else:
-        items = []
-        # PARAMETERS OF THE SELECTION
-        if not request.POST.get('value_squad'):
-            championship = request.POST.get('value_championship')
-            year = request.POST.get('value_year')
-            objects = Team_Status.objects.filter(nameLeague=championship, year=year).values_list('nameTeam', flat=True)
-            for object in objects:
-                items.append(object+"/")
-        elif not request.POST.get('value_player'):
-            championship = request.POST.get('value_championship')
-            year = request.POST.get('value_year')
-            squad= request.POST.get('value_squad')
-            objects = Player_Status.objects.filter(nameLeague=championship, year=year, nameTeam=squad).values_list('namePlayer', flat=True)
+        if request.POST.get("create_model"):
+            items = []
+            target = request.POST.get('target')
+            championship = request.POST.get('championship')
+            year = request.POST.get('year')
+            squad = request.POST.get('squad')
+            player = request.POST.get('player')
+            objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer')
 
             for object in objects:
-                items.append(object + "/")
+                items.append(object)
+
+            items = sorted(items)
+
+            # CLEAN data
+            items = [i for i in items if i[1] != -1]
+            years = []
+            values = []
+
+            for i in items:
+                years.append(i[0])
+                values.append(i[1])
+
+            return render(request, 'request.html', {'history_nav': True, 'years': years, 'values': values, 'name': player})
         else:
-            championship = request.POST.get('value_championship')
-            year = request.POST.get('value_year')
-            squad = request.POST.get('value_squad')
-            player = request.POST.get('value_player')
-            objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer', flat=True)
+            items = []
+            # PARAMETERS OF THE SELECTION
+            if not request.POST.get('value_squad'):
+                championship = request.POST.get('value_championship')
+                year = request.POST.get('value_year')
+                objects = Team_Status.objects.filter(nameLeague=championship, year=year).values_list('nameTeam', flat=True)
+                for object in objects:
+                    items.append(object+"/")
+            elif not request.POST.get('value_player'):
+                championship = request.POST.get('value_championship')
+                year = request.POST.get('value_year')
+                squad= request.POST.get('value_squad')
+                objects = Player_Status.objects.filter(nameLeague=championship, year=year, nameTeam=squad).values_list('namePlayer', flat=True)
 
-            for object in objects:
-                items.append(object + "/")
-        return HttpResponse(items)
+                for object in objects:
+                    items.append(object + "/")
+            else:
+                championship = request.POST.get('value_championship')
+                year = request.POST.get('value_year')
+                squad = request.POST.get('value_squad')
+                player = request.POST.get('value_player')
+                objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer', flat=True)
+
+                for object in objects:
+                    items.append(object + "/")
+
+            return HttpResponse(items)
 
 
 

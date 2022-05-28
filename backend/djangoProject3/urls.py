@@ -30,8 +30,7 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('request', views.request, name="request"),
     path('user_profile', views.user_profile, name="user_profile"),
-    path('history', views.history, name="history"),
-    path('plot_create', views.plotCreation, name="plot_create")
+    path('history', views.history, name="history")
 ]
 
 handler404 = "djangoProject3.views.page_not_found_view"
