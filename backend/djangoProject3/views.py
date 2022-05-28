@@ -17,8 +17,10 @@ def page_not_found_view(request, exception):
 @csrf_exempt
 def request(request):
     if request.method == 'GET':
-        return render(request, 'request.html', {'request_nav': True})
-
+        if "email" in request.session:
+            return render(request, 'request.html', {'request_nav': True})
+        else:
+            return redirect('/login')
     else:
         if request.POST.get("create_model"):
             items = []
@@ -121,27 +123,32 @@ def home(request):
 
 
 def login(request):
-    user = User()
-    errors = []
     if request.method == 'GET':
         if "email" in request.session:
             return redirect('/')
         else:
             return render(request, 'login.html')
     elif request.method == 'POST':
+        errors = []
+
         email = request.POST.get('email')
         password = request.POST.get('password')
 
         if not validate_email(email):
             errors.append("Bad email format")
 
-        if user.login(email, password):
-            request.session["email"] = str(email)
-            return redirect('/')
-        else:
-            errors.append("Email or Password wrong!")
-            return render(request, 'login.html', {'errors': errors})
+        if not errors:
+            user = User.objects.get(email=email)
+            field_object = User._meta.get_field('password')
+            password_server = field_object.value_from_object(user)
+            password_hashed = password.encode('utf-8')
 
+            if bcrypt.checkpw(password_hashed, password_server.encode('utf-8')):
+                request.session["email"] = str(email)
+                return redirect('/')
+            else:
+                errors.append("Email or Password wrong!")
+                return render(request, 'login.html', {'errors': errors})
 
 def register(request):
     errors = []
@@ -169,21 +176,10 @@ def register(request):
             try:
                 user = User(email=email, password=hash.decode('utf-8'))
                 user.save()
+                return render(request, 'register.html', {'success': "User registered!"})
             except:
                 errors.append("Something wrong, user already registered?")
-
-            if not errors:
-                return render(request, 'register.html', {'success': "User registered!"})
-            else:
                 return render(request, 'register.html', {'errors': errors})
-
-            """status = user.register(email, password)
-            if not status:
-                return render(request, 'register.html', {'success': "User registered!"})
-            else:
-                for error in status:
-                    errors.append(error)
-                return render(request, 'register.html', {'errors': errors})"""
         else:
             return render(request, 'register.html', {'errors': errors})
 
