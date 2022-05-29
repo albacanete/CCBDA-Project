@@ -4,15 +4,24 @@ import os
 import logging
 import bcrypt
 import uuid
-
+import pytz
 from boto3.dynamodb.conditions import Key
+
 """
 USER_TABLE = os.environ['USER_TABLE']
 AWS_REGION = os.environ['AWS_REGION']
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 """
+
 logger = logging.getLogger(__name__)
+
+class User(models.Model):
+    email = models.EmailField(unique=True, null =True)
+    password = models.CharField(max_length=250, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
+
 
 """class User(models.Model):
     email = models.EmailField()
@@ -88,18 +97,21 @@ logger = logging.getLogger(__name__)
 class Parameters(models.Model):
     #id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     pass
-
-class Request(models.Model):
-    datetime = models.DateTimeField()
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    #parameter_id = models.ForeignKey()
-
 """
+class Request(models.Model):
+    target = models.CharField(max_length=50, null=True)
+    nameLeague = models.CharField(max_length=50)
+    year = models.PositiveIntegerField()
+    nameTeam = models.CharField(max_length=50)
+    namePlayer = models.CharField(max_length=50)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
 class Team_Status(models.Model):
     nameTeam = models.CharField(max_length=50)
     nameLeague = models.CharField(max_length=50)
     year = models.PositiveIntegerField()
-    avgAge= models.FloatField()
+    avgAge = models.FloatField()
     valueTeam = models.BigIntegerField()
     numberPlayers = models.PositiveIntegerField()
 
