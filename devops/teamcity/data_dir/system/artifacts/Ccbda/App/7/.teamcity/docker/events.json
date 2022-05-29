@@ -1,1 +1,0 @@
-{"events":[{"info":{"infoType":"ImageInfo","name":"python","repo":"library","tag":"3.10","digest":"sha256:fec187bc258d1e1477b313359b2d3055123597e0c5a78df6b3c8350121497331\n","contextLine":"build (Docker)","timestamp":"May 27, 2022, 10:48:22 AM"},"eventName":"pull"}],"pulledDockerHubImages":["library/python:3.10"]}
