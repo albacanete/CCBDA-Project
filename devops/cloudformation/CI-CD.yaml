@@ -85,6 +85,7 @@ Resources:
                 git clone https://github.com/albacg5/CCBDA-devops.git
                 mv /CCBDA-devops /home/ubuntu/CCBDA-devops
                 sudo chown -R ubuntu:ubuntu /home/ubuntu/CCBDA-devops
+                cd /home/ubuntu/CCBDA-devops/teamcity && docker build . -t teamcity-agent
                 cd /home/ubuntu/CCBDA-devops/teamcity && docker-compose up -d
 
             BlockDeviceMappings:

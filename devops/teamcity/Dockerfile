@@ -2,6 +2,7 @@ FROM jetbrains/teamcity-minimal-agent:latest
 
 LABEL dockerImage.teamcity.version="latest" \
     dockerImage.teamcity.buildNumber="latest"
+
 # install docker
 USER root
 RUN apt-get update -y \
