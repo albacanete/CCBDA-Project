@@ -1,3 +1,4 @@
+pystan==2.19.1.1
 pandas
 matplotlib
 sklearn
@@ -8,3 +9,5 @@ xgboost
 scalecast
 ipywidgets
 tqdm
+fbprophet
+multi-prophet

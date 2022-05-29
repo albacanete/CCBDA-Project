@@ -41,7 +41,9 @@
 
     python-env = mach.mkPython {
       # Choose python version
-      python = "python39";
+      python = "python38";
+
+      # providers.fbprophet = ["conda"];
 
       # Specify python requirements, you can use ./requirements.txt a
       # string (or a combination of both)
