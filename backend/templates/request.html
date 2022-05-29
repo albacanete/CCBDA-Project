@@ -107,6 +107,24 @@
                           <script>
                             {% if years %}var x_label = {{ years }};{% endif %}
                             {% if values %}var y_label = {{ values }};{% endif %}
+
+                            let pad_data = values => {
+                              // Add null values to the beginning of the array to plot the line correctly
+                              var padded_data = new Array(y_label.length).fill(null).concat(values);
+                              padded_data[y_label.length-1] = y_label[y_label.length-1];
+                              return padded_data;
+                            }
+
+                            {% if values_pred %}
+                              var y_label_pred = pad_data({{ values_pred }});
+                              x_label = x_label.concat({{ years_pred }});
+                            {% endif %}
+
+                            {% if values_pred_upper %}
+                              var y_label_pred_upper = pad_data({{ values_pred_upper }});
+                              var y_label_pred_lower = pad_data({{ values_pred_lower }});
+                            {% endif %}
+
                             document.addEventListener("DOMContentLoaded", () => {
                               new Chart(document.querySelector('#lineChart'), {
                                 type: 'line',
@@ -118,6 +136,30 @@
                                     fill: false,
                                     borderColor: 'rgb(75, 192, 192)',
                                     tension: 0.1
+                                  {% if values_pred %}
+                                  }, {
+                                    label: 'Predicted value player',
+                                    data: y_label_pred,
+                                    fill: false,
+                                    borderColor: 'rgb(175, 70, 70)',
+                                    tension: 0.5
+                                  {% endif %}
+                                  {% if values_pred_upper %}
+                                  }, {
+                                    label: "Lower bound",
+                                    backgroundColor: 'rgba(55, 173, 221,  0.6)',
+                                    borderColor: 'rgba(55, 173, 221, 1.0)',
+                                    fill: false,  //no fill here
+                                    data: y_label_pred_lower,
+                                    tension: 0.5
+                                  }, {
+                                    label: "Upper bound",
+                                    backgroundColor: 'rgba(55, 173, 221, 0.6)',
+                                    borderColor: 'rgba(55, 173, 221, 1.0)',
+                                    fill: '-1', //fill until previous dataset
+                                    data: y_label_pred_upper,
+                                    tension: 0.5
+                                  {% endif %}
                                   }]
                                 },
                                 options: {
