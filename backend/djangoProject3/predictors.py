@@ -17,7 +17,7 @@ def fill_years(df):
     """
     begin = min(df.year)
     end = max(df.year)
-    df_new = pd.DataFrame.from_dict(dict(year=list(range(begin, end))))
+    df_new = pd.DataFrame.from_dict(dict(year=list(range(begin, end+1))))
     df = pd.merge(df_new, df, on='year', how='left')
     return df.fillna(-1)
 
