@@ -131,7 +131,6 @@
                               var lower = pad_data(pred[key].map((value, i) => value*(0.75 - i*0.1)), y_label);
                               var upper = pad_data(pred[key].map((value, i) => value*(1.25 + i*0.1)), y_label);
 
-                              console.log(y_label_pred);
                               new Chart(document.querySelector("#lineChart-{{key}}"), {
                                 type: 'line',
                                 data: {
