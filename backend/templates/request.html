@@ -128,7 +128,7 @@
                               var x_label = na_to_null(data["year"].concat(pred["year"]));
                               var y_label = na_to_null(data[key]);
                               var y_label_pred = pad_data(pred[key], y_label);
-                              var lower = pad_data(pred[key].map((value, i) => value*(0.75 - i*0.1)), y_label);
+                              var lower = pad_data(pred[key].map((value, i) => value*(0.75 - i*0.1)), y_label).map(x => x < 0 ? 0 : x);
                               var upper = pad_data(pred[key].map((value, i) => value*(1.25 + i*0.1)), y_label);
 
                               new Chart(document.querySelector("#lineChart-{{key}}"), {
