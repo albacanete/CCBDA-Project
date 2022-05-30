@@ -128,6 +128,8 @@
                               var x_label = na_to_null(data["year"].concat(pred["year"]));
                               var y_label = na_to_null(data[key]);
                               var y_label_pred = pad_data(pred[key], y_label);
+                              var lower = pad_data(pred[key].map(value => value*0.75), y_label);
+                              var upper = pad_data(pred[key].map(value => value*1.25), y_label);
 
                               console.log(y_label_pred);
                               new Chart(document.querySelector("#lineChart-{{key}}"), {
@@ -146,6 +148,20 @@
                                     data: y_label_pred,
                                     fill: false,
                                     borderColor: 'rgb(175, 70, 70)',
+                                    tension: 0.5
+                                  }, {
+                                    label: "Lower bound",
+                                    backgroundColor: 'rgba(55, 173, 221,  0.6)',
+                                    borderColor: 'rgba(55, 173, 221, 1.0)',
+                                    fill: false,  //no fill here
+                                    data: lower,
+                                    tension: 0.5
+                                  }, {
+                                    label: "Upper bound",
+                                    backgroundColor: 'rgba(55, 173, 221, 0.6)',
+                                    borderColor: 'rgba(55, 173, 221, 1.0)',
+                                    fill: '-1', //fill until previous dataset
+                                    data: upper,
                                     tension: 0.5
                                   }]
                                 },
