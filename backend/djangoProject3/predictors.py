@@ -4,6 +4,24 @@ import joblib
 import os
 
 
+def obj_to_df(obj):
+    """
+    Convert a pandas object to a dataframe
+    """
+    return fill_years(pd.DataFrame(obj.values()).sort_values(by=['year']))
+
+
+def fill_years(df):
+    """
+    Fill missing years with 0
+    """
+    begin = min(df.year)
+    end = max(df.year)
+    df_new = pd.DataFrame.from_dict(dict(year=list(range(begin, end))))
+    df = pd.merge(df_new, df, on='year', how='left')
+    return df.fillna(-1)
+
+
 class PlayerPredictor:
     def add_lag_columns(
         df: pd.DataFrame, columns="numeric", levels=[1]
@@ -54,9 +72,12 @@ class PlayerPredictor:
         result["year"] += 1
         return result
 
-    def pred_player_lag(self, objects):
+    def pred_player_lag(self, df):
 
-        df = pd.DataFrame(objects.values())
+        if not isinstance(df, pd.DataFrame):
+            df = pd.DataFrame(df.values())
+
+        print(df)
 
         df = df.rename(
             columns=dict(

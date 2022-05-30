@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 from django.views.decorators.csrf import csrf_exempt
 
-from .predictors import PlayerPredictor
+from .predictors import PlayerPredictor, obj_to_df, fill_years
 
 from .models import *
 
@@ -33,19 +33,10 @@ def request(request):
             player = request.POST.get('player')
             objects = Player_Status.objects.filter(namePlayer=player)
 
-            for object in objects.values_list('year', 'valuePlayer'):
-                items.append(object)
+            data = obj_to_df(objects).to_dict("list")
 
-            items = sorted(items)
-
-            # CLEAN data
-            items = [i for i in items if i[1] != -1]
-            years = []
-            values = []
-
-            for i in items:
-                years.append(i[0])
-                values.append(i[1])
+            years = data["year"]
+            values = data["valuePlayer"]
 
             result = PlayerPredictor().pred_player_lag(objects)
             pred_years = result.year.to_list()
