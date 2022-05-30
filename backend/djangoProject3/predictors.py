@@ -8,7 +8,7 @@ def obj_to_df(obj):
     """
     Convert a pandas object to a dataframe
     """
-    return fill_years(pd.DataFrame(obj.values()).sort_values(by=['year']))
+    return rename(fill_years(pd.DataFrame(obj.values()).sort_values(by=['year'])))
 
 
 def fill_years(df):
@@ -20,6 +20,18 @@ def fill_years(df):
     df_new = pd.DataFrame.from_dict(dict(year=list(range(begin, end))))
     df = pd.merge(df_new, df, on='year', how='left')
     return df.fillna(-1)
+
+
+def rename(df):
+    return df.rename(
+        columns=dict(
+            namePlayer="name_player",
+            valuePlayer="value_player",
+            games="games_played",
+            minutes="minute_played",
+            nameLeague="championship",
+            nameTeam="squad_name",
+        ))
 
 
 class PlayerPredictor:
@@ -76,8 +88,6 @@ class PlayerPredictor:
 
         if not isinstance(df, pd.DataFrame):
             df = pd.DataFrame(df.values())
-
-        print(df)
 
         df = df.rename(
             columns=dict(

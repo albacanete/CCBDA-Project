@@ -93,7 +93,7 @@
                     </div>
                   </form>
                   <!-- END:Values to select -->
-                  {% if years %}
+                  {% if data %}
                     <!-- Line Chart -->
                     <div class="col-lg-12">
 
@@ -102,69 +102,51 @@
                           <h5 class="card-title">{{ name }}</h5>
 
                           <!-- Line Chart -->
-                          <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                          {% for key in plot %}
+                            <div>
+                              <h6>{{key}}</h6>
+                            <canvas id="lineChart-{{key}}" style="max-height: 400px;"></canvas>
+                            </div>
+                          {% endfor %}
 
                           <script>
-                            let pad_data = values => {
-                              // Add null values to the beginning of the array to plot the line correctly
-                              var padded_data = new Array(y_label.length).fill(null).concat(values);
-                              padded_data[y_label.length-1] = y_label[y_label.length-1];
-                              return padded_data;
-                            }
 
-                            let na_to_null = values => {
-                              return values.map(value => value == -1? null : value);
-                            }
-
-                            {% if years %}var x_label = na_to_null({{ years }});{% endif %}
-                            {% if values %}var y_label = na_to_null({{ values }});{% endif %}
-
-                            {% if values_pred %}
-                              var y_label_pred = pad_data({{ values_pred }});
-                              x_label = x_label.concat({{ years_pred }});
-                            {% endif %}
-
-                            {% if values_pred_upper %}
-                              var y_label_pred_upper = pad_data({{ values_pred_upper }});
-                              var y_label_pred_lower = pad_data({{ values_pred_lower }});
-                            {% endif %}
-
+                          let pad_data = (values, y_label) => {
+                            // Add null values to the beginning of the array to plot the line correctly
+                            var padded_data = new Array(y_label.length).fill(null).concat(values);
+                            padded_data[y_label.length-1] = y_label[y_label.length-1];
+                            return padded_data;
+                          };
+                          let na_to_null = values => {
+                            return values.map(value => value == -1? null : value);
+                          };
+                          var data = {{ data | safe }};
+                          var pred = {{ pred | safe }};
+                          {% for key in plot %}
                             document.addEventListener("DOMContentLoaded", () => {
-                              new Chart(document.querySelector('#lineChart'), {
+                              var key = "{{key}}";
+                              var x_label = na_to_null(data["year"].concat(pred["year"]));
+                              var y_label = na_to_null(data[key]);
+                              var y_label_pred = pad_data(pred[key], y_label);
+
+                              console.log(y_label_pred);
+                              new Chart(document.querySelector("#lineChart-{{key}}"), {
                                 type: 'line',
                                 data: {
                                   labels: x_label,
                                   datasets: [{
-                                    label: 'Function value player',
+                                    label: key,
                                     data: y_label,
                                     fill: false,
                                     spanGaps: true,
                                     borderColor: 'rgb(75, 192, 192)',
                                     tension: 0.1
-                                  {% if values_pred %}
                                   }, {
-                                    label: 'Predicted value player',
+                                    label: 'Predicted ' + key,
                                     data: y_label_pred,
                                     fill: false,
                                     borderColor: 'rgb(175, 70, 70)',
                                     tension: 0.5
-                                  {% endif %}
-                                  {% if values_pred_upper %}
-                                  }, {
-                                    label: "Lower bound",
-                                    backgroundColor: 'rgba(55, 173, 221,  0.6)',
-                                    borderColor: 'rgba(55, 173, 221, 1.0)',
-                                    fill: false,  //no fill here
-                                    data: y_label_pred_lower,
-                                    tension: 0.5
-                                  }, {
-                                    label: "Upper bound",
-                                    backgroundColor: 'rgba(55, 173, 221, 0.6)',
-                                    borderColor: 'rgba(55, 173, 221, 1.0)',
-                                    fill: '-1', //fill until previous dataset
-                                    data: y_label_pred_upper,
-                                    tension: 0.5
-                                  {% endif %}
                                   }]
                                 },
                                 options: {
@@ -176,8 +158,8 @@
                                 }
                               });
                             });
+                          {% endfor %}
                           </script>
-                          <!-- End Line CHart -->
 
                         </div>
                       </div>

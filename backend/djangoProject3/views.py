@@ -33,14 +33,16 @@ def request(request):
             player = request.POST.get('player')
             objects = Player_Status.objects.filter(namePlayer=player)
 
-            data = obj_to_df(objects).to_dict("list")
-
-            years = data["year"]
-            values = data["valuePlayer"]
-
-            result = PlayerPredictor().pred_player_lag(objects)
-            pred_years = result.year.to_list()
-            pred_values = result.value_player.to_list()
+            data = obj_to_df(objects)[[
+                      "games_played",
+                      "goals",
+                      "assists",
+                      "minute_played",
+                      "value_player",
+                      "age",
+                      "year"
+                  ]].to_dict("list")
+            prediction = PlayerPredictor().pred_player_lag(objects).to_dict("list")
 
             user = User.objects.get(email=request.session['email'])
             field_object = User._meta.get_field('id')
@@ -51,12 +53,9 @@ def request(request):
 
             return render(request, 'request.html',
                           {'request_nav': True,
-                              'years': years,
-                              'values': values,
-                              'years_pred': pred_years,
-                              'values_pred': pred_values,
-                              # 'values_pred_upper': pred_values_upper,
-                              # 'values_pred_lower': pred_values_lower,
+                              'data': data,
+                              'pred': prediction,
+                              'plot': ["value_player", "goals", "assists", "games_played", "minute_played"],
                               'name': player})
         else:
             items = []
