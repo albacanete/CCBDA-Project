@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 
 from django.views.decorators.csrf import csrf_exempt
 
+from .predictors import PlayerPredictor
 
 from .models import *
 
@@ -30,9 +31,9 @@ def request(request):
             year = request.POST.get('year')
             squad = request.POST.get('squad')
             player = request.POST.get('player')
-            objects = Player_Status.objects.filter(namePlayer=player).values_list('year', 'valuePlayer')
+            objects = Player_Status.objects.filter(namePlayer=player)
 
-            for object in objects:
+            for object in objects.values_list('year', 'valuePlayer'):
                 items.append(object)
 
             items = sorted(items)
@@ -42,10 +43,13 @@ def request(request):
             years = []
             values = []
 
-
             for i in items:
                 years.append(i[0])
                 values.append(i[1])
+
+            result = PlayerPredictor().pred_player_lag(objects)
+            pred_years = result.year.to_list()
+            pred_values = result.value_player.to_list()
 
             user = User.objects.get(email=request.session['email'])
             field_object = User._meta.get_field('id')
@@ -54,7 +58,15 @@ def request(request):
             request_player = Request(target=target, nameLeague=championship, year=year, nameTeam=squad, namePlayer=player, user_id=user_id)
             request_player.save()
 
-            return render(request, 'request.html', {'request_nav': True, 'years': years, 'values': values, 'name': player})
+            return render(request, 'request.html',
+                          {'request_nav': True,
+                              'years': years,
+                              'values': values,
+                              'years_pred': pred_years,
+                              'values_pred': pred_values,
+                              # 'values_pred_upper': pred_values_upper,
+                              # 'values_pred_lower': pred_values_lower,
+                              'name': player})
         else:
             items = []
             # PARAMETERS OF THE SELECTION

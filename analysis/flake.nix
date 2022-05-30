@@ -1,6 +1,4 @@
 {
-  description = "Python environment managed with mach-nix and flakes";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
@@ -45,78 +43,28 @@
       # Choose python version
       python = "python39";
 
+      # providers.fbprophet = ["conda"];
+
       # Specify python requirements, you can use ./requirements.txt a
       # string (or a combination of both)
       requirements = ''
-        tzdata
         ipython
         black
-        pip
         python-lsp-server
         python-language-server[all]
       ''
-        + (builtins.readFile ./backend/requirements.txt)
-        + (builtins.readFile ./scrapy/requirements.txt);
-    };
-
-    django-env = mach.mkPython {
-      python = "python38";
-      requirements = ''
-        tzdata
-      '' + (builtins.readFile ./backend/requirements.txt);
+        + (builtins.readFile ./requirements.txt);
     };
 
   in
   {
     devShells.default = with pkgs; mkShellNoCC {
-      name = "python";
+      name = "python-analysis";
       buildInputs =  [
         python-env
-        gnupg
-        openssh
-        sqlite
         jq
-        (writeShellScriptBin "aws" ''
-          unset PYTHONPATH
-          exec ${pkgs.awscli2}/bin/aws "$@"
-        '')
-        (writeShellScriptBin "ssh-aws" ''
-          ADDR="$1"
-          shift
-          exec TERM=xterm ${pkgs.openssh}/bin/ssh ec2-user@"$ADDR" "$@"
-        '')
+        csvkit
       ];
-
-      shellHook = let
-        GIT_HOOKS = ( symlinkJoin { name = "git-hooks"; paths = [
-          (writeShellScriptBin "pre-commit" ''
-            ${gitleaks}/bin/gitleaks protect --verbose --redact --staged
-          '')
-        ]; } ) + "/bin";
-      in "git config --local core.hooksPath ${GIT_HOOKS}";
     };
-    packages.default = self.packages.${system}.backend;
-    packages.backend = let backend = ./backend; in pkgs.writeShellScriptBin "manage"
-    ''
-      export PYTHONPATH=${django-env}/bin;
-      export PATH=${django-env}/bin:$PATH;
-
-      python ${backend}/manage.py "$@"
-    '';
-
-    packages.dockerImage = pkgs.dockerTools.buildLayeredImage {
-      name = "backend";
-      tag = "latest";
-      contents = [ self.packages.${system}.backend ];
-      config = {
-        Cmd = [
-          "${pkgs.bash}/bin/bash" "-c" "manage migrate --run-syncdb && manage parseData && manage runserver"
-        ];
-        ExposedPorts = {
-          "8000/tcp" = {};
-        };
-      };
-    };
-
   });
 }
