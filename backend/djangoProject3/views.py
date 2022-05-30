@@ -168,17 +168,22 @@ def login(request):
             errors.append("Bad email format")
 
         if not errors:
-            user = User.objects.get(email=email)
-            field_object = User._meta.get_field('password')
-            password_server = field_object.value_from_object(user)
-            password_hashed = password.encode('utf-8')
-
-            if bcrypt.checkpw(password_hashed, password_server.encode('utf-8')):
-                request.session["email"] = str(email)
-                return redirect('/')
-            else:
-                errors.append("Email or Password wrong!")
+            try:
+                user = User.objects.get(email=email)
+                field_object = User._meta.get_field('password')
+                password_server = field_object.value_from_object(user)
+                password_hashed = password.encode('utf-8')
+            except:
+                errors.append("Email/password not correct")
                 return render(request, 'login.html', {'errors': errors})
+
+            if not errors:
+                if bcrypt.checkpw(password_hashed, password_server.encode('utf-8')):
+                    request.session["email"] = str(email)
+                    return redirect('/')
+                else:
+                    errors.append("Email or Password wrong!")
+                    return render(request, 'login.html', {'errors': errors})
 
 def register(request):
     errors = []
